@@ -70,6 +70,16 @@ class FactBuilder:
     def score_line(self, snap: MatchSnapshot) -> str:
         return f"{self.meta.home.name} {snap.score.home}-{snap.score.away} {self.meta.away.name}"
 
+    def momentum_words(self, value: float) -> str:
+        """-1..+1 momentum as words, e.g. 'Rivermouth Rovers on top (0.62)'."""
+        side = self.meta.home.name if value > 0 else self.meta.away.name
+        strength = round(abs(value), 2)
+        if strength >= 0.3:
+            return f"{side} on top ({strength})"
+        if strength >= 0.1:
+            return f"{side} slightly on top ({strength})"
+        return f"evenly balanced ({strength})"
+
     def match_stats(self, snap: MatchSnapshot) -> dict[str, Any]:
         h, a = snap.home, snap.away
         hn, an = self.meta.home.name, self.meta.away.name
@@ -141,9 +151,11 @@ class FactBuilder:
         elif k is MomentKind.SUBSTITUTION:
             put("coming_on", self.player_name(str(d.get("on_player_id", ""))), "on_player")
         elif k is MomentKind.MOMENTUM_SHIFT:
-            put("momentum_5_min_ago", round(float(d["from"]), 2), "from")
-            put("momentum_now", round(float(d["to"]), 2), "to")
-            details["momentum_scale"] = f"-1 = {self.meta.away.name}, +1 = {self.meta.home.name}"
+            # Plain words, not a signed -1..+1 number: models misread the sign and said the
+            # side that *gained* momentum had "collapsed".
+            details["gaining_momentum"] = team
+            put("momentum_5_min_ago", self.momentum_words(float(d["from"])), "from_desc")
+            put("momentum_now", self.momentum_words(float(d["to"])), "to_desc")
         elif k is MomentKind.PRESSURE_SURGE:
             put("pressure_index_now", round(float(d["pressure_index"]), 2), "pressure")
             put("pressure_index_previous_10_min", round(float(d["previous"]), 2), "prev")

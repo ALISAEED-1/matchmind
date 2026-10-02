@@ -164,7 +164,7 @@ TEMPLATES: dict[str, dict[Language, dict[Audience, Template]]] = {
             ),
             Audience.ANALYST: (
                 "Momentum shift: {team}",
-                "Momentum moved from {from} to {to} in 5 minutes (-1 {away}, +1 {home}).",
+                "{team} gained momentum in 5 minutes: from {from_desc} to {to_desc}.",
                 "{team} are now creating more danger than {opp}.",
             ),
         },
@@ -176,7 +176,7 @@ TEMPLATES: dict[str, dict[Language, dict[Audience, Template]]] = {
             ),
             Audience.ANALYST: (
                 "مومینٹم میں تبدیلی: {team}",
-                "پانچ منٹ میں مومینٹم {from} سے {to} ہو گیا۔",
+                "پچھلے پانچ منٹ میں مومینٹم {team} کی طرف منتقل ہو گیا۔",
                 "{team} اب {opp} سے زیادہ خطرہ پیدا کر رہے ہیں۔",
             ),
         },
@@ -188,7 +188,7 @@ TEMPLATES: dict[str, dict[Language, dict[Audience, Template]]] = {
             ),
             Audience.ANALYST: (
                 "تحول في الزخم: {team}",
-                "تحرك الزخم من {from} إلى {to} خلال خمس دقائق.",
+                "انتقل الزخم نحو {team} خلال الدقائق الخمس الأخيرة.",
                 "{team} يصنع الآن خطورة أكبر من {opp}.",
             ),
         },
