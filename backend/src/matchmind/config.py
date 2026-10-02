@@ -1,13 +1,14 @@
 """Runtime settings loaded from the repo-root `.env` file.
 
-Two LLM providers are supported, selected with LLM_PROVIDER:
+LLM access is an ordered *provider chain* (LLM_CHAIN): the agents try the first
+provider and fall back to the next one when it is rate-limited, overloaded,
+times out or returns unusable output. Each entry is `kind:model`:
 
-- ``foundry_local`` (default): Microsoft Foundry Local, models run on this machine.
-  No account, no key, no rate limits.
-- ``gemini``: Google Gemini through its OpenAI-compatible endpoint (free API key).
+- ``gemini:<model>``: Google Gemini via its OpenAI-compatible endpoint (free API key).
+- ``foundry_local:<alias>``: Microsoft Foundry Local, on this machine. No account or key.
 
-API keys are only read here and handed to the HTTP client. They are never
-logged or included in error messages.
+Default chain: two Gemini models then Foundry Local when GEMINI_API_KEY is set,
+otherwise Foundry Local only. API keys are only read here and never logged.
 """
 
 from __future__ import annotations
@@ -21,13 +22,13 @@ from dotenv import load_dotenv
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 
-Provider = Literal["foundry_local", "gemini"]
-PROVIDERS: tuple[Provider, ...] = ("foundry_local", "gemini")
+ProviderKind = Literal["foundry_local", "gemini"]
+PROVIDER_KINDS: tuple[ProviderKind, ...] = ("foundry_local", "gemini")
 
 DEFAULT_FOUNDRY_MODEL = "qwen2.5-1.5b"
 DEFAULT_FOUNDRY_DEVICE = "cpu"
 DEFAULT_GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/openai/"
-DEFAULT_GEMINI_MODEL = "gemini-3.5-flash"
+DEFAULT_GEMINI_CHAIN = "gemini:gemini-3.5-flash,gemini:gemini-flash-lite-latest"
 
 
 class ConfigError(RuntimeError):
@@ -35,41 +36,58 @@ class ConfigError(RuntimeError):
 
 
 @dataclass(frozen=True)
-class Settings:
-    provider: Provider
+class ProviderSpec:
+    kind: ProviderKind
     model: str
+
+    @property
+    def name(self) -> str:
+        return f"{self.kind}:{self.model}"
+
+
+@dataclass(frozen=True)
+class Settings:
+    chain: tuple[ProviderSpec, ...]
     foundry_device: str = DEFAULT_FOUNDRY_DEVICE
     gemini_endpoint: str = DEFAULT_GEMINI_ENDPOINT
     gemini_api_key: str = field(default="", repr=False)  # keep the key out of logs and tracebacks
+    llm_timeout_s: float = 60.0
 
 
 def _env(name: str, default: str = "") -> str:
     return os.getenv(name, default).strip()
 
 
+def parse_chain(text: str) -> tuple[ProviderSpec, ...]:
+    specs = []
+    for item in filter(None, (part.strip() for part in text.split(","))):
+        kind, sep, model = item.partition(":")
+        if not sep or not model or kind not in PROVIDER_KINDS:
+            raise ConfigError(
+                f"Bad LLM_CHAIN entry {item!r}: expected kind:model with kind in {PROVIDER_KINDS}."
+            )
+        specs.append(ProviderSpec(kind, model))  # type: ignore[arg-type]
+    if not specs:
+        raise ConfigError("LLM_CHAIN is empty.")
+    return tuple(specs)
+
+
 def load_settings() -> Settings:
     load_dotenv(REPO_ROOT / ".env")
-
-    provider = _env("LLM_PROVIDER", "foundry_local").lower()
-    if provider not in PROVIDERS:
-        raise ConfigError(f"LLM_PROVIDER must be one of {PROVIDERS}, got {provider!r}.")
-
-    if provider == "foundry_local":
-        return Settings(
-            provider="foundry_local",
-            model=_env("FOUNDRY_LOCAL_MODEL", DEFAULT_FOUNDRY_MODEL),
-            foundry_device=_env("FOUNDRY_LOCAL_DEVICE", DEFAULT_FOUNDRY_DEVICE).lower(),
-        )
-
     api_key = _env("GEMINI_API_KEY")
-    if not api_key:
+    local = f"foundry_local:{_env('FOUNDRY_LOCAL_MODEL', DEFAULT_FOUNDRY_MODEL)}"
+    default_chain = f"{DEFAULT_GEMINI_CHAIN},{local}" if api_key else local
+    chain = parse_chain(_env("LLM_CHAIN") or default_chain)
+
+    if any(s.kind == "gemini" for s in chain) and not api_key:
         raise ConfigError(
-            "LLM_PROVIDER=gemini but GEMINI_API_KEY is not set. "
+            "LLM_CHAIN uses gemini but GEMINI_API_KEY is not set. "
             "Create a free key at https://aistudio.google.com/apikey and add it to .env."
         )
     return Settings(
-        provider="gemini",
-        model=_env("GEMINI_MODEL", DEFAULT_GEMINI_MODEL),
+        chain=chain,
+        foundry_device=_env("FOUNDRY_LOCAL_DEVICE", DEFAULT_FOUNDRY_DEVICE).lower(),
         gemini_endpoint=_env("GEMINI_ENDPOINT", DEFAULT_GEMINI_ENDPOINT),
         gemini_api_key=api_key,
+        llm_timeout_s=float(_env("LLM_TIMEOUT_S", "60")),
     )
