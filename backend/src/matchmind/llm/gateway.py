@@ -224,7 +224,8 @@ class LLMGateway:
         *,
         max_invalid_retries: int = 1,
         max_transient_retries: int = 1,
-        backoff_s: float = 2.0,
+        backoff_s: float = 10.0,
+        min_interval_s: dict[str, float] | None = None,
         sleep: Callable[[float], Awaitable[None]] = asyncio.sleep,
     ):
         if not providers:
@@ -239,10 +240,34 @@ class LLMGateway:
         # so one overloaded model doesn't cost a timeout on every call.
         self._cooldown_until: dict[str, float] = {}
         self.cooldown_s = 60.0
+        # Client-side pacing (requests-per-minute quotas): minimum gap between calls.
+        self.min_interval_s = min_interval_s or {}
+        self._next_slot: dict[str, float] = {}
+        self._pace_lock = asyncio.Lock()
 
     @classmethod
     def from_settings(cls, settings: Settings, cache: ResponseCache | None = None) -> LLMGateway:
-        return cls([AgentFrameworkProvider(s, settings) for s in settings.chain], cache)
+        pacing = {
+            s.name: 60.0 / settings.gemini_rpm
+            for s in settings.chain
+            if s.kind == "gemini" and settings.gemini_rpm > 0
+        }
+        return cls(
+            [AgentFrameworkProvider(s, settings) for s in settings.chain],
+            cache,
+            min_interval_s=pacing,
+        )
+
+    async def _pace(self, name: str) -> None:
+        gap = self.min_interval_s.get(name, 0.0)
+        if gap <= 0:
+            return
+        async with self._pace_lock:
+            now = time.monotonic()
+            slot = max(now, self._next_slot.get(name, 0.0))
+            self._next_slot[name] = slot + gap
+        if slot > now:
+            await self._sleep(slot - now)
 
     async def generate(
         self,
@@ -283,6 +308,7 @@ class LLMGateway:
             transient_left = self.max_transient_retries
             while True:
                 full_prompt = prompt if not feedback else _with_feedback(prompt, feedback)
+                await self._pace(provider.name)
                 started = time.perf_counter()
                 try:
                     value = await provider.complete(agent_name, instructions, full_prompt, schema)

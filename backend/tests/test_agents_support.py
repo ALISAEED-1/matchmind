@@ -99,6 +99,9 @@ def test_verifier_flags_invented_names():
     assert any("Smith" in p for p in v.check_text({"body": "Smith نے گول کیا"}, facts, "ur"))
     assert v.check_text({"body": "Femi Okarie نے گول کیا"}, facts, "ur") == []
     assert v.check_text({"title": "Missed Chance For Rivermouth Rovers"}, facts) == []
+    assert (
+        v.check_text({"body": "It lifts the Rovers' spirits and Ironmere's nerves."}, facts) == []
+    )
     assert any(
         "Urdu script" in p for p in v.check_text({"title": "Rovers ka pehla hamla"}, facts, "ur")
     )

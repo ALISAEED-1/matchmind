@@ -155,7 +155,7 @@ class Verifier:
         for sentence in _SENTENCE_SPLIT.split(text):
             words = _WORD.findall(sentence)
             for i, w in enumerate(words):
-                w = w.removesuffix("'s")
+                w = w.removesuffix("'s").rstrip("'")  # possessives: Rovers's, Rovers'
                 if language == "en" and (i == 0 or not w[0].isupper()):
                     continue
                 if w not in vocab and w not in found:

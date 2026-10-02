@@ -127,6 +127,15 @@ def test_skip_provider_and_extra_retries():
     assert [a.outcome for a in res.attempts].count(AttemptOutcome.REJECTED) == 2
 
 
+def test_pacing_spaces_calls_to_the_same_provider():
+    sleeps = Sleeps()
+    a = FakeProvider("gemini:x", [Out(text="1"), Out(text="2")])
+    gw = LLMGateway([a], sleep=sleeps, min_interval_s={"gemini:x": 6.0})
+    run(gw, prompt="one")
+    run(gw, prompt="two")
+    assert len(sleeps.calls) == 1 and sleeps.calls[0] == pytest.approx(6.0, abs=0.5)
+
+
 def test_cache_serves_repeat_requests(tmp_path):
     a = FakeProvider("a", [Out(text="once")])
     gw = LLMGateway([a], ResponseCache(tmp_path))

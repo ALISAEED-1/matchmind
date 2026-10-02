@@ -54,6 +54,7 @@ class Settings:
     gemini_endpoint: str = DEFAULT_GEMINI_ENDPOINT
     gemini_api_key: str = field(default="", repr=False)  # keep the key out of logs and tracebacks
     llm_timeout_s: float = 60.0
+    gemini_rpm: float = 10.0  # free-tier requests per minute, per Gemini model
 
 
 def _env(name: str, default: str = "") -> str:
@@ -92,4 +93,5 @@ def load_settings() -> Settings:
         gemini_endpoint=_env("GEMINI_ENDPOINT", DEFAULT_GEMINI_ENDPOINT),
         gemini_api_key=api_key,
         llm_timeout_s=float(_env("LLM_TIMEOUT_S", "60")),
+        gemini_rpm=float(_env("GEMINI_RPM", "10")),
     )
