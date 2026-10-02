@@ -1,0 +1,456 @@
+{
+  "$defs": {
+    "Club": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "Three-letter code, e.g. 'RIV'.",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "short_name": {
+          "title": "Short Name",
+          "type": "string"
+        },
+        "venue": {
+          "title": "Venue",
+          "type": "string"
+        },
+        "primary_color": {
+          "title": "Primary Color",
+          "type": "string"
+        },
+        "secondary_color": {
+          "title": "Secondary Color",
+          "type": "string"
+        },
+        "formation": {
+          "default": "4-3-3",
+          "title": "Formation",
+          "type": "string"
+        },
+        "players": {
+          "description": "First 11 are the starters, in formation order.",
+          "items": {
+            "$ref": "#/$defs/Player"
+          },
+          "title": "Players",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "short_name",
+        "venue",
+        "primary_color",
+        "secondary_color",
+        "players"
+      ],
+      "title": "Club",
+      "type": "object"
+    },
+    "Event": {
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "period": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Period",
+          "type": "integer"
+        },
+        "minute": {
+          "description": "Match minute, 0-based; >45 in period 1 means stoppage.",
+          "minimum": 0,
+          "title": "Minute",
+          "type": "integer"
+        },
+        "second": {
+          "maximum": 59,
+          "minimum": 0,
+          "title": "Second",
+          "type": "integer"
+        },
+        "timestamp_ms": {
+          "description": "Milliseconds of play since kickoff (monotonic).",
+          "minimum": 0,
+          "title": "Timestamp Ms",
+          "type": "integer"
+        },
+        "type": {
+          "$ref": "#/$defs/EventType"
+        },
+        "team": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Side"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "player_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Player Id"
+        },
+        "related_player_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Pass recipient, pressured/fouled player, player coming on, or assister.",
+          "title": "Related Player Id"
+        },
+        "x": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "X"
+        },
+        "y": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Y"
+        },
+        "end_x": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End X"
+        },
+        "end_y": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End Y"
+        },
+        "outcome": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Outcome"
+        },
+        "ball_speed_kmh": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ball Speed Kmh"
+        },
+        "under_pressure": {
+          "default": false,
+          "title": "Under Pressure",
+          "type": "boolean"
+        },
+        "details": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              }
+            ]
+          },
+          "title": "Details",
+          "type": "object"
+        }
+      },
+      "required": [
+        "event_id",
+        "period",
+        "minute",
+        "second",
+        "timestamp_ms",
+        "type"
+      ],
+      "title": "Event",
+      "type": "object"
+    },
+    "EventType": {
+      "enum": [
+        "kickoff",
+        "pass",
+        "carry",
+        "pressure",
+        "tackle",
+        "interception",
+        "possession_change",
+        "foul",
+        "card",
+        "shot",
+        "goal",
+        "substitution",
+        "half_time",
+        "full_time"
+      ],
+      "title": "EventType",
+      "type": "string"
+    },
+    "MatchMeta": {
+      "additionalProperties": false,
+      "properties": {
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "seed": {
+          "title": "Seed",
+          "type": "integer"
+        },
+        "story": {
+          "title": "Story",
+          "type": "string"
+        },
+        "generator_version": {
+          "title": "Generator Version",
+          "type": "string"
+        },
+        "competition": {
+          "title": "Competition",
+          "type": "string"
+        },
+        "venue": {
+          "title": "Venue",
+          "type": "string"
+        },
+        "home": {
+          "$ref": "#/$defs/Club"
+        },
+        "away": {
+          "$ref": "#/$defs/Club"
+        },
+        "final_score": {
+          "$ref": "#/$defs/Score"
+        },
+        "stoppage_minutes": {
+          "description": "Added time for [period 1, period 2].",
+          "items": {
+            "type": "integer"
+          },
+          "title": "Stoppage Minutes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "match_id",
+        "seed",
+        "story",
+        "generator_version",
+        "competition",
+        "venue",
+        "home",
+        "away",
+        "final_score",
+        "stoppage_minutes"
+      ],
+      "title": "MatchMeta",
+      "type": "object"
+    },
+    "Player": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "Stable id, e.g. 'RIV-09'.",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "shirt": {
+          "title": "Shirt",
+          "type": "integer"
+        },
+        "position": {
+          "$ref": "#/$defs/Position"
+        },
+        "rating": {
+          "maximum": 99,
+          "minimum": 40,
+          "title": "Rating",
+          "type": "integer"
+        },
+        "pace": {
+          "maximum": 99,
+          "minimum": 40,
+          "title": "Pace",
+          "type": "integer"
+        },
+        "passing": {
+          "maximum": 99,
+          "minimum": 40,
+          "title": "Passing",
+          "type": "integer"
+        },
+        "finishing": {
+          "maximum": 99,
+          "minimum": 40,
+          "title": "Finishing",
+          "type": "integer"
+        },
+        "defending": {
+          "maximum": 99,
+          "minimum": 40,
+          "title": "Defending",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "shirt",
+        "position",
+        "rating",
+        "pace",
+        "passing",
+        "finishing",
+        "defending"
+      ],
+      "title": "Player",
+      "type": "object"
+    },
+    "Position": {
+      "enum": [
+        "GK",
+        "RB",
+        "CB",
+        "LB",
+        "DM",
+        "CM",
+        "AM",
+        "RW",
+        "LW",
+        "ST"
+      ],
+      "title": "Position",
+      "type": "string"
+    },
+    "Score": {
+      "additionalProperties": false,
+      "properties": {
+        "home": {
+          "default": 0,
+          "title": "Home",
+          "type": "integer"
+        },
+        "away": {
+          "default": 0,
+          "title": "Away",
+          "type": "integer"
+        }
+      },
+      "title": "Score",
+      "type": "object"
+    },
+    "Side": {
+      "enum": [
+        "home",
+        "away"
+      ],
+      "title": "Side",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "meta": {
+      "$ref": "#/$defs/MatchMeta"
+    },
+    "events": {
+      "items": {
+        "$ref": "#/$defs/Event"
+      },
+      "title": "Events",
+      "type": "array"
+    }
+  },
+  "required": [
+    "meta",
+    "events"
+  ],
+  "title": "MatchMind synthetic match",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}
