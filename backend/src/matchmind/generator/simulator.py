@@ -23,6 +23,7 @@ from dataclasses import dataclass, field
 
 from matchmind.generator.clubs import COMPETITION
 from matchmind.generator.stories import Story, StoryPlan, plan_story
+from matchmind.geometry import dist_m
 from matchmind.models import (
     PITCH_LENGTH_M,
     PITCH_WIDTH_M,
@@ -61,11 +62,6 @@ GOAL_HALF_WIDTH = 7.32 / 2 / PITCH_WIDTH_M * 100  # in y-units
 
 def _clamp(v: float, lo: float, hi: float) -> float:
     return max(lo, min(hi, v))
-
-
-def dist_m(x1: float, y1: float, x2: float, y2: float) -> float:
-    """Distance in metres between two pitch points (0-100 units)."""
-    return math.hypot((x2 - x1) * PITCH_LENGTH_M / 100, (y2 - y1) * PITCH_WIDTH_M / 100)
 
 
 @dataclass
@@ -403,6 +399,8 @@ class MatchSimulator:
             self._emit(EventType.KICKOFF, side, carrier, (ax, ay), details=self._score())
 
         forced = self._goal_due(side)
+        # Scripted attacks finish from a varied spot: edge of the box to close range.
+        shot_x = self.rng.uniform(83, 94) if forced else 100.0
         under = False
         last_passer: Player | None = None
 
@@ -435,7 +433,7 @@ class MatchSimulator:
             spec.kind = "open_play"
 
             # --- shot?
-            if (forced and ax >= 78) or (
+            if (forced and ax >= shot_x) or (
                 not forced and self.rng.random() < self._shot_prob(ax, ay, m)
             ):
                 return self._shoot(side, carrier, ax, ay, under, forced, last_passer)
@@ -520,8 +518,8 @@ class MatchSimulator:
         ex = _clamp(px + self.rng.gauss(0, 3), 1, 99)
         ey = _clamp(py + self.rng.gauss(0, 4), 1, 99)
         if forced:
-            ex = max(ex, min(ax + self.rng.uniform(12, 22), 92))
-            ey = _clamp(ey, 25, 75) if ex > 75 else ey
+            ex = max(ex, min(ax + self.rng.uniform(12, 22), 95))
+            ey = _clamp(ey, 32, 68) if ex > 80 else ey
         return p, ex, ey
 
     def _carry(

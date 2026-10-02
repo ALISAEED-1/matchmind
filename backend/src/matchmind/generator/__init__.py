@@ -47,8 +47,8 @@ class MatchSpec:
 
 # The three matches committed under data/matches.
 SHIPPED_MATCHES = (
-    MatchSpec(7, Story.COMEBACK, "RIV", "IRN"),
-    MatchSpec(21, Story.RED_CARD, "KES", "DUN"),
+    MatchSpec(4, Story.COMEBACK, "RIV", "IRN"),
+    MatchSpec(3, Story.RED_CARD, "KES", "DUN"),
     MatchSpec(20, Story.LATE_WINNER, "DUN", "RIV"),
 )
 

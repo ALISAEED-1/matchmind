@@ -25,9 +25,9 @@ that the shipped files and the schema match the current code.
 
 | File | Fixture | Story | Goals (minute, 0-based) | Final | Events | Shots |
 |---|---|---|---|---|---|---|
-| `mm-0007-comeback.json` | Rivermouth Rovers v Ironmere Athletic | Ironmere come back from 2-0 down | 17' 1-0, 38' 2-0, 59' 2-1, 69' 2-2, 84' 2-3 | 2-3 | 1034 | 27 |
-| `mm-0021-red_card.json` | Kestrel Vale v Duncairn Harbour | Kestrel lead, have a defender sent off (33'), lose | 22' 1-0, 58' 1-1, 79' 1-2 | 1-2 | 979 | 27 |
-| `mm-0020-late_winner.json` | Duncairn Harbour v Rivermouth Rovers | Level until a stoppage-time winner | 36' 0-1, 66' 1-1, 92' 2-1 | 2-1 | 1059 | 25 |
+| `mm-0004-comeback.json` | Rivermouth Rovers v Ironmere Athletic | Rovers come back from 2-0 down | 17' 0-1, 34' 0-2, 59' 1-2, 71' 2-2, 87' 3-2 | 3-2 | 1024 | 25 |
+| `mm-0003-red_card.json` | Kestrel Vale v Duncairn Harbour | Kestrel lead, have a defender sent off (31'), lose | 23' 1-0, 57' 1-1, 77' 1-2 | 1-2 | 997 | 24 |
+| `mm-0020-late_winner.json` | Duncairn Harbour v Rivermouth Rovers | Level until a stoppage-time winner | 36' 0-1, 65' 1-1, 92' 2-1 | 2-1 | 1055 | 28 |
 
 ## File layout
 
@@ -35,16 +35,16 @@ that the shipped files and the schema match the current code.
 {
   "schema_version": "1.0",
   "meta": {
-    "match_id": "mm-0007-comeback",
-    "seed": 7,
+    "match_id": "mm-0004-comeback",
+    "seed": 4,
     "story": "comeback",          // none | comeback | red_card | late_winner
     "generator_version": "1.0.0",
     "competition": "MatchMind Synthetic League",
     "venue": "Estuary Park",
     "home": { /* Club */ },
     "away": { /* Club */ },
-    "final_score": { "home": 2, "away": 3 },
-    "stoppage_minutes": [4, 2]    // added time for period 1, period 2
+    "final_score": { "home": 3, "away": 2 },
+    "stoppage_minutes": [3, 3]    // added time for period 1, period 2
   },
   "events": [ /* Event, one per line, in time order */ ]
 }
@@ -71,7 +71,7 @@ Squads are built from a fixed league seed, so a club's players are identical in 
 | `name` | string | Invented |
 | `shirt` | int | Conventional numbers (1 GK, 9 ST, ...) |
 | `position` | enum | `GK RB CB LB DM CM AM RW LW ST` |
-| `rating`, `pace`, `passing`, `finishing`, `defending` | int 40–99 | Drive the simulation; shaped by position |
+| `rating`, `pace`, `passing`, `finishing`, `defending` | int 40â€“99 | Drive the simulation; shaped by position |
 
 ### Event
 
@@ -79,16 +79,16 @@ Every event has the first six fields; the rest appear when relevant (omitted fie
 
 | Field | Type | Notes |
 |---|---|---|
-| `event_id` | string | `e00001`, `e00002`, … (sequential) |
+| `event_id` | string | `e00001`, `e00002`, â€¦ (sequential) |
 | `period` | 1 \| 2 | Half |
-| `minute`, `second` | int | Match clock, 0-based. Period 1 stoppage shows as minute ≥ 45 with `period: 1`; period 2 starts at minute 45 |
+| `minute`, `second` | int | Match clock, 0-based. Period 1 stoppage shows as minute â‰¥ 45 with `period: 1`; period 2 starts at minute 45 |
 | `timestamp_ms` | int | Milliseconds of play since kickoff, monotonic, excludes the half-time break. Overlay cards are timed against this |
 | `type` | enum | See below |
 | `team` | `home` \| `away` | The team performing the action |
 | `player_id` | string | Actor |
 | `related_player_id` | string | Pass recipient, pressured/tackled/fouled player, player coming on, or goal assister |
-| `x`, `y` | 0–100 | Where the action starts |
-| `end_x`, `end_y` | 0–100 | Where the ball ends up (pass, carry, shot) |
+| `x`, `y` | 0â€“100 | Where the action starts |
+| `end_x`, `end_y` | 0â€“100 | Where the ball ends up (pass, carry, shot) |
 | `outcome` | string | Type-specific, see below |
 | `ball_speed_kmh` | float | Passes and shots |
 | `under_pressure` | bool | The actor was being pressed |
@@ -98,41 +98,41 @@ Every event has the first six fields; the rest appear when relevant (omitted fie
 
 | Type | Outcome values | Details | Notes |
 |---|---|---|---|
-| `kickoff` | – | `score_home`, `score_away` | Start of each half and after every goal |
-| `pass` | `complete`, `incomplete`, `out` | – | Incomplete passes end where the ball was cut out |
+| `kickoff` | â€“ | `score_home`, `score_away` | Start of each half and after every goal |
+| `pass` | `complete`, `incomplete`, `out` | â€“ | Incomplete passes end where the ball was cut out |
 | `carry` | `complete` | `duration_ms` | Player runs with the ball; speed = distance / duration |
-| `pressure` | – | – | Defender closes down `related_player_id` |
-| `tackle` | `won`, `lost` | – | `team` is the tackling side |
-| `interception` | `won` | – | Follows an incomplete pass |
-| `possession_change` | `interception`, `tackle`, `recovery`, `out_of_play`, `shot_saved`, `shot_blocked`, `shot_off_target` | – | `team` is the side that now has the ball; coordinates are the restart point |
+| `pressure` | â€“ | â€“ | Defender closes down `related_player_id` |
+| `tackle` | `won`, `lost` | â€“ | `team` is the tackling side |
+| `interception` | `won` | â€“ | Follows an incomplete pass |
+| `possession_change` | `interception`, `tackle`, `recovery`, `out_of_play`, `shot_saved`, `shot_blocked`, `shot_off_target` | â€“ | `team` is the side that now has the ball; coordinates are the restart point |
 | `foul` | `free_kick` | `denied_goal_scoring_opportunity` (red-card fouls) | `team` is the offending side |
-| `card` | `yellow`, `red` | – | A red card removes the player for the rest of the match |
+| `card` | `yellow`, `red` | â€“ | A red card removes the player for the rest of the match |
 | `shot` | `goal`, `saved`, `blocked`, `off_target` | `body_part`: `foot` \| `head` | `end_x/end_y` is where the ball went |
-| `goal` | – | `score_home`, `score_away` (after the goal) | Always directly follows the `shot` with outcome `goal`; `related_player_id` is the assister |
-| `substitution` | – | `position` | `player_id` goes off, `related_player_id` comes on |
-| `half_time`, `full_time` | – | `score_home`, `score_away` | No team or player |
+| `goal` | â€“ | `score_home`, `score_away` (after the goal) | Always directly follows the `shot` with outcome `goal`; `related_player_id` is the assister |
+| `substitution` | â€“ | `position` | `player_id` goes off, `related_player_id` comes on |
+| `half_time`, `full_time` | â€“ | `score_home`, `score_away` | No team or player |
 
 ## Coordinates
 
 ```
             y = 100  (away team's right touchline)
-   x = 0  ┌───────────────────────────────┐  x = 100
-   home   │                               │  away
-   goal   │            centre             │  goal
-          └───────────────────────────────┘
+   x = 0  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  x = 100
+   home   â”‚                               â”‚  away
+   goal   â”‚            centre             â”‚  goal
+          â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
             y = 0    (home team's right touchline)
 
    HOME attacks towards x = 100 for the whole match (no switch at half time).
    AWAY attacks towards x = 0.
 ```
 
-The pitch is 105 × 68 m, so 1 unit of `x` = 1.05 m and 1 unit of `y` = 0.68 m.
+The pitch is 105 Ã— 68 m, so 1 unit of `x` = 1.05 m and 1 unit of `y` = 0.68 m.
 Distances in metres: `hypot((x2 - x1) * 1.05, (y2 - y1) * 0.68)`.
 
 ## How the simulator works
 
 1. **Possessions.** The match is a loop of possessions that start from a restart (kickoff, throw-in,
-   goal kick, free kick, keeper) or a turnover and run pass → carry → pass … until the ball is lost,
+   goal kick, free kick, keeper) or a turnover and run pass â†’ carry â†’ pass â€¦ until the ball is lost,
    goes out, or a shot ends it.
 2. **Player positions.** Each player has a 4-3-3 base position that slides up and down the pitch
    with the ball. Pass recipients are chosen by distance (about 16 m is typical) and forward options;
@@ -142,7 +142,7 @@ Distances in metres: `hypot((x2 - x1) * 1.05, (y2 - y1) * 0.68)`.
    story. It shifts pass completion, pressing, how direct a team plays and how often it shoots,
    which is what creates realistic momentum swings.
 4. **Stories.** A story fixes when goals and red cards happen (with seeded jitter) and biases
-   momentum around them. The scoring team gets a forced attacking move ending in a goal; in story
+   momentum around them. The scoring team gets a forced attacking move ending in a goal from a varied spot (edge of the box to close range); in story
    mode, unscripted shots never go in, so the final score always matches the story.
 5. **Facts, not metrics.** The generator only records what is observable (positions, outcomes,
    ball speed, timing). Derived metrics such as xG, pass difficulty, pressure index and momentum
@@ -152,9 +152,9 @@ Distances in metres: `hypot((x2 - x1) * 1.05, (y2 - y1) * 0.68)`.
 
 | Metric | Target | Typical |
 |---|---|---|
-| Events per match | 900–1,150 | ~1,030 |
-| Pass completion | 75–92 % | ~87 % |
-| Shots per match | 20–30 (average) | ~23 natural, ~25–28 story |
-| Goals per match | – | ~2–4 natural |
-| Fouls per match | – | 15–20 |
-| Max carry speed | < 10 m/s | top sprints ≈ 30 km/h |
+| Events per match | 900â€“1,150 | ~1,030 |
+| Pass completion | 75â€“92 % | ~87 % |
+| Shots per match | 20â€“30 (average) | ~23 natural, ~25â€“28 story |
+| Goals per match | â€“ | ~2â€“4 natural |
+| Fouls per match | â€“ | 15â€“20 |
+| Max carry speed | < 10 m/s | top sprints â‰ˆ 30 km/h |

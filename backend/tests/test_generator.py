@@ -13,7 +13,7 @@ from matchmind.generator import (
     generate,
     match_json_schema,
 )
-from matchmind.generator.simulator import dist_m
+from matchmind.geometry import dist_m
 from matchmind.models import EventType, Match, Side
 
 NATURAL_SEEDS = range(1, 9)
