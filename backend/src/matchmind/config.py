@@ -27,7 +27,7 @@ PROVIDERS: tuple[Provider, ...] = ("foundry_local", "gemini")
 DEFAULT_FOUNDRY_MODEL = "qwen2.5-1.5b"
 DEFAULT_FOUNDRY_DEVICE = "cpu"
 DEFAULT_GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/openai/"
-DEFAULT_GEMINI_MODEL = "gemini-flash-latest"
+DEFAULT_GEMINI_MODEL = "gemini-3.5-flash"
 
 
 class ConfigError(RuntimeError):
