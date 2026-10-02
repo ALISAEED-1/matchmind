@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import time
 from collections import Counter
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from enum import StrEnum
 from typing import Any
@@ -53,6 +54,7 @@ class MatchState:
     handoffs: list[Handoff] = field(default_factory=list)
     counters: Counter[str] = field(default_factory=Counter)
     recap: Any = None  # narrator's RecapOut at full time (None if it fell back to templates)
+    listener: Callable[[Handoff], None] | None = field(default=None, repr=False)  # live log
     _started: float = field(default_factory=time.perf_counter, repr=False)
 
     @property
@@ -101,4 +103,6 @@ class MatchState:
         )
         self.handoffs.append(record)
         self.counters[f"handoff_{status.value}"] += 1
+        if self.listener is not None:
+            self.listener(record)
         return record

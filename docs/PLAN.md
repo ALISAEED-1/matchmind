@@ -22,6 +22,7 @@ This file records the agreed architecture and schedule, plus changes from the br
 | 0 Setup | Oct 3 | Oct 3 |
 | 1 Data generator | Oct 4–6 | Oct 3 |
 | 2 Stats engine | Oct 7–8 | Oct 3 |
+| 3 Agents + orchestration | Oct 9–14 | Oct 3 (code + tests); demo bakes in progress |
 
 ## Phase 0 findings
 

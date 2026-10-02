@@ -186,8 +186,9 @@ class PersonalizerAgent:
     instructions = (
         "You are the Personalizer Agent in an AI broadcast booth. You rewrite one overlay card "
         "for each requested (language, audience) pair.\n"
-        "- fan: simple, warm, emotional words; no jargon; at most one number. If a favourite "
-        "club is given, write from that supporter's point of view.\n"
+        "- fan: simple, warm, emotional words; no jargon; at most one number. Stay neutral "
+        "(never 'we' or 'us') unless REQUEST names a favourite club; then write as that club's "
+        "supporter.\n"
         "- analyst: precise and tactical; include the key numbers from FACTS.\n"
         "- player_focus: centre the text on the player in FACTS.\n"
         "- Languages: en = English, ur = Urdu in Urdu script, ar = Modern Standard Arabic in "

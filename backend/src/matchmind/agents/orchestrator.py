@@ -441,12 +441,28 @@ class PersonalizerExecutor(Executor):
         if draft.fallback:
             cards += self.factory.templates(task, targets, fallback=True)
         else:
+            # One request per language: smaller answers are faster and more reliable, and a
+            # failure in one language only costs that language (it falls back to templates).
             log = attempt_logger(self.state, self.agent.name, moment)
-            try:
-                result = await self.agent.run(
-                    task.facts, title, body, why, targets, self.config.profile, on_attempt=log
-                )
-                wanted = set(targets)
+            for lang in self.config.languages:
+                lang_targets = [t for t in targets if t[0] is lang]
+                try:
+                    result = await self.agent.run(
+                        task.facts, title, body, why, lang_targets, self.config.profile,
+                        on_attempt=log,
+                    )  # fmt: skip
+                except AllProvidersFailed:
+                    self.state.counters["consecutive_llm_failures"] += 1
+                    self.state.log(
+                        self.agent.name, "template_writer", moment_id=moment.id,
+                        status=HandoffStatus.FALLBACK,
+                        detail=f"{lang.value}: all providers failed; using templates",
+                        match_ms=moment.timestamp_ms,
+                    )  # fmt: skip
+                    cards += self.factory.templates(task, lang_targets, fallback=True)
+                    continue
+                self.state.counters["consecutive_llm_failures"] = 0
+                wanted = set(lang_targets)
                 for v in result.value.variants:
                     if (v.language, v.audience) in wanted:
                         wanted.discard((v.language, v.audience))
@@ -464,15 +480,6 @@ class PersonalizerExecutor(Executor):
                                 card_type=CardType.RECAP if draft.recap else None,
                             )  # fmt: skip
                         )
-            except AllProvidersFailed:
-                self.state.counters["consecutive_llm_failures"] += 1
-                self.state.log(
-                    self.agent.name, "template_writer", moment_id=moment.id,
-                    status=HandoffStatus.FALLBACK,
-                    detail="personalization failed; unverified base text dropped, using templates",
-                    match_ms=moment.timestamp_ms,
-                )  # fmt: skip
-                cards += self.factory.templates(task, targets, fallback=True)
 
         if draft.commentary is not None:
             cards.append(

@@ -83,6 +83,20 @@ def numbers_in(text: str) -> list[str]:
     return [_canon(t) for t in _NUM.findall(text.translate(_DIGITS))]
 
 
+_WORD = re.compile(r"[A-Za-z][A-Za-z']*")
+_SENTENCE_SPLIT = re.compile(r"(?<=[.!?:;])\s+|\n+")
+
+
+def _strings(node: Any) -> list[str]:
+    if isinstance(node, str):
+        return [node]
+    if isinstance(node, dict):
+        return [s for k, v in node.items() for s in (*_strings(k), *_strings(v))]
+    if isinstance(node, list | tuple):
+        return [s for v in node for s in _strings(v)]
+    return []
+
+
 class Verifier:
     def __init__(self, match_player_names: Iterable[str], proper_nouns: Iterable[str] = ()):
         self.match_players = set(match_player_names)
@@ -117,8 +131,36 @@ class Verifier:
             for other in self.other_players:
                 if other in text:
                     problems.append(f"{name} mentions {other}, who is not in this match")
+            # English titles are often Title Case, so names are only checked in running text.
+            title_case = language == "en" and name in ("title", "headline")
+            unknown = [] if title_case else self._unknown_names(text, facts, language)
+            if unknown:
+                problems.append(
+                    f"{name} mentions names not in FACTS: {', '.join(unknown)} "
+                    "(only use players and clubs from FACTS)"
+                )
             problems.extend(self._language(name, text, language))
         return problems
+
+    def _unknown_names(self, text: str, facts: Any, language: str) -> list[str]:
+        """Capitalised words that look like names but appear nowhere in FACTS.
+
+        English: mid-sentence capitalised words (sentence starts are ordinary words).
+        Urdu/Arabic: every Latin-letter word, since only names stay in Latin script.
+        """
+        vocab = {"xG", "km", "h", "I", "VAR"}
+        for phrase in [*self._nouns, *_strings(facts)]:
+            vocab.update(_WORD.findall(phrase))
+        found: list[str] = []
+        for sentence in _SENTENCE_SPLIT.split(text):
+            words = _WORD.findall(sentence)
+            for i, w in enumerate(words):
+                w = w.removesuffix("'s")
+                if language == "en" and (i == 0 or not w[0].isupper()):
+                    continue
+                if w not in vocab and w not in found:
+                    found.append(w)
+        return found
 
     def _language(self, name: str, text: str, language: str) -> list[str]:
         for noun in self._nouns:

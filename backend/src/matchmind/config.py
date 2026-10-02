@@ -28,7 +28,9 @@ PROVIDER_KINDS: tuple[ProviderKind, ...] = ("foundry_local", "gemini")
 DEFAULT_FOUNDRY_MODEL = "qwen2.5-1.5b"
 DEFAULT_FOUNDRY_DEVICE = "cpu"
 DEFAULT_GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/openai/"
-DEFAULT_GEMINI_CHAIN = "gemini:gemini-3.5-flash,gemini:gemini-flash-lite-latest"
+# flash-lite first: ~2 s per call. gemini-3.5-flash "thinks" before answering (45 s measured
+# for one sentence), so it is the backup, not the default.
+DEFAULT_GEMINI_CHAIN = "gemini:gemini-flash-lite-latest,gemini:gemini-3.5-flash"
 
 
 class ConfigError(RuntimeError):

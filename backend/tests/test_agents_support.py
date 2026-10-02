@@ -87,6 +87,23 @@ def test_verifier_flags_invented_numbers_players_script_and_length():
     assert any("empty" in p for p in v.check_text({"title": ""}, facts))
 
 
+def test_verifier_flags_invented_names():
+    v = verifier_for(MATCHES[0])
+    facts = {"score": "Rivermouth Rovers 1-2 Ironmere Athletic", "player": {"name": "Femi Okarie"}}
+    assert (
+        v.check_text({"body": "What a finish from Femi Okarie for Ironmere Athletic!"}, facts) == []
+    )
+    assert v.check_text({"body": "Unbelievable scenes! The Rovers keep pushing."}, facts) == []
+    flagged = v.check_text({"body": "He's done it! A late winner from Smith."}, facts)
+    assert any("Smith" in p for p in flagged)
+    assert any("Smith" in p for p in v.check_text({"body": "Smith نے گول کیا"}, facts, "ur"))
+    assert v.check_text({"body": "Femi Okarie نے گول کیا"}, facts, "ur") == []
+    assert v.check_text({"title": "Missed Chance For Rivermouth Rovers"}, facts) == []
+    assert any(
+        "Urdu script" in p for p in v.check_text({"title": "Rovers ka pehla hamla"}, facts, "ur")
+    )
+
+
 def test_every_moment_kind_has_a_template_and_card_type():
     for kind in MomentKind:
         assert kind.value in TEMPLATES, kind
