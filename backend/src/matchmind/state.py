@@ -12,6 +12,7 @@ import time
 from collections import Counter
 from dataclasses import dataclass, field
 from enum import StrEnum
+from typing import Any
 
 from pydantic import BaseModel
 
@@ -51,6 +52,7 @@ class MatchState:
     cards: list[OverlayCard] = field(default_factory=list)
     handoffs: list[Handoff] = field(default_factory=list)
     counters: Counter[str] = field(default_factory=Counter)
+    recap: Any = None  # narrator's RecapOut at full time (None if it fell back to templates)
     _started: float = field(default_factory=time.perf_counter, repr=False)
 
     @property
