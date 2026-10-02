@@ -10,15 +10,18 @@ This file records the agreed architecture and schedule, plus changes from the br
 | **Orchestrator routes per event** | Routine passes skip the LLM; shots go to Insight; goals and red cards trigger every agent. Turns a fixed chain into orchestration. |
 | **Stats exposed as an MCP server** (FastMCP) | Agents call stat tools over MCP. Covers the "MCP integration" judging point for about 2–3h. |
 | **Personalizer returns all variants in one call** | fan/analyst/player_focus × en/ur/ar in one JSON response. Cuts LLM calls about 6×. |
-| **Static Demo Mode** | Flutter replays a pre-baked JSON bundle from GitHub Pages with no backend. Judges can't drain the quota. Live mode runs locally. |
-| **Demo bundles baked from Oct 14** | Free quota is about 150 requests/day on low-tier models, so baking needs several days. |
+| **Static Demo Mode** | Flutter replays a pre-baked JSON bundle from GitHub Pages with no backend. Judges need no model, key or quota. Live mode runs locally. |
+| **Demo bundles baked from Oct 14** | Local CPU inference is slow and Gemini's free tier is rate-limited, so baking needs several runs. |
+| **LLM provider: Foundry Local + Gemini** (switch: `LLM_PROVIDER`) | GitHub Models was retired on 2026-07-30, so the brief's LLM source no longer exists. Foundry Local is Microsoft, local, no account. Gemini's free API key gives better quality for baking. |
 | Hours moved from stats to agents | Stats are pure functions; the Agent Framework is the unfamiliar part. |
 
 ## Phase 0 findings
 
+- **GitHub Models is retired** (2026-07-30). `models.github.ai` now answers every request with a plain `200 OK`.
 - Agent Framework is installed as `agent-framework-core` + `agent-framework-openai` + `agent-framework-orchestrations` (1.x). The `agent-framework` meta-package pulls in ~30 unused integrations.
-- `OpenAIChatClient` targets the Responses API. GitHub Models uses Chat Completions, so we use `OpenAIChatCompletionClient` with `base_url`. No adapter needed (`backend/src/matchmind/llm/client.py`).
-- Still to confirm with a real token: the model ID `openai/gpt-4.1-mini` and its rate-limit tier.
+- All providers go through Agent Framework's `OpenAIChatCompletionClient` (Chat Completions). `OpenAIChatClient` targets the Responses API, which these endpoints don't support.
+- Agent Framework's own Foundry Local connector pins `foundry-local-sdk` 0.5.x, which calls the removed `foundry service` CLI command. Our adapter (`llm/foundry_local.py`) uses SDK 2.x instead: in-process load + its built-in OpenAI-compatible web service.
+- Dev machine: 2-core i7-5600U, 8 GB RAM, no usable GPU, so only CPU models up to ~2B parameters. `qwen3.5-2b-text` fails on the SDK's ONNX runtime (position_ids rank error); using `qwen2.5-1.5b`. Measured: warm model load ~23 s, one short reply ~7 s. Implication: live mode must batch LLM calls (key moments + ~10-minute windows), and demo baking runs unattended.
 
 ## Architecture
 
