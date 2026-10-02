@@ -113,6 +113,20 @@ def test_all_providers_failing_raises_with_full_history():
     ]
 
 
+def test_skip_provider_and_extra_retries():
+    local = FakeProvider("foundry_local:tiny", [Out(text="never used")])
+    remote = FakeProvider("gemini:x", [Out(text="bad 1"), Out(text="bad 2"), Out(text="good")])
+    gw = LLMGateway([remote, local])
+    res = run(
+        gw,
+        check=lambda v: ["bad"] if "bad" in v.text else [],
+        skip_provider=lambda name: name.startswith("foundry_local:"),
+        invalid_retries=2,
+    )
+    assert res.value.text == "good" and local.prompts == []
+    assert [a.outcome for a in res.attempts].count(AttemptOutcome.REJECTED) == 2
+
+
 def test_cache_serves_repeat_requests(tmp_path):
     a = FakeProvider("a", [Out(text="once")])
     gw = LLMGateway([a], ResponseCache(tmp_path))

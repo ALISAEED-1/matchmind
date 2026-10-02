@@ -191,9 +191,9 @@ class PersonalizerAgent:
         "supporter.\n"
         "- analyst: precise and tactical; include the key numbers from FACTS.\n"
         "- player_focus: centre the text on the player in FACTS.\n"
-        "- Languages: en = English, ur = Urdu in Urdu script, ar = Modern Standard Arabic in "
-        "Arabic script. Keep player and club names in English letters. Use Western digits "
-        "(0-9).\n"
+        "- Languages: en = English; ur = Urdu written in Urdu (Arabic) script, NEVER Roman "
+        "Urdu, and that includes the title; ar = Modern Standard Arabic in Arabic script. "
+        "Only player and club names stay in English letters. Use Western digits (0-9).\n"
         "- title at most 8 words, body at most 2 sentences, why_it_matters 1 sentence.\n" + _RULES
     )
 
@@ -212,6 +212,7 @@ class PersonalizerAgent:
         on_attempt: OnAttempt | None = None,
     ) -> LLMResult[PersonalizedOut]:
         wanted = [{"language": lang.value, "audience": aud.value} for lang, aud in targets]
+        non_english = any(lang is not Language.EN for lang, _ in targets)
         request: dict[str, Any] = {
             "base_card": {"title": base_title, "body": base_body, "why_it_matters": base_why or ""},
             "produce_exactly": wanted,
@@ -251,4 +252,8 @@ class PersonalizerAgent:
             schema=PersonalizedOut,
             check=check,
             on_attempt=on_attempt,
+            # A 1.5B on-device model can't write reliable Urdu/Arabic, and each attempt costs
+            # a minute on CPU; for those languages the chain goes Gemini -> verified templates.
+            skip_provider=(lambda name: name.startswith("foundry_local:")) if non_english else None,
+            invalid_retries=2 if non_english else None,
         )

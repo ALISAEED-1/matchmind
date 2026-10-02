@@ -253,7 +253,11 @@ class LLMGateway:
         schema: type[T],
         check: Check | None = None,
         on_attempt: OnAttempt | None = None,
+        skip_provider: Callable[[str], bool] | None = None,
+        invalid_retries: int | None = None,
     ) -> LLMResult[T]:
+        """`skip_provider(name)` excludes providers unsuited to this request (e.g. a small
+        local model for Urdu); `invalid_retries` overrides the corrective-retry budget."""
         attempts: list[Attempt] = []
 
         def record(a: Attempt) -> None:
@@ -269,12 +273,13 @@ class LLMGateway:
                 return LLMResult(value, provider, attempts, cached=True)
 
         now = time.monotonic()
-        ordered = [p for p in self.providers if self._cooldown_until.get(p.name, 0) <= now]
-        ordered += [p for p in self.providers if p not in ordered]  # cooling ones last, not never
+        usable = [p for p in self.providers if not (skip_provider and skip_provider(p.name))]
+        ordered = [p for p in usable if self._cooldown_until.get(p.name, 0) <= now]
+        ordered += [p for p in usable if p not in ordered]  # cooling ones last, not never
 
         for provider in ordered:
             feedback: list[str] = []
-            invalid_left = self.max_invalid_retries
+            invalid_left = self.max_invalid_retries if invalid_retries is None else invalid_retries
             transient_left = self.max_transient_retries
             while True:
                 full_prompt = prompt if not feedback else _with_feedback(prompt, feedback)
