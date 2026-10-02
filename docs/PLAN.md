@@ -15,6 +15,14 @@ This file records the agreed architecture and schedule, plus changes from the br
 | **LLM provider: Foundry Local + Gemini** (switch: `LLM_PROVIDER`) | GitHub Models was retired on 2026-07-30, so the brief's LLM source no longer exists. Foundry Local is Microsoft, local, no account. Gemini's free API key gives better quality for baking. |
 | Hours moved from stats to agents | Stats are pure functions; the Agent Framework is the unfamiliar part. |
 
+## Progress
+
+| Phase | Planned | Done |
+|---|---|---|
+| 0 Setup | Oct 3 | Oct 3 |
+| 1 Data generator | Oct 4–6 | Oct 3 |
+| 2 Stats engine | Oct 7–8 | Oct 3 |
+
 ## Phase 0 findings
 
 - **GitHub Models is retired** (2026-07-30). `models.github.ai` now answers every request with a plain `200 OK`.
