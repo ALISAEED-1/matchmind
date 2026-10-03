@@ -17,6 +17,7 @@ Moment ids are stable, so live mode can de-duplicate across windows.
 
 from __future__ import annotations
 
+from bisect import bisect_left
 from collections import Counter
 from collections.abc import Sequence
 from dataclasses import dataclass, field
@@ -216,10 +217,16 @@ def _trend_moments(events: Sequence[Event]) -> list[Moment]:
     last_surge = {Side.HOME: -99, Side.AWAY: -99}
     last_chaos = -99
     prev_chaos = 0.0
+    # Events are time-ordered: binary-search each window instead of rescanning the prefix
+    # (keeps detection linear per call; it runs every replay window in live mode).
+    stamps = [e.timestamp_ms for e in events]
+
+    def between(lo_ms: int, hi_ms: int) -> Sequence[Event]:
+        """Events with lo_ms <= timestamp_ms < hi_ms."""
+        return events[bisect_left(stamps, lo_ms) : bisect_left(stamps, hi_ms)]
 
     for p in complete:
         boundary = (p.t_min + 1) * 60_000
-        before = [e for e in events if e.timestamp_ms < boundary]
         meta = {"period": p.period, "minute": p.minute}
 
         # Momentum shift: a big swing towards one side.
@@ -245,9 +252,11 @@ def _trend_moments(events: Sequence[Event]) -> list[Moment]:
         if boundary < WINDOW_MS:
             continue
         start = boundary - WINDOW_MS
+        recent = between(start, boundary)
+        earlier = between(max(0, start - WINDOW_MS), start)
         for side in Side:
-            now = pressure_index(before, side, start, boundary - 1)
-            prior = pressure_index(before, side, max(0, start - WINDOW_MS), start - 1)
+            now = pressure_index(recent, side, start, boundary - 1)
+            prior = pressure_index(earlier, side, max(0, start - WINDOW_MS), start - 1)
             if (
                 now >= PRESSURE_SURGE_LEVEL
                 and now - prior >= PRESSURE_SURGE_RISE
@@ -266,7 +275,7 @@ def _trend_moments(events: Sequence[Event]) -> list[Moment]:
                     )
                 )
 
-        chaos = control_chaos(before, start, boundary - 1)
+        chaos = control_chaos(recent, start, boundary - 1)
         if (
             chaos.index >= CHAOS_SPELL_LEVEL
             and prev_chaos < CHAOS_SPELL_LEVEL

@@ -110,22 +110,37 @@ class NarratorAgent:
         self.verifier = verifier
 
     async def commentate(
-        self, mf: MomentFacts, insight: InsightOut | None, on_attempt: OnAttempt | None = None
+        self,
+        mf: MomentFacts,
+        insight: InsightOut | None,
+        on_attempt: OnAttempt | None = None,
+        language: Language = Language.EN,
     ) -> LLMResult[CommentaryOut]:
+        """Commentary in the viewer's language (live mode) or English (demo bundles)."""
         insight_block = (
             "\n\nINSIGHT:\n" + insight.model_dump_json(indent=1) if insight is not None else ""
         )
+        instructions = self.instructions
+        if language is not Language.EN:
+            instructions = instructions.replace(
+                "English only.",
+                f"Write the line in {LANGUAGE_NAMES[language]}, never in Roman letters; only "
+                "player and club names stay in English letters. Use Western digits (0-9).",
+            )
 
         def check(v: CommentaryOut) -> list[str]:
-            return self.verifier.check_text({"line": v.line}, mf.facts)
+            return self.verifier.check_text({"line": v.line}, mf.facts, language.value)
 
+        non_english = language is not Language.EN
         return await self.gateway.generate(
             agent_name=self.name,
-            instructions=self.instructions,
+            instructions=instructions,
             prompt=_facts_block(mf.facts) + insight_block + "\n\nWrite the commentary line.",
             schema=CommentaryOut,
             check=check,
             on_attempt=on_attempt,
+            skip_provider=(lambda name: name.startswith("foundry_local:")) if non_english else None,
+            invalid_retries=2 if non_english else None,
         )
 
     async def recap(

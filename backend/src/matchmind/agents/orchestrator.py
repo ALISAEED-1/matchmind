@@ -44,7 +44,7 @@ from matchmind.agents.llm_agents import (
     ViewerProfile,
 )
 from matchmind.agents.stats_source import StatsSource
-from matchmind.agents.templates import CARD_TYPE, render
+from matchmind.agents.templates import CARD_TYPE, COMMENTARY_TITLE, render
 from matchmind.agents.verifier import Verifier
 from matchmind.cards import Audience, CardType, Language, OverlayCard
 from matchmind.llm.gateway import AllProvidersFailed, Attempt, AttemptOutcome, LLMGateway
@@ -63,6 +63,7 @@ class PipelineConfig:
     full_threshold: float = 0.6  # insight + commentary + personalization
     insight_threshold: float = 0.45  # insight + personalization
     llm_enabled: bool = True
+    commentary_language: Language = Language.EN  # live mode: the viewer's language
     breaker_failures: int = 3  # consecutive all-provider failures before degrading
     breaker_cooldown_moments: int = 6  # template-only moments before trying the LLM again
 
@@ -277,9 +278,9 @@ class InsightExecutor(Executor):
 
 
 class NarratorExecutor(Executor):
-    def __init__(self, state: MatchState, agent: NarratorAgent):
+    def __init__(self, state: MatchState, agent: NarratorAgent, config: PipelineConfig):
         super().__init__(id="narrator_agent")
-        self.state, self.agent = state, agent
+        self.state, self.agent, self.config = state, agent, config
 
     @handler
     async def on_draft(self, draft: Draft, ctx: WorkflowContext[Draft]) -> None:
@@ -288,7 +289,10 @@ class NarratorExecutor(Executor):
             log = attempt_logger(self.state, self.agent.name, moment)
             try:
                 result = await self.agent.commentate(
-                    draft.task.facts, draft.insight, on_attempt=log
+                    draft.task.facts,
+                    draft.insight,
+                    on_attempt=log,
+                    language=self.config.commentary_language,
                 )
                 draft.commentary, draft.providers[self.agent.name] = result.value, result.provider
             except AllProvidersFailed:
@@ -485,9 +489,9 @@ class PersonalizerExecutor(Executor):
             cards.append(
                 self.factory.card(
                     moment,
-                    Language.EN,
+                    self.config.commentary_language,
                     Audience.FAN,
-                    title,
+                    COMMENTARY_TITLE.get(self.config.commentary_language) or title,
                     draft.commentary.line,
                     None,
                     source_agent="narrator_agent",
@@ -554,7 +558,7 @@ class MatchOrchestrator:
         stats = StatsAgentExecutor(state, source, builder)
         producer = ProducerExecutor(state, self.config)
         insight = InsightExecutor(state, InsightAgent(gateway, verifier))
-        narrator = NarratorExecutor(state, NarratorAgent(gateway, verifier))
+        narrator = NarratorExecutor(state, NarratorAgent(gateway, verifier), self.config)
         personalizer = PersonalizerExecutor(
             state, PersonalizerAgent(gateway, verifier), self.config
         )

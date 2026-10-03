@@ -419,10 +419,10 @@ TEMPLATES: dict[str, dict[Language, dict[Audience, Template]]] = {
     },
 }
 
-COMMENTARY_TEMPLATES: dict[Language, str] = {
-    Language.EN: "{minute}: {title}.",
-    Language.UR: "{minute}: {title}",
-    Language.AR: "{minute}: {title}",
+# Title of commentary cards in non-English live sessions (English uses the insight title).
+COMMENTARY_TITLE: dict[Language, str] = {
+    Language.UR: "کمنٹری",
+    Language.AR: "تعليق",
 }
 
 CARD_TYPE: dict[MomentKind, CardType] = {
