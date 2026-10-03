@@ -95,7 +95,8 @@ def main() -> None:
         description="Explains why a match moment matters, from FACTS JSON",
     )
     entities = [build_workflow(gateway), build_copilot_agent(), insight]
-    serve(entities=entities, port=8080, auto_open=True)
+    # Bound to 127.0.0.1 only (this machine), so the access token is off for convenience.
+    serve(entities=entities, port=8080, host="127.0.0.1", auto_open=True, auth_enabled=False)
 
 
 if __name__ == "__main__":
