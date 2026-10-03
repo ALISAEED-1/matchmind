@@ -12269,5 +12269,54 @@
    "status": "ok",
    "detail": "6 cards"
   }
+ ],
+ "qa": [
+  {
+   "match_id": "mm-0003-red_card",
+   "question": "How does the red card change this match?",
+   "answer": "At 32', Kestrel Vale's Felix Montaval received a red card, fundamentally shifting this match's dynamics. Kestrel Vale leads 1-0 after Mateo Tavrelle's goal at 24', but now must play the final 58 minutes with ten men. This devastating change forces Kestrel Vale to become far more defensive despite their possession advantage (64 per cent). Duncairn Harbour, who trail but have generated higher xG (0.45 vs 0.12), now face a numerical advantage. The away side's superior shot volume and intensity—evidenced by their rocket shots earlier—becomes even more threatening. Kestrel Vale must abandon their attacking approach to protect their lead with reduced personnel.",
+   "language": "en",
+   "until_ms": 1863163,
+   "minute": "32'",
+   "provider": "github-copilot",
+   "tools_used": [
+    "key_moments",
+    "match_snapshot"
+   ],
+   "latency_ms": 37159,
+   "fallback_used": false
+  },
+  {
+   "match_id": "mm-0003-red_card",
+   "question": "How did Duncairn Harbour turn the game around?",
+   "answer": "Based on the match data, Duncairn Harbour turned the game around dramatically. The momentum timeline shows Kestrel Vale dominated the first half, particularly at 45+2' and 45+3' when home momentum surged. However, Duncairn Harbour's second-half performance was exceptional. From 74' onwards (the 75' mark), Duncairn Harbour's momentum reached historic highs—hitting 0.796 at 76' and 0.922 at 78', with massive threat generation. Striker Samir Esperon was instrumental, recording 2 goals from 14 shots totaling 2.53 xG. Despite holding less possession (44%), Duncairn Harbour out-shot Kestrel Vale 19-5 and created three big chances, ultimately winning 2-1.",
+   "language": "en",
+   "until_ms": 5826392,
+   "minute": "90+4'",
+   "provider": "github-copilot",
+   "tools_used": [
+    "match_snapshot",
+    "momentum_timeline",
+    "key_moments"
+   ],
+   "latency_ms": 25667,
+   "fallback_used": false
+  },
+  {
+   "match_id": "mm-0003-red_card",
+   "question": "ما الذي غيّره الطرد في هذه المباراة؟",
+   "answer": "الطرد الأحمر لـ Felix Montaval في الدقيقة 32' غيّر مسار المباراة بشكل جذري. كان Kestrel Vale متقدماً 1-0 بعد هدف Mateo Tavrelle في الدقيقة 24'، لكن اللعب برجل أقل أضعف من موقفهم دفاعياً. استفاد Duncairn Harbour من الأفضلية العددية وحقق التعادل في الدقيقة 58' عبر Samir Esperon، ثم سجل هدف الفوز في الدقيقة 78'. انتهت المباراة بفوز Duncairn Harbour 2-1 رغم تصدر Kestrel Vale في البداية قبل الطرد.",
+   "language": "ar",
+   "until_ms": 5826392,
+   "minute": "90+4'",
+   "provider": "github-copilot",
+   "tools_used": [
+    "key_moments",
+    "match_snapshot",
+    "momentum_timeline"
+   ],
+   "latency_ms": 31916,
+   "fallback_used": false
+  }
  ]
 }

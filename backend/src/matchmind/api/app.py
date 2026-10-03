@@ -7,6 +7,7 @@ Run from backend/:  uv run uvicorn matchmind.api.app:app --reload
     GET  /api/matches/{match_id}      full match: meta + events
     GET  /api/demo                    demo bundles available
     GET  /api/demo/{match_id}         pre-baked demo bundle (cards, handoffs, recap, timeline)
+    POST /api/ask                     Ask MatchMind: GitHub Copilot agent + MCP stats tools
     WS   /ws/live/{match_id}          live replay with the agent team (see api/live.py)
          query: speed, audience, language, club, player, llm=0|1, outage=0|1
 """
@@ -18,16 +19,20 @@ import json
 import os
 from contextlib import suppress
 from functools import cache
+from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field
 
+from matchmind.agents.ask import AskAnswer, AskMatchMind
 from matchmind.agents.llm_agents import ViewerProfile
 from matchmind.api.live import LiveSession, SessionOptions
 from matchmind.bake import CACHE_DIR, DEMO_DIR
 from matchmind.cards import Audience, Language
-from matchmind.config import ConfigError, load_settings
+from matchmind.config import REPO_ROOT, ConfigError, load_settings
 from matchmind.generator import MATCHES_DIR
 from matchmind.llm.gateway import LLMGateway, ResponseCache
 from matchmind.models import Match
@@ -41,11 +46,26 @@ def _match(match_id: str) -> Match:
     return Match.load(path)
 
 
-def create_app(gateway: LLMGateway | None = None, use_mcp: bool | None = None) -> FastAPI:
+class AskRequest(BaseModel):
+    match_id: str
+    question: str = Field(min_length=3, max_length=400)
+    until_ms: int | None = Field(
+        default=None, description="Match time to answer at (default: full match)"
+    )
+    language: Language = Language.EN
+
+
+def create_app(
+    gateway: LLMGateway | None = None,
+    use_mcp: bool | None = None,
+    asker: AskMatchMind | None = None,
+    web_dir: Path | None = None,
+) -> FastAPI:
     app = FastAPI(title="MatchMind", version="0.1.0")
+    app.state.asker = asker
     # Local development and the static web app call this API from another origin.
     app.add_middleware(
-        CORSMiddleware, allow_origins=["*"], allow_methods=["GET"], allow_headers=["*"]
+        CORSMiddleware, allow_origins=["*"], allow_methods=["GET", "POST"], allow_headers=["*"]
     )
     app.state.gateway = gateway
     app.state.use_mcp = (
@@ -99,6 +119,17 @@ def create_app(gateway: LLMGateway | None = None, use_mcp: bool | None = None) -
             raise HTTPException(404, f"no demo bundle for {match_id!r}")
         return json.loads(path.read_text(encoding="utf-8"))
 
+    @app.post("/api/ask")
+    async def ask(req: AskRequest) -> AskAnswer:
+        """Ask MatchMind (GitHub Copilot agent + MCP stats tools) a question about a match."""
+        if app.state.asker is None:
+            app.state.asker = AskMatchMind(gateway=get_gateway())
+        match = _match(req.match_id)
+        try:
+            return await app.state.asker.ask(match, req.question, req.until_ms, req.language)
+        except ValueError as exc:
+            raise HTTPException(400, str(exc)) from exc
+
     @app.websocket("/ws/live/{match_id}")
     async def live(ws: WebSocket, match_id: str) -> None:
         await ws.accept()
@@ -143,6 +174,14 @@ def create_app(gateway: LLMGateway | None = None, use_mcp: bool | None = None) -
                 await listener
         with suppress(RuntimeError):
             await ws.close()
+
+    # Serve the built Flutter web app at "/" when present (Codespaces, local runs), so the
+    # UI and the live API share one origin. Mounted last: API routes above take priority.
+    web = Path(os.getenv("MATCHMIND_WEB_DIR", REPO_ROOT / "frontend" / "build" / "web"))
+    if web_dir is not None:
+        web = web_dir
+    if (web / "index.html").exists():
+        app.mount("/", StaticFiles(directory=web, html=True), name="web")
 
     return app
 

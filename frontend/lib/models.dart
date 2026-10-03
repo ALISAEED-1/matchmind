@@ -314,6 +314,43 @@ class Recap {
   final List<String> turningPoints;
 }
 
+/// An "Ask MatchMind" answer (GitHub Copilot agent + MCP stats tools).
+class AskAnswer {
+  AskAnswer({
+    required this.question,
+    required this.answer,
+    required this.language,
+    required this.untilMs,
+    required this.minute,
+    required this.provider,
+    required this.toolsUsed,
+    required this.latencyMs,
+    required this.fallbackUsed,
+  });
+
+  factory AskAnswer.fromJson(Map<String, dynamic> j) => AskAnswer(
+    question: j['question'] as String,
+    answer: j['answer'] as String,
+    language: (j['language'] as String?) ?? 'en',
+    untilMs: _i(j['until_ms']),
+    minute: j['minute'] as String,
+    provider: j['provider'] as String,
+    toolsUsed: [for (final t in (j['tools_used'] as List? ?? const [])) t as String],
+    latencyMs: _i(j['latency_ms']),
+    fallbackUsed: (j['fallback_used'] as bool?) ?? false,
+  );
+
+  final String question;
+  final String answer;
+  final String language;
+  final int untilMs;
+  final String minute;
+  final String provider;
+  final List<String> toolsUsed;
+  final int latencyMs;
+  final bool fallbackUsed;
+}
+
 class MatchSummary {
   MatchSummary({
     required this.matchId,

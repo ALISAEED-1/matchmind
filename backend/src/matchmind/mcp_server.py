@@ -18,6 +18,7 @@ from typing import Any
 
 from mcp.server.fastmcp import FastMCP
 
+from matchmind.agents.facts import display_minute
 from matchmind.generator import MATCHES_DIR
 from matchmind.models import Event, EventType, Match
 from matchmind.stats import (
@@ -54,10 +55,20 @@ def _until(match_id: str, until_ms: int | None) -> tuple[Match, list[Event]]:
     return match, [e for e in match.events if e.timestamp_ms <= until_ms]
 
 
-def _moment_dict(m) -> dict[str, Any]:
+def _moment_dict(m, match: Match) -> dict[str, Any]:
+    """A moment as JSON, with names next to ids so clients never have to quote raw ids."""
     d = asdict(m)
     d["kind"] = m.kind.value
     d["team"] = m.team.value if m.team else None
+    d["clock"] = display_minute(m.period, m.minute)
+    if m.team:
+        d["team_name"] = match.club(m.team).name
+    names = {p.id: p.name for c in (match.meta.home, match.meta.away) for p in c.players}
+    if m.player_id in names:
+        d["player_name"] = names[m.player_id]
+    for key, value in list(d["data"].items()):
+        if key.endswith("player_id") and value in names:
+            d["data"][key.removesuffix("_id") + "_name"] = names[value]
     return d
 
 
@@ -85,7 +96,8 @@ def match_snapshot(match_id: str, until_ms: int | None = None) -> dict[str, Any]
     match, events = _until(match_id, until_ms)
     if not events:
         raise ValueError("No events before until_ms.")
-    return compute_snapshot(match.meta, events).model_dump(mode="json")
+    snap = compute_snapshot(match.meta, events)
+    return {**snap.model_dump(mode="json"), "clock": display_minute(snap.period, snap.minute)}
 
 
 @mcp.tool()
@@ -96,9 +108,9 @@ def key_moments(
     min_importance: float = 0.0,
 ) -> list[dict[str, Any]]:
     """Key moments (goals, big chances, momentum shifts, pressure surges...), importance 0-1."""
-    _, events = _until(match_id, until_ms)
+    match, events = _until(match_id, until_ms)
     return [
-        _moment_dict(m)
+        _moment_dict(m, match)
         for m in detect_moments(events)
         if m.timestamp_ms >= since_ms and m.importance >= min_importance
     ]
@@ -115,7 +127,9 @@ def player_stats(match_id: str, player_id: str, until_ms: int | None = None) -> 
 def momentum_timeline(match_id: str, until_ms: int | None = None) -> list[dict[str, Any]]:
     """Per-minute momentum (-1 away .. +1 home) with each side's smoothed threat."""
     _, events = _until(match_id, until_ms)
-    return [asdict(p) for p in momentum_series(events)]
+    return [
+        {**asdict(p), "clock": display_minute(p.period, p.minute)} for p in momentum_series(events)
+    ]
 
 
 @mcp.tool()

@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:http/http.dart' as http;
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 import 'models.dart';
@@ -22,6 +23,7 @@ class DemoBundle {
     required this.recap,
     required this.counters,
     required this.llmChain,
+    required this.qa,
   });
 
   factory DemoBundle.fromJson(Map<String, dynamic> j) => DemoBundle(
@@ -31,6 +33,7 @@ class DemoBundle {
     recap: j['recap'] == null ? null : Recap.fromJson(j['recap'] as Map<String, dynamic>),
     counters: (j['counters'] as Map<String, dynamic>).map((k, v) => MapEntry(k, (v as num).toInt())),
     llmChain: [for (final s in (j['pipeline'] as Map<String, dynamic>)['llm_chain'] as List) s as String],
+    qa: [for (final a in (j['qa'] as List? ?? const [])) AskAnswer.fromJson(a as Map<String, dynamic>)],
   );
 
   final List<OverlayCard> cards;
@@ -39,6 +42,24 @@ class DemoBundle {
   final Recap? recap;
   final Map<String, int> counters;
   final List<String> llmChain;
+  final List<AskAnswer> qa;
+}
+
+/// POST /api/ask on the live backend.
+Future<AskAnswer> askBackend({
+  required String baseUrl,
+  required String matchId,
+  required String question,
+  required int untilMs,
+  required String language,
+}) async {
+  final res = await http.post(
+    Uri.parse(baseUrl).replace(path: '/api/ask'),
+    headers: {'content-type': 'application/json'},
+    body: jsonEncode({'match_id': matchId, 'question': question, 'until_ms': untilMs, 'language': language}),
+  );
+  if (res.statusCode != 200) throw Exception('Ask failed (${res.statusCode}): ${res.body}');
+  return AskAnswer.fromJson(jsonDecode(utf8.decode(res.bodyBytes)) as Map<String, dynamic>);
 }
 
 class DemoRepository {

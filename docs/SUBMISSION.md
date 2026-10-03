@@ -14,22 +14,26 @@ the **Microsoft Agent Framework**, turns a live stream of match events into expl
 intelligence: a Stats agent computes every number in code through an **MCP** server; a Producer
 routes each moment by importance; Insight, Narrator and Personalizer agents explain why the moment
 matters, commentate, and rewrite every card for fans or analysts in English, Urdu and Arabic. A
-deterministic Verifier checks every answer against the facts, so no statistic is ever invented.
-When models fail, the system recovers visibly: corrective retries, fallback across models down
-to **Microsoft Foundry Local** on-device, verified template cards, and a circuit breaker. Every
-handoff is logged and shown in a debug drawer. The output is a set of timed, machine-readable
-overlay cards that can sit on screen alongside the match. All data is synthetic, from a seeded
-match generator with calibrated metrics.
+deterministic Verifier checks every answer against the facts, so no statistic or scoreline is
+misreported. Viewers can also **ask questions**: a **GitHub Copilot** agent answers by calling the
+same MCP tools. When models fail, the system recovers visibly, falling back down to **Microsoft
+Foundry Local** on-device, then verified templates, behind a circuit breaker. Every handoff is
+logged in a debug drawer. Output: timed, machine-readable overlay cards for the screen alongside
+the match. All data is synthetic and calibrated.
 
 ## Microsoft technology used
 
 - **Microsoft Agent Framework (Python):** the orchestration workflow (executors, switch-case
-  routing, shared state), every LLM agent (`Agent` with structured output), and the MCP client
-  (`MCPStdioTool`)
-- **Microsoft Foundry Local:** on-device model (`qwen2.5-1.5b`) in the provider chain, via the
-  Foundry Local SDK
-- **Model Context Protocol:** the stats engine as an MCP server usable by any MCP client
-- **GitHub Actions:** CI (Python lint and tests, Flutter analyze and tests) and the Pages deployment
+  routing, shared state), every LLM agent (`Agent` with structured output), the MCP client
+  (`MCPStdioTool`), `WorkflowViz` for the architecture diagram, and **DevUI** for debugging
+- **GitHub Copilot SDK** through Agent Framework's `GitHubCopilotAgent`: the Ask MatchMind agent,
+  locked to read-only MCP tools
+- **Microsoft Foundry Local:** on-device models (`qwen2.5-1.5b`, Microsoft **Phi-3.5-mini**) in the
+  provider chain, via the Foundry Local SDK
+- **Model Context Protocol:** the stats engine as an MCP server, used by our agents and by Copilot
+- **GitHub Codespaces:** dev container for a one-click live environment
+- **GitHub Actions:** CI (Python lint and tests, Flutter analyze and tests), Pages deployment and the
+  web release used by Codespaces
 - Google Gemini's free API is used first in the chain for text quality; Foundry Local is the
   local fallback
 
@@ -59,6 +63,15 @@ Shortcut links:
 (`seek` is minutes of play since kickoff, including first-half stoppage time.)
 - Agent handoff drawer: https://alisaeed-1.github.io/matchmind/?match=mm-0003-red_card&seek=40&audience=analyst&drawer=1
 - Recap: https://alisaeed-1.github.io/matchmind/?match=mm-0020-late_winner&recap=1
+- Ask MatchMind (Copilot answers): https://alisaeed-1.github.io/matchmind/?match=mm-0004-comeback&seek=100&ask=1
+
+**Live agents in one click (about 5 minutes, GitHub account only):**
+1. Click **Open in GitHub Codespaces** in the README. Optionally add a free `GEMINI_API_KEY`
+   when prompted (better text); without it the agents use Microsoft Foundry Local.
+2. When port 8000 opens, choose a match: Live agents mode is selected by default.
+3. Open the hub drawer and flip **Simulate model outage** to watch recovery live; open the
+   speech-bubble icon to ask the GitHub Copilot agent a question (uses your Copilot access if
+   available, otherwise the fallback model).
 
 **Live agents (optional, about 10 minutes, Windows/macOS/Linux):**
 1. Install [uv](https://docs.astral.sh/uv/). Optional: a free Gemini key in `.env`, or install

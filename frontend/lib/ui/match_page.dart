@@ -9,6 +9,7 @@ import 'debug_drawer.dart';
 import 'panels.dart';
 import 'pitch_view.dart';
 import 'recap_page.dart';
+import 'ask_sheet.dart';
 import 'settings_sheet.dart';
 
 final _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -50,9 +51,9 @@ class MatchPage extends StatelessWidget {
       );
     }
 
-    if (c.openDrawerOnLoad || c.openRecapOnLoad) {
-      final drawer = c.openDrawerOnLoad, recap = c.openRecapOnLoad;
-      c.openDrawerOnLoad = c.openRecapOnLoad = false;
+    if (c.openDrawerOnLoad || c.openRecapOnLoad || c.openAskOnLoad) {
+      final drawer = c.openDrawerOnLoad, recap = c.openRecapOnLoad, ask = c.openAskOnLoad;
+      c.openDrawerOnLoad = c.openRecapOnLoad = c.openAskOnLoad = false;
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (recap) {
           c.seekTo(c.events.last.ts.toDouble());
@@ -63,6 +64,8 @@ class MatchPage extends StatelessWidget {
           );
         } else if (drawer) {
           _scaffoldKey.currentState?.openEndDrawer();
+        } else if (ask) {
+          showAsk(_scaffoldKey.currentContext ?? context);
         }
       });
     }
@@ -89,6 +92,11 @@ class MatchPage extends StatelessWidget {
                 style: t.titleMedium?.copyWith(fontWeight: FontWeight.w800, color: MM.highlight),
               ),
             ),
+          ),
+          IconButton(
+            tooltip: 'Ask MatchMind (GitHub Copilot agent)',
+            icon: const Icon(Icons.forum_outlined),
+            onPressed: () => showAsk(context),
           ),
           IconButton(tooltip: 'Viewer profile', icon: const Icon(Icons.tune), onPressed: () => showSettings(context)),
           Builder(
@@ -222,13 +230,15 @@ extension on _MainColumn {
         Positioned(
           top: 12,
           right: 12,
-          width: wide ? 380 : 280,
+          width: wide ? 380 : 260,
           child: OverlayStack(
-            cards: c.activeCards,
+            // Narrow screens: one compact card so the pitch stays visible.
+            cards: wide ? c.activeCards : c.activeCards.take(1).toList(),
+            compact: !wide,
             lang: c.language,
             isFavourite: (card) =>
                 c.isFavourite(card.team) || (card.playerId != null && card.playerId == c.favouritePlayerId),
-            showSource: c.audience == Audience.analyst,
+            showSource: wide && c.audience == Audience.analyst,
           ),
         ),
         if (c.clockMs == 0 && !c.playing)

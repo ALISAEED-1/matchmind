@@ -127,12 +127,14 @@ class OverlayStack extends StatelessWidget {
     required this.lang,
     required this.isFavourite,
     required this.showSource,
+    this.compact = false,
   });
 
   final List<OverlayCard> cards;
   final Lang lang;
   final bool Function(OverlayCard) isFavourite;
   final bool showSource;
+  final bool compact;
 
   @override
   Widget build(BuildContext context) {
@@ -152,7 +154,7 @@ class OverlayStack extends StatelessWidget {
                 opacity: v,
                 child: Transform.translate(offset: Offset(40 * (1 - v), 0), child: child),
               ),
-              child: CardTile(card: c, lang: lang, favourite: isFavourite(c), showSource: showSource),
+              child: CardTile(card: c, lang: lang, favourite: isFavourite(c), showSource: showSource, compact: compact),
             ),
           ),
       ],

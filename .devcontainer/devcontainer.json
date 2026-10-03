@@ -1,0 +1,23 @@
+{
+  "name": "MatchMind",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+  "hostRequirements": { "cpus": 2, "memory": "8gb" },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start.sh",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": { "label": "MatchMind (web app + live API)", "onAutoForward": "openBrowser" }
+  },
+  "secrets": {
+    "GEMINI_API_KEY": {
+      "description": "Optional. A free Google Gemini key for higher-quality agent text. Without it the agents run on Microsoft Foundry Local inside the Codespace (slower first start).",
+      "documentationUrl": "https://aistudio.google.com/apikey"
+    }
+  },
+  "customizations": {
+    "codespaces": { "openFiles": ["README.md"] },
+    "vscode": {
+      "extensions": ["ms-python.python", "charliermarsh.ruff", "GitHub.copilot", "GitHub.copilot-chat"]
+    }
+  }
+}

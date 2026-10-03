@@ -14081,5 +14081,52 @@
    "status": "ok",
    "detail": "6 cards"
   }
+ ],
+ "qa": [
+  {
+   "match_id": "mm-0020-late_winner",
+   "question": "Who is on top at half time, and why?",
+   "answer": "At 46', Rivermouth Rovers lead 1-0 and are on top. Despite near-equal possession at 50.2%, they've been more clinical and dangerous. Rovers have six shots on target compared to Duncairn's three, and their xG of 1.18 beats Harbour's 0.97. Leon Navarel's early goal was clinical finishing. Harbour have had three big chances but haven't converted. Rovers' higher pressure intensity and better passing accuracy of 91.4% gives them control despite Harbour's slightly higher expected goals from open play.",
+   "language": "en",
+   "until_ms": 2931953,
+   "minute": "46'",
+   "provider": "github-copilot",
+   "tools_used": [
+    "match_snapshot"
+   ],
+   "latency_ms": 23563,
+   "fallback_used": false
+  },
+  {
+   "match_id": "mm-0020-late_winner",
+   "question": "How was the late winner created?",
+   "answer": "Based on the match data, Duncairn Harbour's late winner in the 90+3' came from Samir Esperon, who received a perfectly-timed assist from Kenji Gravell. Esperon struck the ball powerfully from a dangerous position, sending it past the Rivermouth Rovers goalkeeper at 77.1 km/h with an xG value of 0.292. This clinical finish turned the match around, as Duncairn had trailed 1-0 earlier before equalizing through Amir Vasconel in the 66'.",
+   "language": "en",
+   "until_ms": 5889523,
+   "minute": "90+6'",
+   "provider": "github-copilot",
+   "tools_used": [
+    "key_moments",
+    "match_snapshot",
+    "explain_event"
+   ],
+   "latency_ms": 25864,
+   "fallback_used": false
+  },
+  {
+   "match_id": "mm-0020-late_winner",
+   "question": "Was the result fair, judging by the chances?",
+   "answer": "The result was **not fair** based on the chances. Rivermouth Rovers dominated the xG significantly with 2.38 compared to Duncairn Harbour's 1.91. Rovers also created more big chances (5 vs. 2) and had more shots on target (13 vs. 6). Yet Duncairn won 2-1 in their comeback late, particularly around the 84' onwards when momentum shifted dramatically in their favour. Rovers likely felt robbed—they created better chances throughout but failed to convert.",
+   "language": "en",
+   "until_ms": 5889523,
+   "minute": "90+6'",
+   "provider": "github-copilot",
+   "tools_used": [
+    "match_snapshot",
+    "key_moments"
+   ],
+   "latency_ms": 27497,
+   "fallback_used": false
+  }
  ]
 }

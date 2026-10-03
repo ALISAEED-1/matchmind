@@ -34,6 +34,9 @@ class MatchController extends ChangeNotifier {
   Recap? recap;
   Map<String, int> counters = {};
   List<String> llmChain = [];
+  List<AskAnswer> qa = []; // demo: pre-asked; live: asked in this session
+  bool asking = false;
+  String? askError;
   String? error;
   bool loading = true;
 
@@ -67,6 +70,7 @@ class MatchController extends ChangeNotifier {
   // Deep-link actions the page performs once loaded (?drawer=1, ?recap=1).
   bool openDrawerOnLoad = false;
   bool openRecapOnLoad = false;
+  bool openAskOnLoad = false;
 
   // ------------------------------------------------------------------ load
 
@@ -84,6 +88,7 @@ class MatchController extends ChangeNotifier {
         recap = b.recap;
         counters = b.counters;
         llmChain = b.llmChain;
+        qa = b.qa;
         _addCards(b.cards);
         cards.sort((a, b) => a.displayAtMs.compareTo(b.displayAtMs));
       }
@@ -203,6 +208,33 @@ class MatchController extends ChangeNotifier {
     _live?.send({'action': 'outage', 'value': on});
     notifyListeners();
   }
+
+  // ------------------------------------------------------------------ ask
+
+  /// Live mode: ask the GitHub Copilot agent a question at the current match time.
+  Future<void> ask(String question) async {
+    if (!isLive || question.trim().length < 3 || asking) return;
+    asking = true;
+    askError = null;
+    notifyListeners();
+    try {
+      final a = await askBackend(
+        baseUrl: liveBaseUrl!,
+        matchId: matchId,
+        question: question.trim(),
+        untilMs: clockMs.round(),
+        language: language.wire,
+      );
+      qa = [a, ...qa];
+    } catch (e) {
+      askError = '$e';
+    }
+    asking = false;
+    notifyListeners();
+  }
+
+  /// Demo mode: whether a pre-asked question is "unlocked" yet (no spoilers).
+  bool qaUnlocked(AskAnswer a) => isLive || finished || a.untilMs <= clockMs;
 
   // -------------------------------------------------------------- profile
 

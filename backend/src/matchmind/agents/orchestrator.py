@@ -548,7 +548,10 @@ class MatchOrchestrator:
         gateway: LLMGateway,
         source: StatsSource,
         config: PipelineConfig | None = None,
+        front: Executor | None = None,
     ):
+        """`front`: optional executor placed before stats_agent (e.g. a DevUI entry point that
+        turns "match_id minutes" text into replay windows)."""
         self.state = state
         self.config = config or PipelineConfig()
         builder = FactBuilder(state.meta)
@@ -565,11 +568,17 @@ class MatchOrchestrator:
         template = TemplateExecutor(state, self.config)
         publisher = PublisherExecutor(state)
 
+        builder_ = WorkflowBuilder(
+            name="matchmind-broadcast",
+            description="MatchMind agent team: stats -> producer -> insight/narrator/"
+            "personalizer or templates -> publisher",
+            start_executor=front or stats,
+            output_from=[publisher],
+        )
+        if front is not None:
+            builder_ = builder_.add_edge(front, stats)
         self.workflow = (
-            WorkflowBuilder(
-                name="matchmind-broadcast", start_executor=stats, output_from=[publisher]
-            )
-            .add_edge(stats, producer)
+            builder_.add_edge(stats, producer)
             .add_switch_case_edge_group(
                 producer,
                 [

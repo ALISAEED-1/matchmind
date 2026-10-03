@@ -11290,5 +11290,68 @@
    "status": "ok",
    "detail": "6 cards"
   }
+ ],
+ "qa": [
+  {
+   "match_id": "mm-0004-comeback",
+   "question": "Why are Ironmere Athletic ahead at half time?",
+   "answer": "Ironmere Athletic lead 2-0 at the 46' mark because they were clinical in attack despite having less possession. Emil Quenby scored at 18', assisted by Lars Maraval who then doubled the advantage at 35'. Maraval was particularly effective, converting from limited chances and creating opportunities from Ironmere's counter-attacking approach. While Rivermouth had more of the ball and created chances, they couldn't finish. Ironmere's efficiency and killer instinct on the break have put them in complete control at half time.",
+   "language": "en",
+   "until_ms": 2883225,
+   "minute": "46'",
+   "provider": "github-copilot",
+   "tools_used": [
+    "match_snapshot",
+    "key_moments"
+   ],
+   "latency_ms": 21013,
+   "fallback_used": false
+  },
+  {
+   "match_id": "mm-0004-comeback",
+   "question": "What changed for Rivermouth Rovers in the second half?",
+   "answer": "Rivermouth Rovers mounted an impressive second-half comeback from two goals down at halftime. They took control after the break with 59 per cent possession and high pressure, creating dangerous chances. Ilyas Zevalo got them going with a goal at 60', then they dominated the period through 70' with momentum peaking at 0.714 at 60'. They levelled the match when Zane Orbeza scored at 72', matching Ironmere's shots on target while creating superior overall pressure and ball retention throughout the second period.",
+   "language": "en",
+   "until_ms": 4456689,
+   "minute": "72'",
+   "provider": "github-copilot",
+   "tools_used": [
+    "match_snapshot",
+    "momentum_timeline",
+    "key_moments"
+   ],
+   "latency_ms": 18520,
+   "fallback_used": false
+  },
+  {
+   "match_id": "mm-0004-comeback",
+   "question": "How did Rivermouth Rovers come back to win?",
+   "answer": "Rivermouth Rovers were 0-2 down at half-time after Ironmere goals in the 18' and 35', but orchestrated a spectacular comeback. After trailing 1-2 at 60', Zane Orbeza equalised at 72', then scored the winner at 88' with his second strike. Both crucial late goals arrived with assists from Leon Coldbeck, transforming a desperate situation into a 3-2 triumph secured in the final minutes.",
+   "language": "en",
+   "until_ms": 5769187,
+   "minute": "90+4'",
+   "provider": "github-copilot",
+   "tools_used": [
+    "key_moments",
+    "momentum_timeline",
+    "match_snapshot"
+   ],
+   "latency_ms": 18763,
+   "fallback_used": false
+  },
+  {
+   "match_id": "mm-0004-comeback",
+   "question": "میچ کا بہترین کھلاڑی کون تھا اور کیوں؟",
+   "answer": "میچ کا بہترین کھلاڑی **Zane Orbeza** تھا۔ یہ Rivermouth Rovers کے دفاعی کھلاڑی نے 90+4' میں 2 گول اسکور کیے اور اپنے تمام 3 شاٹس میں سے 2 درست لگائے۔ اسی طرح **Ilyas Zevalo** بھی شاندار رہے جنہوں نے 40 involvement ریکارڈ کی، 8 شاٹیں لگائیں اور 1 گول کیا۔ Zevalo کا سب سے زیادہ 1.58 xG تھا۔ میچ میں Rovers کی جیت ان دونوں جارحین کی کامیابی پر منحصر تھی۔",
+   "language": "ur",
+   "until_ms": 5769187,
+   "minute": "90+4'",
+   "provider": "github-copilot",
+   "tools_used": [
+    "match_snapshot"
+   ],
+   "latency_ms": 19813,
+   "fallback_used": false
+  }
  ]
 }

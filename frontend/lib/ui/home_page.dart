@@ -17,8 +17,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final repo = DemoRepository();
   late final Future<List<MatchSummary>> _matches = repo.matches();
-  bool live = false;
-  final _url = TextEditingController(text: 'http://127.0.0.1:8000');
+  late bool live = _servedByBackend; // Codespaces / local backend: live agents by default
+  // Served by the backend (local or Codespaces): live API is the same origin.
+  // Served by GitHub Pages: default to a backend on this machine.
+  final _url = TextEditingController(
+    text: Uri.base.host.endsWith('github.io') || Uri.base.scheme == 'file' ? 'http://127.0.0.1:8000' : Uri.base.origin,
+  );
+  late final bool _servedByBackend = !Uri.base.host.endsWith('github.io') && Uri.base.port != 8090;
 
   @override
   void initState() {
@@ -39,6 +44,7 @@ class _HomePageState extends State<HomePage> {
     controller.favouritePlayerId = q['player'];
     controller.openDrawerOnLoad = q['drawer'] == '1';
     controller.openRecapOnLoad = q['recap'] == '1';
+    controller.openAskOnLoad = q['ask'] == '1';
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (_) => ChangeNotifierProvider(

@@ -34,6 +34,35 @@ jobs:
         with:
           path: frontend/build/web
 
+  # The same app built for serving at "/" by the backend (Codespaces and local runs),
+  # published as the `web-latest` release asset that .devcontainer/setup.sh downloads.
+  release-web:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.32.7"
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter build web --release --pwa-strategy=none --base-href /
+      - run: cd build/web && zip -q -r ../../web.zip .
+      - name: Publish web-latest release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view web-latest >/dev/null 2>&1 || \
+            gh release create web-latest --title "Web app (latest build)" \
+              --notes "Prebuilt MatchMind web app for Codespaces and local runs. Updated on every push to main." \
+              --latest=false
+          gh release upload web-latest web.zip --clobber
+
   deploy:
     needs: build
     runs-on: ubuntu-latest

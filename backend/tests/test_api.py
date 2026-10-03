@@ -4,6 +4,7 @@ import pytest
 from fakes import FakeLLM, no_sleep
 from fastapi.testclient import TestClient
 
+from matchmind.agents.ask import AskMatchMind
 from matchmind.api.app import create_app
 from matchmind.llm.gateway import LLMGateway
 
@@ -106,6 +107,57 @@ def test_simulated_outage_runs_the_recovery_path():
     )
     assert any("circuit breaker" in h["detail"] for h in handoffs)
     assert msgs[-1]["counters"]["breaker_trips"] >= 1
+
+
+class _NoCopilot(AskMatchMind):
+    """Copilot is unavailable in CI: force the fallback path."""
+
+    async def _copilot(self, *args, **kwargs):
+        raise RuntimeError("copilot CLI not signed in")
+
+
+class _FakeCopilot(AskMatchMind):
+    async def _copilot(self, match, question, until_ms, minute, language):
+        return f"At {minute}: answered with tools.", ["match_snapshot", "key_moments"]
+
+
+def test_ask_uses_copilot_and_reports_tools():
+    c = TestClient(create_app(use_mcp=False, asker=_FakeCopilot()))
+    r = c.post(
+        "/api/ask", json={"match_id": MATCH, "question": "Who is on top?", "until_ms": 2_000_000}
+    )
+    body = r.json()
+    assert r.status_code == 200 and body["provider"] == "github-copilot"
+    assert body["tools_used"] == ["match_snapshot", "key_moments"] and not body["fallback_used"]
+    assert body["minute"] in body["answer"] and body["until_ms"] <= 2_000_000
+
+
+def test_ask_falls_back_when_copilot_is_unavailable():
+    gateway = LLMGateway([_AnswerLLM()], sleep=no_sleep)
+    c = TestClient(create_app(use_mcp=False, asker=_NoCopilot(gateway=gateway)))
+    body = c.post("/api/ask", json={"match_id": MATCH, "question": "Why did they win?"}).json()
+    assert body["fallback_used"] and body["provider"].startswith("fake:model")
+    assert body["answer"] == "Fallback answer from the stats snapshot."
+
+
+def test_serves_the_web_app_alongside_the_api(tmp_path):
+    (tmp_path / "index.html").write_text("<title>MatchMind</title>", encoding="utf-8")
+    c = TestClient(create_app(use_mcp=False, web_dir=tmp_path))
+    assert "MatchMind" in c.get("/").text
+    assert c.get("/api/health").json() == {"status": "ok"}  # API routes still win
+
+
+def test_ask_validates_input():
+    c = TestClient(create_app(use_mcp=False, asker=_FakeCopilot()))
+    assert c.post("/api/ask", json={"match_id": "nope", "question": "Why?"}).status_code == 404
+    assert c.post("/api/ask", json={"match_id": MATCH, "question": ""}).status_code == 422
+
+
+class _AnswerLLM:
+    name = "fake:model"
+
+    async def complete(self, agent_name, instructions, prompt, schema):
+        return schema(answer="Fallback answer from the stats snapshot.")
 
 
 @pytest.mark.parametrize("query", ["audience=coach", "language=fr", "speed=fast"])

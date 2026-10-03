@@ -109,12 +109,60 @@ server works from any MCP client, for example Claude Desktop or VS Code:
   "command": "uv", "args": ["--directory", "<repo>/backend", "run", "python", "-m", "matchmind.mcp_server"]}}}
 ```
 
+## Ask MatchMind (GitHub Copilot agent)
+
+Viewers can ask questions ("Why did Rovers come back?") in the app. The answer comes from an
+**Agent Framework `GitHubCopilotAgent`** (GitHub Copilot SDK) whose only tool source is the
+`matchmind-stats` MCP server. It looks the answer up itself (snapshot, key moments, player
+stats, momentum, pass and shot explanations), always at the viewer's current match time
+(`until_ms`), and the answer lists the tools it used.
+
+- **Locked down:** the Copilot runtime can run shell commands, edit files and fetch URLs. Our
+  permission handler approves only `matchmind-stats` MCP tool calls (all read-only) and rejects
+  everything else (`backend/src/matchmind/agents/ask.py`).
+- **Recovery:** if Copilot is unavailable (not signed in, quota, timeout), the question goes to the
+  regular LLM chain with the stats snapshot as FACTS, and the answer is marked as a fallback.
+- **Demo mode:** a few questions per match were answered by Copilot ahead of time and ship in the
+  bundles; they unlock as the match clock reaches them. Live mode calls `POST /api/ask`.
+
+## The workflow, as Agent Framework draws it
+
+Generated from the real workflow object with `WorkflowViz`
+(`uv run python scripts/workflow_diagram.py`):
+
+```mermaid
+flowchart TD
+  stats_agent["stats_agent (Start)"];
+  producer["producer"];
+  insight_agent["insight_agent"];
+  narrator_agent["narrator_agent"];
+  template_writer["template_writer"];
+  personalizer_agent["personalizer_agent"];
+  publisher["publisher"];
+  stats_agent --> producer;
+  producer --> insight_agent;
+  producer --> narrator_agent;
+  producer --> template_writer;
+  insight_agent --> narrator_agent;
+  insight_agent --> personalizer_agent;
+  narrator_agent --> personalizer_agent;
+  personalizer_agent --> publisher;
+  template_writer --> publisher;
+```
+
+## Agent Framework DevUI
+
+`uv run python scripts/devui.py` opens Microsoft's DevUI debugger with three entities:
+the **matchmind-broadcast** workflow (send `mm-0004-comeback 60` to replay the first 60 minutes
+and watch every executor run), the **ask_matchmind** Copilot agent, and the **insight_agent**.
+
 ## LLM providers
 
 | Provider | How | Why |
 |---|---|---|
 | Google Gemini (free key) | `OpenAIChatCompletionClient` → OpenAI-compatible endpoint | Best quality, good Urdu/Arabic; used to bake the demo |
-| **Microsoft Foundry Local** | On-device `qwen2.5-1.5b`, via a small adapter over Foundry Local SDK 2.x | No account, no quota, works offline; last line before templates |
+| **Microsoft Foundry Local** | On-device `qwen2.5-1.5b` (or Microsoft's **Phi-3.5-mini**: `FOUNDRY_LOCAL_MODEL=phi-3.5-mini`), via a small adapter over Foundry Local SDK 2.x | No account, no quota, works offline; last line before templates |
+| **GitHub Copilot** | `GitHubCopilotAgent` (Agent Framework) for Ask MatchMind | Uses the viewer's own Copilot access; tool use over MCP |
 
 Every call goes through an Agent Framework `Agent` with `response_format=<Pydantic model>`
 (structured output) inside `LLMGateway` (`backend/src/matchmind/llm/gateway.py`).

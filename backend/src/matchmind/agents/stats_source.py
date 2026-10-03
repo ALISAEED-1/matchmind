@@ -57,7 +57,8 @@ def moment_from_dict(d: dict[str, Any]) -> Moment:
         team=Side(d["team"]) if d.get("team") else None,
         player_id=d.get("player_id"),
         event_id=d.get("event_id"),
-        data=d.get("data") or {},
+        # drop display-only names the MCP server adds next to ids
+        data={k: v for k, v in (d.get("data") or {}).items() if not k.endswith("_name")},
     )
 
 
