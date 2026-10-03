@@ -22,7 +22,11 @@ This file records the agreed architecture and schedule, plus changes from the br
 | 0 Setup | Oct 3 | Oct 3 |
 | 1 Data generator | Oct 4–6 | Oct 3 |
 | 2 Stats engine | Oct 7–8 | Oct 3 |
-| 3 Agents + orchestration | Oct 9–14 | Oct 3 (code + tests); demo bakes in progress |
+| 3 Agents + orchestration | Oct 9–14 | Oct 3 (3 demo bundles baked, 0 fallbacks) |
+| 4 API | Oct 15–16 | Oct 3 |
+| 5 Flutter UI | Oct 16–21 | Oct 3 |
+| 6 Deploy + docs | Oct 22–24 | Oct 3 (GitHub Pages) |
+| 7 Video + submit | Oct 24–25 | **you**: see SUBMISSION.md and DEMO_SCRIPT.md |
 
 ## Phase 0 findings
 

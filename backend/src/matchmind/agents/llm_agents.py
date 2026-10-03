@@ -63,6 +63,7 @@ class InsightAgent:
             return self.verifier.check_text(
                 {"title": v.title, "body": v.explanation, "why_it_matters": v.why_it_matters},
                 mf.facts,
+                forbidden=mf.forbidden,
             )
 
         return await self.gateway.generate(
@@ -129,7 +130,9 @@ class NarratorAgent:
             )
 
         def check(v: CommentaryOut) -> list[str]:
-            return self.verifier.check_text({"line": v.line}, mf.facts, language.value)
+            return self.verifier.check_text(
+                {"line": v.line}, mf.facts, language.value, forbidden=mf.forbidden
+            )
 
         non_english = language is not Language.EN
         return await self.gateway.generate(
@@ -252,6 +255,7 @@ class PersonalizerAgent:
                     {"title": x.title, "body": x.body, "why_it_matters": x.why_it_matters},
                     mf.facts,
                     x.language.value,
+                    forbidden=mf.forbidden,
                 )
                 problems += [f"{x.language.value}/{x.audience.value} {p}" for p in issues]
             return problems

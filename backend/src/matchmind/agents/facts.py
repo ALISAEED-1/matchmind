@@ -50,6 +50,43 @@ class MomentFacts:
     facts: dict[str, Any]
     fields: dict[str, str]
     players: dict[str, str]  # player_id -> name, for every player in this match
+    # (regex, explanation) pairs English text must not match, e.g. calling an equaliser
+    # "restores the lead". Checked by the Verifier.
+    forbidden: tuple[tuple[str, str], ...] = ()
+
+
+ORDINALS = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth"}
+
+_LEAD_CLAIM = (
+    r"\b(restores?|regains?|retakes?|takes?|taking|goes|go|puts?|putting|edges?|sends?|moves?)"
+    r"\s+(\w+\s+){0,3}(lead|ahead|in front)\b"
+)
+_LEVEL_CLAIM = r"\b(equali[sz]\w*|levels?\s+(it|the\s+(score|scores|match|game))|draws?\s+level)\b"
+
+
+def goal_effect(
+    scorer_before: int, opponent_before: int
+) -> tuple[str, tuple[tuple[str, str], ...]]:
+    """What a goal did to the scoreline, in words, plus phrases that would contradict it."""
+    diff = scorer_before - opponent_before
+    if scorer_before == opponent_before == 0:
+        return "opens the scoring", (
+            (_LEVEL_CLAIM, "this goal opens the scoring, it is not an equaliser"),
+        )
+    if diff == -1:
+        return "equaliser", ((_LEAD_CLAIM, "this goal is an equaliser: nobody leads"),)
+    if diff == 0:
+        return "takes the lead", (
+            (_LEVEL_CLAIM, "this goal takes the lead, it is not an equaliser"),
+        )
+    if diff >= 1:
+        return "extends the lead", (
+            (_LEVEL_CLAIM, "this goal extends a lead, it is not an equaliser"),
+        )
+    return "pulls one back", (
+        (_LEVEL_CLAIM, "this goal only pulls one back; the scorers still trail"),
+        (_LEAD_CLAIM, "this goal only pulls one back; the scorers still trail"),
+    )
 
 
 class FactBuilder:
@@ -124,10 +161,20 @@ class FactBuilder:
             fields[field or key] = fmt.format(value)
 
         k = moment.kind
+        forbidden: tuple[tuple[str, str], ...] = ()
         if k is MomentKind.GOAL:
+            home_after, away_after = int(d["score_home"]), int(d["score_away"])
+            if moment.team is Side.HOME:
+                scorer_before, opp_before = home_after - 1, away_after
+            else:
+                scorer_before, opp_before = away_after - 1, home_after
+            effect, forbidden = goal_effect(scorer_before, opp_before)
+            score_now = f"{self.meta.home.name} {home_after}-{away_after} {self.meta.away.name}"
+            details["goal_effect"] = f"{effect} (now {score_now})"
+            nth = int(d.get("player_goals", 1))
+            details["scorer_goal_of_match"] = f"his {ORDINALS.get(nth, str(nth))} goal of the match"
             put("xg", round(float(d.get("xg", 0)), 2))
             put("shot_speed_kmh", round(float(d.get("shot_speed_kmh", 0))), "speed")
-            put("player_goals_this_match", int(d.get("player_goals", 1)), "goals")
             if d.get("assist_player_id"):
                 put("assist", self.player_name(str(d["assist_player_id"])))
         elif k is MomentKind.BIG_CHANCE:
@@ -180,7 +227,7 @@ class FactBuilder:
             facts["details"] = details
         facts["match_so_far"] = self.match_stats(snap)
         names = {pid: p.name for pid, (p, _) in self.players.items()}
-        return MomentFacts(facts=facts, fields=fields, players=names)
+        return MomentFacts(facts=facts, fields=fields, players=names, forbidden=forbidden)
 
     def for_recap(self, snap: MatchSnapshot, moments: list[Moment]) -> MomentFacts:
         # Goals and red cards always make the timeline; other big moments fill it up to 14.

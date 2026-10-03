@@ -114,7 +114,10 @@ class Verifier:
         fields: dict[str, str | None],
         facts: Any,
         language: str = "en",
+        forbidden: Iterable[tuple[str, str]] = (),
     ) -> list[str]:
+        """`forbidden`: (regex, reason) pairs that English text must not match, e.g. an
+        equaliser described as "restores the lead" (see facts.goal_effect)."""
         allowed = allowed_numbers(facts)
         problems: list[str] = []
         for name, text in fields.items():
@@ -139,6 +142,10 @@ class Verifier:
                     f"{name} mentions names not in FACTS: {', '.join(unknown)} "
                     "(only use players and clubs from FACTS)"
                 )
+            if language == "en":
+                for pattern, reason in forbidden:
+                    if re.search(pattern, text, re.IGNORECASE):
+                        problems.append(f"{name} contradicts FACTS: {reason}")
             problems.extend(self._language(name, text, language))
         return problems
 

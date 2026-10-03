@@ -2,7 +2,7 @@ from functools import cache
 
 import pytest
 
-from matchmind.agents.facts import FactBuilder, display_minute
+from matchmind.agents.facts import FactBuilder, display_minute, goal_effect
 from matchmind.agents.templates import CARD_TYPE, TEMPLATES, render
 from matchmind.agents.verifier import Verifier, allowed_numbers, numbers_in
 from matchmind.cards import Audience, Language
@@ -114,6 +114,40 @@ def test_verifier_flags_invented_names():
     assert any(
         "Urdu script" in p for p in v.check_text({"title": "Rovers ka pehla hamla"}, facts, "ur")
     )
+
+
+@pytest.mark.parametrize(
+    "before, effect",
+    [((0, 0), "opens the scoring"), ((1, 2), "equaliser"), ((1, 1), "takes the lead"),
+     ((2, 0), "extends the lead"), ((0, 2), "pulls one back")],
+)  # fmt: skip
+def test_goal_effect(before, effect):
+    assert goal_effect(*before)[0] == effect
+
+
+def test_verifier_rejects_misreading_the_scoreline():
+    v = verifier_for(MATCHES[0])
+    _, equaliser_rules = goal_effect(1, 2)
+    _, lead_rules = goal_effect(1, 1)
+    facts = {"score": "Rivermouth Rovers 2-2 Ironmere Athletic"}
+    bad = v.check_text(
+        {"line": "Orbeza restores the Rovers lead!"}, facts, forbidden=equaliser_rules
+    )
+    assert any("equaliser" in p for p in bad)
+    good = "Orbeza levels it at 2-2 and wipes out Ironmere's lead!"
+    assert v.check_text({"line": good}, facts, forbidden=equaliser_rules) == []
+    assert v.check_text({"line": "A late equaliser!"}, facts, forbidden=lead_rules)
+    # Urdu/Arabic text is not pattern-checked (the rules are English phrases)
+    assert v.check_text({"line": "گول"}, facts, "ur", forbidden=equaliser_rules) == []
+
+
+def test_goal_facts_state_the_effect_in_words():
+    for mo, mf in moment_facts(MATCHES[0]):
+        if mo.kind is MomentKind.GOAL:
+            effects = {"opens the scoring", "equaliser", "takes the lead", "extends the lead"}
+            effects.add("pulls one back")
+            assert mf.facts["details"]["goal_effect"].split(" (")[0] in effects
+            assert "goal of the match" in mf.facts["details"]["scorer_goal_of_match"]
 
 
 def test_every_moment_kind_has_a_template_and_card_type():
