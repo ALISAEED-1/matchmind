@@ -1,7 +1,7 @@
 {
  "bundle_version": "1.0",
  "match_id": "mm-0020-late_winner",
- "generated_at": "2026-10-03T11:12:43+00:00",
+ "generated_at": "2026-10-03T12:20:49+00:00",
  "pipeline": {
   "languages": [
    "en",
@@ -19,22 +19,24 @@
   ],
   "full_threshold": 0.6,
   "insight_threshold": 0.45,
-  "bake_seconds": 22
+  "bake_seconds": 109
  },
  "counters": {
   "events": 1055,
-  "handoff_ok": 359,
+  "handoff_ok": 373,
   "moments": 47,
   "route_template": 23,
   "handoff_skipped": 23,
   "cards": 300,
   "route_full": 18,
-  "handoff_cached": 113,
-  "llm_cached": 113,
+  "handoff_cached": 99,
+  "llm_cached": 99,
   "consecutive_llm_failures": 0,
   "route_insight": 5,
-  "route_recap": 1,
-  "llm_ok": 1
+  "llm_ok": 15,
+  "handoff_retry": 3,
+  "llm_rejected": 3,
+  "route_recap": 1
  },
  "recap": {
   "headline": "Duncairn Harbour Secures Dramatic Late Victory Against Rivermouth Rovers",
@@ -4042,9 +4044,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ar",
-   "title": "تحليل هدف Leon Navarel في الدقيقة 37",
-   "body": "أحرز الجناح الأيمن Leon Navarel هدف التقدم لـ Rivermouth Rovers بنتيجة Duncairn Harbour 0-1 Rivermouth Rovers في الدقيقة 37' بتسديدة سرعتها 40 kmh وبقيمة xg تبلغ 0.07 بعد تمريرة حاسمة من Ilyas Zevalo.",
-   "why_it_matters": "هذه التسديدة منخفضة الاحتمالية عززت تفوق Rivermouth Rovers في إجمالي التسديدات والتسديدات على المرمى.",
+   "title": "تحليل هدف Leon Navarel",
+   "body": "سجل Leon Navarel في الدقيقة 37' من تسديدة بقوة 40 kmh وبقيمة xG بلغت 0.07 بعد تمريرة من Ilyas Zevalo لتصبح النتيجة Duncairn Harbour 0-1 Rivermouth Rovers.",
+   "why_it_matters": "هذه التسديدة ذات الاحتمالية المنخفضة تكسر التعادل وتعزز تقدم Rivermouth Rovers في المباراة.",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -4073,9 +4075,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ar",
-   "title": "هدف جميل في الدقيقة 37",
-   "body": "سجل Leon Navarel هدفاً رائعاً ليتقدم Rivermouth Rovers بهدف نظيف أمام Duncairn Harbour. جاء هذا الهدف الرائع ليمنح الفريق فرحة كبيرة بدعم من زميله Ilyas Zevalo.",
-   "why_it_matters": "هذا الهدف يمنح الفريق التقدم في مباراة صعبة.",
+   "title": "هدف أول رائع",
+   "body": "سجل Leon Navarel هدفا جميلا ليمنح فريقه التقدم في الدقيقة 37'.",
+   "why_it_matters": "هذا الهدف يمنح الفريق دفعة معنوية كبيرة في اللقاء.",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -4104,9 +4106,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "en",
-   "title": "Navarel Opens Scoring at 37'",
-   "body": "Right winger Leon Navarel scored in the 37' minute from an Ilyas Zevalo assist, generating 0.07 xg with a shot speed of 40 kmh. The score is Duncairn Harbour 0-1 Rivermouth Rovers, with Rivermouth Rovers holding 8 total shots and 5 shots on target.",
-   "why_it_matters": "This low xg finish capitalizes on Rivermouth Rovers edge in shots on target during a balanced phase.",
+   "title": "Navarel 37' xG 0.07 Goal",
+   "body": "Leon Navarel scored his first goal of the match from a 40 kmh shot with an xG of 0.07, assisted by Ilyas Zevalo.",
+   "why_it_matters": "This low-probability strike breaks the deadlock and gives Rivermouth Rovers a 0-1 lead.",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -4135,9 +4137,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "en",
-   "title": "Brilliant Goal for Rivermouth Rovers",
-   "body": "Leon Navarel scores a wonderful goal in the 37' minute with help from Ilyas Zevalo. Rivermouth Rovers leads Duncairn Harbour 0-1.",
-   "why_it_matters": "This fantastic goal gives Rivermouth Rovers a vital lead.",
+   "title": "Navarel breaks the deadlock!",
+   "body": "Leon Navarel fires Rivermouth Rovers ahead with a brilliant finish at 37'.",
+   "why_it_matters": "This opening goal rewards the growing momentum for Rivermouth Rovers.",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -4166,9 +4168,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ur",
-   "title": "لیون نیواریل گول 37'",
-   "body": "Rivermouth Rovers کے right winger لیون نیواریل نے 37' میں Ilyas Zevalo کی اسسٹ پر گول کیا۔ اس شاٹ کی اسپیڈ 40 kmh تھی اور xg 0.07 ریکارڈ کیا گیا جس سے سکور Duncairn Harbour 0-1 Rivermouth Rovers ہو گیا۔",
-   "why_it_matters": "یہ کم xg والا شاٹ انتہائی کم موقع پر کامیابی کی مثال ہے جبکہ Rivermouth Rovers کے پاس shots on target کی تعداد 5 ہے۔",
+   "title": "37' منٹ میں Rivermouth Rovers کی برتری",
+   "body": "میچ کے 37' منٹ میں، Rivermouth Rovers کے رائٹ ونگر Leon Navarel نے 0.07 xG سے 40 kmh کی رفتار سے گول اسکور کیا۔ Ilyas Zevalo کی مدد سے ہونے والے اس گول نے اسکور Duncairn Harbour 0-1 Rivermouth Rovers کر دیا۔",
+   "why_it_matters": "صرف 0.07 xG کے کم امکان والے اس گول نے کھیل کا توازن بدل دیا ہے۔",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -4182,7 +4184,7 @@
    "player_id": "RIV-07",
    "importance": 1.0,
    "source_agent": "insight_agent+personalizer_agent",
-   "provider": "gemini:gemini-flash-lite-latest",
+   "provider": "gemini:gemini-3.5-flash",
    "fallback_used": false,
    "verified": true
   },
@@ -4197,9 +4199,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ur",
-   "title": "لیون نیواریل کا شاندار گول",
-   "body": "لیون نیواریل نے 37' میں شاندار گول کر کے Rivermouth Rovers کو برتری دلائی۔ یہ گول میچ کا پہلا گول تھا۔",
-   "why_it_matters": "اس گول نے Rivermouth Rovers کے حامیوں کو خوشی کا موقع دیا اور ٹیم کو میچ میں آگے کیا۔",
+   "title": "Leon Navarel کا شاندار پہلا گول",
+   "body": "Leon Navarel نے 37' منٹ میں گول کر کے سب کے دل جیت لیے۔ Ilyas Zevalo کی خوبصورت مدد سے انہوں نے اپنی ٹیم کو برتری دلا دی۔",
+   "why_it_matters": "یہ خوبصورت لمحہ کھیل میں نیا جوش لے آیا ہے۔",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -4213,7 +4215,7 @@
    "player_id": "RIV-07",
    "importance": 1.0,
    "source_agent": "insight_agent+personalizer_agent",
-   "provider": "gemini:gemini-flash-lite-latest",
+   "provider": "gemini:gemini-3.5-flash",
    "fallback_used": false,
    "verified": true
   },
@@ -4228,8 +4230,8 @@
    "type": "commentary",
    "audience": "fan",
    "language": "en",
-   "title": "Navarel breaks deadlock at 37'",
-   "body": "Leon Navarel breaks the deadlock in the 37th minute with an assist from Ilyas Zevalo, putting Rivermouth Rovers ahead 1-0!",
+   "title": "Navarel opens the scoring",
+   "body": "Leon Navarel strikes in the 37' minute off an assist from Ilyas Zevalo! Rivermouth Rovers lead Duncairn Harbour 0-1!",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -6743,9 +6745,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ar",
-   "title": "تحليل هدف Amir Vasconel في الدقيقة 66",
-   "body": "سجل Amir Vasconel بتسديدة سرعتها 109 كم/س ومن قيمة xG بلغت 0.12 وبصناعة من Samir Esperon لتعود النتيجة إلى تعادل Duncairn Harbour 1-1 Rivermouth Rovers. جاء الهدف مستنداً إلى مؤشر ضغط بلغ 0.65 في اخر 10 دقائق.",
-   "why_it_matters": "الهدف يعكس استغلال Duncairn Harbour للضغط المتزايد وتحول الزخم في المباراة.",
+   "title": "Amir Vasconel يسجل التعادل بقوة",
+   "body": "في الدقيقة 66'، سجل left winger اللاعب Amir Vasconel هدفه الأول من فرصة بلغت 0.12 xG وبسرعة تسديدة وصلت إلى 109 kmh، ليصبح التعادل Duncairn Harbour 1-1 Rivermouth Rovers بعد تمريرة من Samir Esperon.",
+   "why_it_matters": "هذا التعادل يترجم ضغط Duncairn Harbour المتصاعد ويغير مجريات اللقاء لصالحهم.",
    "data": {
     "score_home": 1,
     "score_away": 1,
@@ -6774,9 +6776,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ar",
-   "title": "هدف التعادل الرائع لـ Amir Vasconel",
-   "body": "في الدقيقة 66 أحرز Amir Vasconel هدف التعادل الجميل لنادي Duncairn Harbour. هذا الهدف يعيد الأمل ويفرح الجماهير الكبيرة.",
-   "why_it_matters": "هذا الهدف يمنح الفريق دفعة معنوية كبيرة لتغيير مجريات اللقاء.",
+   "title": "هدف التعادل الرائع من Amir Vasconel",
+   "body": "عاد فريق Duncairn Harbour إلى أجواء اللقاء بهدف جميل في الدقيقة 66'. النتيجة الآن التعادل 1-1 ضد Rivermouth Rovers.",
+   "why_it_matters": "هذا الهدف أعاد الأمل والفرح لجماهير Duncairn Harbour في وقت حاسم من المباراة.",
    "data": {
     "score_home": 1,
     "score_away": 1,
@@ -6805,9 +6807,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "en",
-   "title": "Vasconel Equalizer Analysis",
-   "body": "In the 66' minute, left winger Amir Vasconel converted with a 109 km/h strike from an xG of 0.12, assisted by Samir Esperon to make it Duncairn Harbour 1-1 Rivermouth Rovers. This capitalized on a pressure index of 0.65 in the last 10 minutes.",
-   "why_it_matters": "The strike shifts the momentum firmly in favor of Duncairn Harbour, rewarding their sustained pressure and turning the tide against Rivermouth Rovers.",
+   "title": "Vasconel Equaliser at 66'",
+   "body": "Left winger Amir Vasconel scored his first goal of the match in the 66' minute with a 109 kmh shot from a 0.12 xG chance, with an assist from Samir Esperon to make the score Duncairn Harbour 1-1 Rivermouth Rovers.",
+   "why_it_matters": "This equaliser capitalises on Duncairn Harbour's rising pressure and momentum, shifting the dynamic of the match back to level terms.",
    "data": {
     "score_home": 1,
     "score_away": 1,
@@ -6836,9 +6838,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "en",
-   "title": "Vasconel Brings Duncairn Harbour Level",
-   "body": "In the 66' minute, Amir Vasconel scored a brilliant goal to tie the match at 1-1. The fantastic strike gives Duncairn Harbour a huge lift.",
-   "why_it_matters": "The goal shifts the momentum firmly in favor of Duncairn Harbour after a great period of pressure.",
+   "title": "Amir Vasconel Brings Duncairn Harbour Level",
+   "body": "In the 66' minute, Amir Vasconel scored a brilliant equaliser to make it 1-1 against Rivermouth Rovers. The wonderful goal was assisted by Samir Esperon.",
+   "why_it_matters": "This equaliser capitalises on Duncairn Harbour's rising pressure and momentum, shifting the dynamic of the match back to level terms.",
    "data": {
     "score_home": 1,
     "score_away": 1,
@@ -6867,9 +6869,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ur",
-   "title": "امیر واسکونیل کا 0.12 xG گول",
-   "body": "ڈنکیرن ھاربر کے بائیں ونگر امیر واسکونیل نے 66' میں 109 km/h کی سپیڈ سے گول کیا۔ سامر اسھیرون کی امداد سے اسکور ڈنکیرن ھاربر 1-1 روورموتۚ روورڲ ہو گیا۔",
-   "why_it_matters": "اس گول نے کھیل کو برابر کرتے ھوئے ڈنکیرن ھاربر کے مویمنٹ کو مزدید بہتر کر دیا۔",
+   "title": "امیر واسکونیل کا برابری کا گول",
+   "body": "66' منٹ پر بائیں بازو کے کھلاڑی امیر واسکونیل نے Samir Esperon کی اسسٹ پر 0.12 xG اور 109 kmh کی رفتار سے شاٹ مار کر Duncairn Harbour کا اسکور 1-1 کر دیا۔",
+   "why_it_matters": "اس برابری کے گول نے Duncairn Harbour کی بڑھتی ہوئی دباؤ کی حکمت عملی کو کامیابی سے نتیجہ خیز بنایا۔",
    "data": {
     "score_home": 1,
     "score_away": 1,
@@ -6898,9 +6900,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ur",
-   "title": "واسکونیل کا شاندار گول",
-   "body": "ڈنکیرن ھاربر کے امیر واسکونیل نے 66' میں گول کر کے میچ کو برابر کر دیالوکٿڱے اس شاندار کککککک گول پر سامر اسھیرون کا امداد ثاّن",
-   "why_it_matters": "اس گول نے ڈنکیرن ھاربر کو میچ میں وپس لا کر شاندار کردیا ہے۔",
+   "title": "امیر واسکونیل کا شاندار گول",
+   "body": "66' میں امیر واسکونیل نے خوبصورت گول کر کے Duncairn Harbour اور Rivermouth Rovers کا اسکور برابر کر دیا۔ یہ اس میچ کا ان کا پہلا گول ہے۔",
+   "why_it_matters": "اس گول نے Duncairn Harbour کے لیے میچ کا نقشہ بدل دیا۔",
    "data": {
     "score_home": 1,
     "score_away": 1,
@@ -6930,7 +6932,7 @@
    "audience": "fan",
    "language": "en",
    "title": "Vasconel Leveler Restores Parity",
-   "body": "Amir Vasconel smashes it in at 109 km/h in the 66' minute! Duncairn Harbour 1-1 Rivermouth Rovers!",
+   "body": "Amir Vasconel fires a stunning 109 kmh rocket in the 66' minute! Level terms here as Duncairn Harbour make it 1-1!",
    "data": {
     "score_home": 1,
     "score_away": 1,
@@ -8706,9 +8708,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ar",
-   "title": "هدف إسبيرون الحاسم في الدقيقة 90+3'",
-   "body": "سجل المهاجم سمير إسبيرون من تمريرة حاسمة لـ كينجي جرافيل بسرعة تسديدة بلغت 77 كم/س ومن قيمة أهداف متوقعة بلغت 0.29 لتصبح النتيجة دانكيرن هاربور 2-1 ريفرماوث روفرز.",
-   "why_it_matters": "هذه التسديدة حسمت اللقاء مستغلة مؤشر الزخم لصالح دانكيرن هاربور البالغ 0.34 على الرغم من تفوق ريفرماوث روفرز في إجمالي الأهداف المتوقعة بـ 2.38.",
+   "title": "سمير إسبيرون يحسم المباراة",
+   "body": "في الدقيقة 90+3 أحرز المهاجم Samir Esperon هدفه الأول في اللقاء لصالح Duncairn Harbour بتسديدة سرعتها 77 كم/س ومن قيمة أهداف متوقعة بلغت 0.29 وبتمريرة حاسمة من Kenji Gravell لتصبح النتيجة 2-1 ضد Rivermouth Rovers.",
+   "why_it_matters": "هذا الهدف يقلب معطيات المباراة ويمنح Duncairn Harbour التقدم بالرغم من تفوق المنافس في إجمالي التسديدات.",
    "data": {
     "score_home": 2,
     "score_away": 1,
@@ -8737,9 +8739,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ar",
-   "title": "إسبيرون يحسم الفوز في الوقت القاتل",
-   "body": "سجل المهاجم سمير إسبيرون هدفاً رائعاً ليمنح دانكيرن هاربور التقدم. وبهذا تصبح النتيجة دانكيرن هاربور 2-1 ريفرماوث روفرز في الدقيقة 90+3'.",
-   "why_it_matters": "هذا الهدف الحاسم في اللحظات الأخيرة يجلب الفوز والفرح العارم لأنصار دانكيرن هاربور.",
+   "title": "هدف متأخر يمنح الفوز",
+   "body": "في الدقيقة 90+3 سجل المهاجم Samir Esperon هدفا رائعا ليمنح Duncairn Harbour التقدم بهدفين مقابل هدف واحد ضد Rivermouth Rovers. لقد كانت لحظة حاسمة ومؤثرة جدا في نهاية اللقاء.",
+   "why_it_matters": "هذا الهدف القاتل يمنح الفريق دفعة معنوية كبيرة ويحقق فوزا ثمينا في أوقات حاسمة.",
    "data": {
     "score_home": 2,
     "score_away": 1,
@@ -8768,9 +8770,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "en",
-   "title": "Esperon 90+3' Winner Analysis",
-   "body": "Samir Esperon converted with a 77 kmh shot from an xG of 0.29 in the 90+3' minute, following an assist by Kenji Gravell. The goal brought Duncairn Harbour's score to 2-1 against Rivermouth Rovers.",
-   "why_it_matters": "This decisive strike capitalizes on the momentum strength of 0.34 to secure the win despite Rivermouth Rovers holding an overall xG of 2.38.",
+   "title": "Esperon 77 km/h Winner at 90+3'",
+   "body": "Striker Samir Esperon scores his first goal of the match for Duncairn Harbour at 90+3' with a shot speed of 77 km/h from an xG of 0.29, assisted by Kenji Gravell to make it Duncairn Harbour 2-1 Rivermouth Rovers.",
+   "why_it_matters": "This late strike seizes momentum and secures the lead despite Rivermouth Rovers holding the advantage in total shots and xG over the match.",
    "data": {
     "score_home": 2,
     "score_away": 1,
@@ -8799,9 +8801,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "en",
-   "title": "Heartstopping Late Winner",
-   "body": "Striker Samir Esperon scored a wonderful goal in the 90+3' minute to lift Duncairn Harbour to a thrilling victory. Kenji Gravell provided the assist to seal the 2-1 win.",
-   "why_it_matters": "This dramatic late goal secures a wonderful victory at the very end of the match.",
+   "title": "Late Drama as Duncairn Harbour Scores",
+   "body": "At 90+3', Samir Esperon scores his first goal of the match for Duncairn Harbour to take the lead. This magical moment brings pure joy to the supporters.",
+   "why_it_matters": "This late strike seizes momentum and secures the lead despite Rivermouth Rovers holding the advantage in total shots and xG over the match.",
    "data": {
     "score_home": 2,
     "score_away": 1,
@@ -8830,9 +8832,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ur",
-   "title": "ایسپرون کا فیصلہ کن گول",
-   "body": "سمیر ایسپرون نے 90+3' منٹ میں 77 کلومیٹر فی گھنٹہ کی رفتار سے شاٹ لگایا جس کا xG 0.29 تھا اور اسکور 2-1 ہو گیا۔ اس گول میں کینجی گریویل نے مدد کی۔",
-   "why_it_matters": "اس گول نے ریورماؤتھ روورز کے 2.38 کے مجموعی xG کے باوجود ڈنکیرن ہاربر کو 0.34 مومینٹم کی مدد سے کامیابی دلائی۔",
+   "title": "اسپیرون کا فیصلہ کن گول",
+   "body": "90+3' منٹ میں اسٹرائیکر Samir Esperon نے 0.29 xG اور 77 کلومیٹر فی گھنٹہ کی رفتار سے شاٹ لگا کر اپنا پہلا گول اسکور کیا، جس میں Kenji Gravell نے اسسٹ دیا۔",
+   "why_it_matters": "اس گول نے Rivermouth Rovers کے مجموعی برتری کے باوجود Duncairn Harbour کو 2-1 کی برتری دلائی۔",
    "data": {
     "score_home": 2,
     "score_away": 1,
@@ -8861,9 +8863,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ur",
-   "title": "آخری منٹ میں شاندار فتح",
-   "body": "90+3' منٹ میں سмир ایسپرون نے شاندار گول کر کے ڈنکیرن ہاربر کو فتح دلائی۔ یہ اس میچ کا ان کا پہلا گول تھا۔",
-   "why_it_matters": "یہ گول آخری لمحات میں ٹیم کے لیے فیصلہ کن ثابت ہوا۔",
+   "title": "سمیر اسپیرون کا آخری لمحے میں گول",
+   "body": "90+3' منٹ میں سمیر اسپیرون نے شاندار گول کر کے Duncairn Harbour کو برتری دلائی۔",
+   "why_it_matters": "اس آخری گول نے میچ کا نقشہ بدل کر رکھ دیا۔",
    "data": {
     "score_home": 2,
     "score_away": 1,
@@ -8892,8 +8894,8 @@
    "type": "commentary",
    "audience": "fan",
    "language": "en",
-   "title": "Esperon seals late victory",
-   "body": "Samir Esperon fires in at 90+3'! Kenji Gravell assists, making it Duncairn Harbour 2-1 Rivermouth Rovers!",
+   "title": "Esperon snatches late winner",
+   "body": "Samir Esperon scores in the 90+3' minute with a 77 km/h strike, assisted by Kenji Gravell to take the lead!",
    "data": {
     "score_home": 2,
     "score_away": 1,
@@ -9065,7 +9067,7 @@
  "handoffs": [
   {
    "seq": 1,
-   "wall_ms": 5718,
+   "wall_ms": 3009,
    "match_ms": 43662,
    "source": "replayer",
    "target": "stats_agent",
@@ -9074,7 +9076,7 @@
   },
   {
    "seq": 2,
-   "wall_ms": 5748,
+   "wall_ms": 3033,
    "match_ms": 43662,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9083,7 +9085,7 @@
   },
   {
    "seq": 3,
-   "wall_ms": 5749,
+   "wall_ms": 3033,
    "match_ms": 43662,
    "source": "stats_agent",
    "target": "producer",
@@ -9093,7 +9095,7 @@
   },
   {
    "seq": 4,
-   "wall_ms": 5750,
+   "wall_ms": 3033,
    "match_ms": 43662,
    "source": "producer",
    "target": "template_writer",
@@ -9103,7 +9105,7 @@
   },
   {
    "seq": 5,
-   "wall_ms": 5752,
+   "wall_ms": 3034,
    "match_ms": 43662,
    "source": "template_writer",
    "target": "publisher",
@@ -9113,7 +9115,7 @@
   },
   {
    "seq": 6,
-   "wall_ms": 5756,
+   "wall_ms": 3036,
    "match_ms": 102398,
    "source": "replayer",
    "target": "stats_agent",
@@ -9122,7 +9124,7 @@
   },
   {
    "seq": 7,
-   "wall_ms": 5775,
+   "wall_ms": 3051,
    "match_ms": 102398,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9131,7 +9133,7 @@
   },
   {
    "seq": 8,
-   "wall_ms": 5776,
+   "wall_ms": 3052,
    "match_ms": 174802,
    "source": "replayer",
    "target": "stats_agent",
@@ -9140,7 +9142,7 @@
   },
   {
    "seq": 9,
-   "wall_ms": 5792,
+   "wall_ms": 3067,
    "match_ms": 174802,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9149,7 +9151,7 @@
   },
   {
    "seq": 10,
-   "wall_ms": 5793,
+   "wall_ms": 3068,
    "match_ms": 237955,
    "source": "replayer",
    "target": "stats_agent",
@@ -9158,7 +9160,7 @@
   },
   {
    "seq": 11,
-   "wall_ms": 5814,
+   "wall_ms": 3084,
    "match_ms": 237955,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9167,7 +9169,7 @@
   },
   {
    "seq": 12,
-   "wall_ms": 5814,
+   "wall_ms": 3084,
    "match_ms": 236162,
    "source": "stats_agent",
    "target": "producer",
@@ -9177,7 +9179,7 @@
   },
   {
    "seq": 13,
-   "wall_ms": 5815,
+   "wall_ms": 3084,
    "match_ms": 236162,
    "source": "producer",
    "target": "insight_agent",
@@ -9187,7 +9189,7 @@
   },
   {
    "seq": 14,
-   "wall_ms": 5833,
+   "wall_ms": 3089,
    "match_ms": 236162,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9199,7 +9201,7 @@
   },
   {
    "seq": 15,
-   "wall_ms": 5834,
+   "wall_ms": 3089,
    "match_ms": 236162,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -9209,7 +9211,7 @@
   },
   {
    "seq": 16,
-   "wall_ms": 5851,
+   "wall_ms": 3101,
    "match_ms": 236162,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9221,7 +9223,7 @@
   },
   {
    "seq": 17,
-   "wall_ms": 5851,
+   "wall_ms": 3101,
    "match_ms": 236162,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -9231,7 +9233,7 @@
   },
   {
    "seq": 18,
-   "wall_ms": 5874,
+   "wall_ms": 3116,
    "match_ms": 236162,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9243,7 +9245,7 @@
   },
   {
    "seq": 19,
-   "wall_ms": 5889,
+   "wall_ms": 3129,
    "match_ms": 236162,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9255,7 +9257,7 @@
   },
   {
    "seq": 20,
-   "wall_ms": 5906,
+   "wall_ms": 3144,
    "match_ms": 236162,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9267,7 +9269,7 @@
   },
   {
    "seq": 21,
-   "wall_ms": 5906,
+   "wall_ms": 3145,
    "match_ms": 236162,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -9277,7 +9279,7 @@
   },
   {
    "seq": 22,
-   "wall_ms": 5914,
+   "wall_ms": 3147,
    "match_ms": 276653,
    "source": "replayer",
    "target": "stats_agent",
@@ -9286,7 +9288,7 @@
   },
   {
    "seq": 23,
-   "wall_ms": 5937,
+   "wall_ms": 3162,
    "match_ms": 276653,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9295,7 +9297,7 @@
   },
   {
    "seq": 24,
-   "wall_ms": 5937,
+   "wall_ms": 3162,
    "match_ms": 276653,
    "source": "stats_agent",
    "target": "producer",
@@ -9305,7 +9307,7 @@
   },
   {
    "seq": 25,
-   "wall_ms": 5939,
+   "wall_ms": 3163,
    "match_ms": 276653,
    "source": "producer",
    "target": "template_writer",
@@ -9315,7 +9317,7 @@
   },
   {
    "seq": 26,
-   "wall_ms": 5940,
+   "wall_ms": 3164,
    "match_ms": 276653,
    "source": "template_writer",
    "target": "publisher",
@@ -9325,7 +9327,7 @@
   },
   {
    "seq": 27,
-   "wall_ms": 5942,
+   "wall_ms": 3165,
    "match_ms": 349990,
    "source": "replayer",
    "target": "stats_agent",
@@ -9334,7 +9336,7 @@
   },
   {
    "seq": 28,
-   "wall_ms": 5962,
+   "wall_ms": 3181,
    "match_ms": 349990,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9343,7 +9345,7 @@
   },
   {
    "seq": 29,
-   "wall_ms": 5962,
+   "wall_ms": 3181,
    "match_ms": 348590,
    "source": "stats_agent",
    "target": "producer",
@@ -9353,7 +9355,7 @@
   },
   {
    "seq": 30,
-   "wall_ms": 5963,
+   "wall_ms": 3181,
    "match_ms": 348590,
    "source": "producer",
    "target": "insight_agent",
@@ -9363,7 +9365,7 @@
   },
   {
    "seq": 31,
-   "wall_ms": 5975,
+   "wall_ms": 3192,
    "match_ms": 348590,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9375,7 +9377,7 @@
   },
   {
    "seq": 32,
-   "wall_ms": 5975,
+   "wall_ms": 3192,
    "match_ms": 348590,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -9385,7 +9387,7 @@
   },
   {
    "seq": 33,
-   "wall_ms": 5990,
+   "wall_ms": 3204,
    "match_ms": 348590,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9397,7 +9399,7 @@
   },
   {
    "seq": 34,
-   "wall_ms": 5990,
+   "wall_ms": 3204,
    "match_ms": 348590,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -9407,7 +9409,7 @@
   },
   {
    "seq": 35,
-   "wall_ms": 6007,
+   "wall_ms": 3218,
    "match_ms": 348590,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9419,7 +9421,7 @@
   },
   {
    "seq": 36,
-   "wall_ms": 6020,
+   "wall_ms": 3231,
    "match_ms": 348590,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9431,7 +9433,7 @@
   },
   {
    "seq": 37,
-   "wall_ms": 6039,
+   "wall_ms": 3248,
    "match_ms": 348590,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9443,7 +9445,7 @@
   },
   {
    "seq": 38,
-   "wall_ms": 6040,
+   "wall_ms": 3248,
    "match_ms": 348590,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -9453,7 +9455,7 @@
   },
   {
    "seq": 39,
-   "wall_ms": 6042,
+   "wall_ms": 3250,
    "match_ms": 413313,
    "source": "replayer",
    "target": "stats_agent",
@@ -9462,7 +9464,7 @@
   },
   {
    "seq": 40,
-   "wall_ms": 6062,
+   "wall_ms": 3268,
    "match_ms": 413313,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9471,7 +9473,7 @@
   },
   {
    "seq": 41,
-   "wall_ms": 6063,
+   "wall_ms": 3268,
    "match_ms": 360000,
    "source": "stats_agent",
    "target": "producer",
@@ -9481,7 +9483,7 @@
   },
   {
    "seq": 42,
-   "wall_ms": 6063,
+   "wall_ms": 3269,
    "match_ms": 360000,
    "source": "producer",
    "target": "insight_agent",
@@ -9491,7 +9493,7 @@
   },
   {
    "seq": 43,
-   "wall_ms": 6077,
+   "wall_ms": 3283,
    "match_ms": 360000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9503,7 +9505,7 @@
   },
   {
    "seq": 44,
-   "wall_ms": 6077,
+   "wall_ms": 3283,
    "match_ms": 360000,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -9513,7 +9515,7 @@
   },
   {
    "seq": 45,
-   "wall_ms": 6091,
+   "wall_ms": 3297,
    "match_ms": 360000,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9525,7 +9527,7 @@
   },
   {
    "seq": 46,
-   "wall_ms": 6091,
+   "wall_ms": 3297,
    "match_ms": 360000,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -9535,7 +9537,7 @@
   },
   {
    "seq": 47,
-   "wall_ms": 6106,
+   "wall_ms": 3311,
    "match_ms": 360000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9547,7 +9549,7 @@
   },
   {
    "seq": 48,
-   "wall_ms": 6120,
+   "wall_ms": 3323,
    "match_ms": 360000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9559,7 +9561,7 @@
   },
   {
    "seq": 49,
-   "wall_ms": 6140,
+   "wall_ms": 3339,
    "match_ms": 360000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9571,7 +9573,7 @@
   },
   {
    "seq": 50,
-   "wall_ms": 6141,
+   "wall_ms": 3339,
    "match_ms": 360000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -9581,7 +9583,7 @@
   },
   {
    "seq": 51,
-   "wall_ms": 6143,
+   "wall_ms": 3343,
    "match_ms": 474586,
    "source": "replayer",
    "target": "stats_agent",
@@ -9590,7 +9592,7 @@
   },
   {
    "seq": 52,
-   "wall_ms": 6163,
+   "wall_ms": 3362,
    "match_ms": 474586,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9599,7 +9601,7 @@
   },
   {
    "seq": 53,
-   "wall_ms": 6164,
+   "wall_ms": 3363,
    "match_ms": 537062,
    "source": "replayer",
    "target": "stats_agent",
@@ -9608,7 +9610,7 @@
   },
   {
    "seq": 54,
-   "wall_ms": 6186,
+   "wall_ms": 3381,
    "match_ms": 537062,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9617,7 +9619,7 @@
   },
   {
    "seq": 55,
-   "wall_ms": 6188,
+   "wall_ms": 3382,
    "match_ms": 596913,
    "source": "replayer",
    "target": "stats_agent",
@@ -9626,7 +9628,7 @@
   },
   {
    "seq": 56,
-   "wall_ms": 6209,
+   "wall_ms": 3401,
    "match_ms": 596913,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9635,7 +9637,7 @@
   },
   {
    "seq": 57,
-   "wall_ms": 6210,
+   "wall_ms": 3402,
    "match_ms": 654500,
    "source": "replayer",
    "target": "stats_agent",
@@ -9644,7 +9646,7 @@
   },
   {
    "seq": 58,
-   "wall_ms": 6230,
+   "wall_ms": 3421,
    "match_ms": 654500,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9653,7 +9655,7 @@
   },
   {
    "seq": 59,
-   "wall_ms": 6231,
+   "wall_ms": 3422,
    "match_ms": 717108,
    "source": "replayer",
    "target": "stats_agent",
@@ -9662,7 +9664,7 @@
   },
   {
    "seq": 60,
-   "wall_ms": 6258,
+   "wall_ms": 3444,
    "match_ms": 717108,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9671,7 +9673,7 @@
   },
   {
    "seq": 61,
-   "wall_ms": 6260,
+   "wall_ms": 3446,
    "match_ms": 776128,
    "source": "replayer",
    "target": "stats_agent",
@@ -9680,7 +9682,7 @@
   },
   {
    "seq": 62,
-   "wall_ms": 6283,
+   "wall_ms": 3466,
    "match_ms": 776128,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9689,7 +9691,7 @@
   },
   {
    "seq": 63,
-   "wall_ms": 6284,
+   "wall_ms": 3467,
    "match_ms": 835659,
    "source": "replayer",
    "target": "stats_agent",
@@ -9698,7 +9700,7 @@
   },
   {
    "seq": 64,
-   "wall_ms": 6312,
+   "wall_ms": 3488,
    "match_ms": 835659,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9707,7 +9709,7 @@
   },
   {
    "seq": 65,
-   "wall_ms": 6313,
+   "wall_ms": 3489,
    "match_ms": 899504,
    "source": "replayer",
    "target": "stats_agent",
@@ -9716,7 +9718,7 @@
   },
   {
    "seq": 66,
-   "wall_ms": 6344,
+   "wall_ms": 3509,
    "match_ms": 899504,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9725,7 +9727,7 @@
   },
   {
    "seq": 67,
-   "wall_ms": 6344,
+   "wall_ms": 3509,
    "match_ms": 840000,
    "source": "stats_agent",
    "target": "producer",
@@ -9735,7 +9737,7 @@
   },
   {
    "seq": 68,
-   "wall_ms": 6344,
+   "wall_ms": 3510,
    "match_ms": 840000,
    "source": "producer",
    "target": "insight_agent",
@@ -9745,7 +9747,7 @@
   },
   {
    "seq": 69,
-   "wall_ms": 6358,
+   "wall_ms": 3522,
    "match_ms": 840000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9757,7 +9759,7 @@
   },
   {
    "seq": 70,
-   "wall_ms": 6358,
+   "wall_ms": 3522,
    "match_ms": 840000,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -9767,7 +9769,7 @@
   },
   {
    "seq": 71,
-   "wall_ms": 6372,
+   "wall_ms": 3535,
    "match_ms": 840000,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9779,7 +9781,7 @@
   },
   {
    "seq": 72,
-   "wall_ms": 6372,
+   "wall_ms": 3535,
    "match_ms": 840000,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -9789,7 +9791,7 @@
   },
   {
    "seq": 73,
-   "wall_ms": 6386,
+   "wall_ms": 3551,
    "match_ms": 840000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9801,7 +9803,7 @@
   },
   {
    "seq": 74,
-   "wall_ms": 6399,
+   "wall_ms": 3556,
    "match_ms": 840000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9813,7 +9815,7 @@
   },
   {
    "seq": 75,
-   "wall_ms": 6414,
+   "wall_ms": 3569,
    "match_ms": 840000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9825,7 +9827,7 @@
   },
   {
    "seq": 76,
-   "wall_ms": 6414,
+   "wall_ms": 3570,
    "match_ms": 840000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -9835,7 +9837,7 @@
   },
   {
    "seq": 77,
-   "wall_ms": 6419,
+   "wall_ms": 3571,
    "match_ms": 954432,
    "source": "replayer",
    "target": "stats_agent",
@@ -9844,7 +9846,7 @@
   },
   {
    "seq": 78,
-   "wall_ms": 6446,
+   "wall_ms": 3592,
    "match_ms": 954432,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9853,7 +9855,7 @@
   },
   {
    "seq": 79,
-   "wall_ms": 6447,
+   "wall_ms": 3593,
    "match_ms": 1012964,
    "source": "replayer",
    "target": "stats_agent",
@@ -9862,7 +9864,7 @@
   },
   {
    "seq": 80,
-   "wall_ms": 6479,
+   "wall_ms": 3613,
    "match_ms": 1012964,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9871,7 +9873,7 @@
   },
   {
    "seq": 81,
-   "wall_ms": 6481,
+   "wall_ms": 3614,
    "match_ms": 1074461,
    "source": "replayer",
    "target": "stats_agent",
@@ -9880,7 +9882,7 @@
   },
   {
    "seq": 82,
-   "wall_ms": 6522,
+   "wall_ms": 3635,
    "match_ms": 1074461,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9889,7 +9891,7 @@
   },
   {
    "seq": 83,
-   "wall_ms": 6525,
+   "wall_ms": 3636,
    "match_ms": 1133846,
    "source": "replayer",
    "target": "stats_agent",
@@ -9898,7 +9900,7 @@
   },
   {
    "seq": 84,
-   "wall_ms": 6562,
+   "wall_ms": 3657,
    "match_ms": 1133846,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9907,7 +9909,7 @@
   },
   {
    "seq": 85,
-   "wall_ms": 6563,
+   "wall_ms": 3658,
    "match_ms": 1198020,
    "source": "replayer",
    "target": "stats_agent",
@@ -9916,7 +9918,7 @@
   },
   {
    "seq": 86,
-   "wall_ms": 6597,
+   "wall_ms": 3680,
    "match_ms": 1198020,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9925,7 +9927,7 @@
   },
   {
    "seq": 87,
-   "wall_ms": 6597,
+   "wall_ms": 3680,
    "match_ms": 1160491,
    "source": "stats_agent",
    "target": "producer",
@@ -9935,7 +9937,7 @@
   },
   {
    "seq": 88,
-   "wall_ms": 6598,
+   "wall_ms": 3680,
    "match_ms": 1160491,
    "source": "producer",
    "target": "template_writer",
@@ -9945,7 +9947,7 @@
   },
   {
    "seq": 89,
-   "wall_ms": 6599,
+   "wall_ms": 3681,
    "match_ms": 1160491,
    "source": "template_writer",
    "target": "publisher",
@@ -9955,7 +9957,7 @@
   },
   {
    "seq": 90,
-   "wall_ms": 6604,
+   "wall_ms": 3683,
    "match_ms": 1245373,
    "source": "replayer",
    "target": "stats_agent",
@@ -9964,7 +9966,7 @@
   },
   {
    "seq": 91,
-   "wall_ms": 6639,
+   "wall_ms": 3705,
    "match_ms": 1245373,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9973,7 +9975,7 @@
   },
   {
    "seq": 92,
-   "wall_ms": 6639,
+   "wall_ms": 3705,
    "match_ms": 1245373,
    "source": "stats_agent",
    "target": "producer",
@@ -9983,7 +9985,7 @@
   },
   {
    "seq": 93,
-   "wall_ms": 6640,
+   "wall_ms": 3705,
    "match_ms": 1245373,
    "source": "producer",
    "target": "template_writer",
@@ -9993,7 +9995,7 @@
   },
   {
    "seq": 94,
-   "wall_ms": 6640,
+   "wall_ms": 3706,
    "match_ms": 1245373,
    "source": "template_writer",
    "target": "publisher",
@@ -10003,7 +10005,7 @@
   },
   {
    "seq": 95,
-   "wall_ms": 6642,
+   "wall_ms": 3709,
    "match_ms": 1319641,
    "source": "replayer",
    "target": "stats_agent",
@@ -10012,7 +10014,7 @@
   },
   {
    "seq": 96,
-   "wall_ms": 6673,
+   "wall_ms": 3732,
    "match_ms": 1319641,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10021,7 +10023,7 @@
   },
   {
    "seq": 97,
-   "wall_ms": 6674,
+   "wall_ms": 3733,
    "match_ms": 1363194,
    "source": "replayer",
    "target": "stats_agent",
@@ -10030,7 +10032,7 @@
   },
   {
    "seq": 98,
-   "wall_ms": 6703,
+   "wall_ms": 3760,
    "match_ms": 1363194,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10039,7 +10041,7 @@
   },
   {
    "seq": 99,
-   "wall_ms": 6704,
+   "wall_ms": 3761,
    "match_ms": 1436075,
    "source": "replayer",
    "target": "stats_agent",
@@ -10048,7 +10050,7 @@
   },
   {
    "seq": 100,
-   "wall_ms": 6734,
+   "wall_ms": 3785,
    "match_ms": 1436075,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10057,7 +10059,7 @@
   },
   {
    "seq": 101,
-   "wall_ms": 6735,
+   "wall_ms": 3786,
    "match_ms": 1495816,
    "source": "replayer",
    "target": "stats_agent",
@@ -10066,7 +10068,7 @@
   },
   {
    "seq": 102,
-   "wall_ms": 6771,
+   "wall_ms": 3817,
    "match_ms": 1495816,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10075,7 +10077,7 @@
   },
   {
    "seq": 103,
-   "wall_ms": 6773,
+   "wall_ms": 3818,
    "match_ms": 1554384,
    "source": "replayer",
    "target": "stats_agent",
@@ -10084,7 +10086,7 @@
   },
   {
    "seq": 104,
-   "wall_ms": 6810,
+   "wall_ms": 3850,
    "match_ms": 1554384,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10093,7 +10095,7 @@
   },
   {
    "seq": 105,
-   "wall_ms": 6812,
+   "wall_ms": 3851,
    "match_ms": 1611679,
    "source": "replayer",
    "target": "stats_agent",
@@ -10102,7 +10104,7 @@
   },
   {
    "seq": 106,
-   "wall_ms": 6855,
+   "wall_ms": 3882,
    "match_ms": 1611679,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10111,7 +10113,7 @@
   },
   {
    "seq": 107,
-   "wall_ms": 6855,
+   "wall_ms": 3882,
    "match_ms": 1560000,
    "source": "stats_agent",
    "target": "producer",
@@ -10121,7 +10123,7 @@
   },
   {
    "seq": 108,
-   "wall_ms": 6855,
+   "wall_ms": 3882,
    "match_ms": 1610040,
    "source": "stats_agent",
    "target": "producer",
@@ -10131,7 +10133,7 @@
   },
   {
    "seq": 109,
-   "wall_ms": 6856,
+   "wall_ms": 3883,
    "match_ms": 1560000,
    "source": "producer",
    "target": "insight_agent",
@@ -10141,7 +10143,7 @@
   },
   {
    "seq": 110,
-   "wall_ms": 6857,
+   "wall_ms": 3883,
    "match_ms": 1610040,
    "source": "producer",
    "target": "template_writer",
@@ -10151,7 +10153,7 @@
   },
   {
    "seq": 111,
-   "wall_ms": 6872,
+   "wall_ms": 3895,
    "match_ms": 1560000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10163,7 +10165,7 @@
   },
   {
    "seq": 112,
-   "wall_ms": 6872,
+   "wall_ms": 3895,
    "match_ms": 1560000,
    "source": "insight_agent",
    "target": "personalizer_agent",
@@ -10173,7 +10175,7 @@
   },
   {
    "seq": 113,
-   "wall_ms": 6873,
+   "wall_ms": 3896,
    "match_ms": 1610040,
    "source": "template_writer",
    "target": "publisher",
@@ -10183,7 +10185,7 @@
   },
   {
    "seq": 114,
-   "wall_ms": 6888,
+   "wall_ms": 3912,
    "match_ms": 1560000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10195,7 +10197,7 @@
   },
   {
    "seq": 115,
-   "wall_ms": 6903,
+   "wall_ms": 3929,
    "match_ms": 1560000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10207,7 +10209,7 @@
   },
   {
    "seq": 116,
-   "wall_ms": 6916,
+   "wall_ms": 3941,
    "match_ms": 1560000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10219,7 +10221,7 @@
   },
   {
    "seq": 117,
-   "wall_ms": 6916,
+   "wall_ms": 3941,
    "match_ms": 1560000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -10229,7 +10231,7 @@
   },
   {
    "seq": 118,
-   "wall_ms": 6921,
+   "wall_ms": 3943,
    "match_ms": 1673223,
    "source": "replayer",
    "target": "stats_agent",
@@ -10238,7 +10240,7 @@
   },
   {
    "seq": 119,
-   "wall_ms": 6955,
+   "wall_ms": 3974,
    "match_ms": 1673223,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10247,7 +10249,7 @@
   },
   {
    "seq": 120,
-   "wall_ms": 6955,
+   "wall_ms": 3974,
    "match_ms": 1620000,
    "source": "stats_agent",
    "target": "producer",
@@ -10257,7 +10259,7 @@
   },
   {
    "seq": 121,
-   "wall_ms": 6956,
+   "wall_ms": 3975,
    "match_ms": 1620000,
    "source": "producer",
    "target": "insight_agent",
@@ -10267,7 +10269,7 @@
   },
   {
    "seq": 122,
-   "wall_ms": 6967,
+   "wall_ms": 3979,
    "match_ms": 1620000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10279,7 +10281,7 @@
   },
   {
    "seq": 123,
-   "wall_ms": 6967,
+   "wall_ms": 3979,
    "match_ms": 1620000,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -10289,7 +10291,7 @@
   },
   {
    "seq": 124,
-   "wall_ms": 6983,
+   "wall_ms": 3993,
    "match_ms": 1620000,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10301,7 +10303,7 @@
   },
   {
    "seq": 125,
-   "wall_ms": 6983,
+   "wall_ms": 3993,
    "match_ms": 1620000,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -10311,7 +10313,7 @@
   },
   {
    "seq": 126,
-   "wall_ms": 7003,
+   "wall_ms": 4014,
    "match_ms": 1620000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10323,7 +10325,7 @@
   },
   {
    "seq": 127,
-   "wall_ms": 7019,
+   "wall_ms": 4027,
    "match_ms": 1620000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10335,7 +10337,7 @@
   },
   {
    "seq": 128,
-   "wall_ms": 7044,
+   "wall_ms": 4038,
    "match_ms": 1620000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10347,7 +10349,7 @@
   },
   {
    "seq": 129,
-   "wall_ms": 7044,
+   "wall_ms": 4038,
    "match_ms": 1620000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -10357,7 +10359,7 @@
   },
   {
    "seq": 130,
-   "wall_ms": 7047,
+   "wall_ms": 4045,
    "match_ms": 1731968,
    "source": "replayer",
    "target": "stats_agent",
@@ -10366,7 +10368,7 @@
   },
   {
    "seq": 131,
-   "wall_ms": 7103,
+   "wall_ms": 4097,
    "match_ms": 1731968,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10375,7 +10377,7 @@
   },
   {
    "seq": 132,
-   "wall_ms": 7105,
+   "wall_ms": 4098,
    "match_ms": 1797937,
    "source": "replayer",
    "target": "stats_agent",
@@ -10384,7 +10386,7 @@
   },
   {
    "seq": 133,
-   "wall_ms": 7174,
+   "wall_ms": 4168,
    "match_ms": 1797937,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10393,7 +10395,7 @@
   },
   {
    "seq": 134,
-   "wall_ms": 7174,
+   "wall_ms": 4169,
    "match_ms": 1760302,
    "source": "stats_agent",
    "target": "producer",
@@ -10403,7 +10405,7 @@
   },
   {
    "seq": 135,
-   "wall_ms": 7175,
+   "wall_ms": 4170,
    "match_ms": 1760302,
    "source": "producer",
    "target": "insight_agent",
@@ -10413,7 +10415,7 @@
   },
   {
    "seq": 136,
-   "wall_ms": 7197,
+   "wall_ms": 4179,
    "match_ms": 1760302,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10425,7 +10427,7 @@
   },
   {
    "seq": 137,
-   "wall_ms": 7197,
+   "wall_ms": 4180,
    "match_ms": 1760302,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -10435,7 +10437,7 @@
   },
   {
    "seq": 138,
-   "wall_ms": 7210,
+   "wall_ms": 4196,
    "match_ms": 1760302,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10447,7 +10449,7 @@
   },
   {
    "seq": 139,
-   "wall_ms": 7210,
+   "wall_ms": 4196,
    "match_ms": 1760302,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -10457,7 +10459,7 @@
   },
   {
    "seq": 140,
-   "wall_ms": 7226,
+   "wall_ms": 4224,
    "match_ms": 1760302,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10469,7 +10471,7 @@
   },
   {
    "seq": 141,
-   "wall_ms": 7240,
+   "wall_ms": 4243,
    "match_ms": 1760302,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10481,7 +10483,7 @@
   },
   {
    "seq": 142,
-   "wall_ms": 7254,
+   "wall_ms": 4263,
    "match_ms": 1760302,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10493,7 +10495,7 @@
   },
   {
    "seq": 143,
-   "wall_ms": 7254,
+   "wall_ms": 4264,
    "match_ms": 1760302,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -10503,7 +10505,7 @@
   },
   {
    "seq": 144,
-   "wall_ms": 7256,
+   "wall_ms": 4267,
    "match_ms": 1856559,
    "source": "replayer",
    "target": "stats_agent",
@@ -10512,7 +10514,7 @@
   },
   {
    "seq": 145,
-   "wall_ms": 7291,
+   "wall_ms": 4333,
    "match_ms": 1856559,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10521,7 +10523,7 @@
   },
   {
    "seq": 146,
-   "wall_ms": 7292,
+   "wall_ms": 4334,
    "match_ms": 1918557,
    "source": "replayer",
    "target": "stats_agent",
@@ -10530,7 +10532,7 @@
   },
   {
    "seq": 147,
-   "wall_ms": 7330,
+   "wall_ms": 4395,
    "match_ms": 1918557,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10539,7 +10541,7 @@
   },
   {
    "seq": 148,
-   "wall_ms": 7333,
+   "wall_ms": 4396,
    "match_ms": 1975025,
    "source": "replayer",
    "target": "stats_agent",
@@ -10548,7 +10550,7 @@
   },
   {
    "seq": 149,
-   "wall_ms": 7381,
+   "wall_ms": 4441,
    "match_ms": 1975025,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10557,7 +10559,7 @@
   },
   {
    "seq": 150,
-   "wall_ms": 7383,
+   "wall_ms": 4443,
    "match_ms": 2018182,
    "source": "replayer",
    "target": "stats_agent",
@@ -10566,7 +10568,7 @@
   },
   {
    "seq": 151,
-   "wall_ms": 7438,
+   "wall_ms": 4511,
    "match_ms": 2018182,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10575,7 +10577,7 @@
   },
   {
    "seq": 152,
-   "wall_ms": 7439,
+   "wall_ms": 4514,
    "match_ms": 2096474,
    "source": "replayer",
    "target": "stats_agent",
@@ -10584,7 +10586,7 @@
   },
   {
    "seq": 153,
-   "wall_ms": 7477,
+   "wall_ms": 4578,
    "match_ms": 2096474,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10593,7 +10595,7 @@
   },
   {
    "seq": 154,
-   "wall_ms": 7477,
+   "wall_ms": 4578,
    "match_ms": 2066131,
    "source": "stats_agent",
    "target": "producer",
@@ -10603,7 +10605,7 @@
   },
   {
    "seq": 155,
-   "wall_ms": 7478,
+   "wall_ms": 4580,
    "match_ms": 2066131,
    "source": "producer",
    "target": "template_writer",
@@ -10613,7 +10615,7 @@
   },
   {
    "seq": 156,
-   "wall_ms": 7479,
+   "wall_ms": 4581,
    "match_ms": 2066131,
    "source": "template_writer",
    "target": "publisher",
@@ -10623,7 +10625,7 @@
   },
   {
    "seq": 157,
-   "wall_ms": 7481,
+   "wall_ms": 4585,
    "match_ms": 2154529,
    "source": "replayer",
    "target": "stats_agent",
@@ -10632,7 +10634,7 @@
   },
   {
    "seq": 158,
-   "wall_ms": 7534,
+   "wall_ms": 4638,
    "match_ms": 2154529,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10641,7 +10643,7 @@
   },
   {
    "seq": 159,
-   "wall_ms": 7534,
+   "wall_ms": 4638,
    "match_ms": 2100000,
    "source": "stats_agent",
    "target": "producer",
@@ -10651,7 +10653,7 @@
   },
   {
    "seq": 160,
-   "wall_ms": 7534,
+   "wall_ms": 4639,
    "match_ms": 2117384,
    "source": "stats_agent",
    "target": "producer",
@@ -10661,7 +10663,7 @@
   },
   {
    "seq": 161,
-   "wall_ms": 7535,
+   "wall_ms": 4639,
    "match_ms": 2117384,
    "source": "stats_agent",
    "target": "producer",
@@ -10671,7 +10673,7 @@
   },
   {
    "seq": 162,
-   "wall_ms": 7535,
+   "wall_ms": 4640,
    "match_ms": 2100000,
    "source": "producer",
    "target": "insight_agent",
@@ -10681,7 +10683,7 @@
   },
   {
    "seq": 163,
-   "wall_ms": 7536,
+   "wall_ms": 4641,
    "match_ms": 2117384,
    "source": "producer",
    "target": "insight_agent",
@@ -10691,7 +10693,7 @@
   },
   {
    "seq": 164,
-   "wall_ms": 7536,
+   "wall_ms": 4641,
    "match_ms": 2117384,
    "source": "producer",
    "target": "template_writer",
@@ -10701,7 +10703,7 @@
   },
   {
    "seq": 165,
-   "wall_ms": 7551,
+   "wall_ms": 4660,
    "match_ms": 2100000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10713,7 +10715,7 @@
   },
   {
    "seq": 166,
-   "wall_ms": 7551,
+   "wall_ms": 4660,
    "match_ms": 2100000,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -10723,7 +10725,7 @@
   },
   {
    "seq": 167,
-   "wall_ms": 7567,
+   "wall_ms": 4676,
    "match_ms": 2117384,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10735,7 +10737,7 @@
   },
   {
    "seq": 168,
-   "wall_ms": 7567,
+   "wall_ms": 4676,
    "match_ms": 2117384,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -10745,7 +10747,7 @@
   },
   {
    "seq": 169,
-   "wall_ms": 7567,
+   "wall_ms": 4677,
    "match_ms": 2117384,
    "source": "template_writer",
    "target": "publisher",
@@ -10755,7 +10757,7 @@
   },
   {
    "seq": 170,
-   "wall_ms": 7581,
+   "wall_ms": 4687,
    "match_ms": 2100000,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10767,7 +10769,7 @@
   },
   {
    "seq": 171,
-   "wall_ms": 7582,
+   "wall_ms": 4687,
    "match_ms": 2100000,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -10777,7 +10779,7 @@
   },
   {
    "seq": 172,
-   "wall_ms": 7593,
+   "wall_ms": 4702,
    "match_ms": 2117384,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10789,7 +10791,7 @@
   },
   {
    "seq": 173,
-   "wall_ms": 7593,
+   "wall_ms": 4702,
    "match_ms": 2117384,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -10799,7 +10801,7 @@
   },
   {
    "seq": 174,
-   "wall_ms": 7611,
+   "wall_ms": 4718,
    "match_ms": 2100000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10811,7 +10813,7 @@
   },
   {
    "seq": 175,
-   "wall_ms": 7624,
+   "wall_ms": 4725,
    "match_ms": 2100000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10823,7 +10825,7 @@
   },
   {
    "seq": 176,
-   "wall_ms": 7639,
+   "wall_ms": 4736,
    "match_ms": 2100000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10835,7 +10837,7 @@
   },
   {
    "seq": 177,
-   "wall_ms": 7639,
+   "wall_ms": 4737,
    "match_ms": 2100000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -10845,7 +10847,7 @@
   },
   {
    "seq": 178,
-   "wall_ms": 7654,
+   "wall_ms": 4750,
    "match_ms": 2117384,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10857,7 +10859,7 @@
   },
   {
    "seq": 179,
-   "wall_ms": 7667,
+   "wall_ms": 4763,
    "match_ms": 2117384,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10869,7 +10871,7 @@
   },
   {
    "seq": 180,
-   "wall_ms": 7681,
+   "wall_ms": 4769,
    "match_ms": 2117384,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10881,7 +10883,7 @@
   },
   {
    "seq": 181,
-   "wall_ms": 7682,
+   "wall_ms": 4769,
    "match_ms": 2117384,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -10891,7 +10893,7 @@
   },
   {
    "seq": 182,
-   "wall_ms": 7684,
+   "wall_ms": 4772,
    "match_ms": 2198999,
    "source": "replayer",
    "target": "stats_agent",
@@ -10900,7 +10902,7 @@
   },
   {
    "seq": 183,
-   "wall_ms": 7732,
+   "wall_ms": 4804,
    "match_ms": 2198999,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10909,7 +10911,7 @@
   },
   {
    "seq": 184,
-   "wall_ms": 7732,
+   "wall_ms": 4804,
    "match_ms": 2198999,
    "source": "stats_agent",
    "target": "producer",
@@ -10919,7 +10921,7 @@
   },
   {
    "seq": 185,
-   "wall_ms": 7733,
+   "wall_ms": 4805,
    "match_ms": 2198999,
    "source": "producer",
    "target": "insight_agent",
@@ -10929,19 +10931,19 @@
   },
   {
    "seq": 186,
-   "wall_ms": 7745,
+   "wall_ms": 6706,
    "match_ms": 2198999,
    "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00422",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1899
   },
   {
    "seq": 187,
-   "wall_ms": 7745,
+   "wall_ms": 6708,
    "match_ms": 2198999,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -10951,19 +10953,19 @@
   },
   {
    "seq": 188,
-   "wall_ms": 7758,
+   "wall_ms": 11806,
    "match_ms": 2198999,
    "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00422",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 991
   },
   {
    "seq": 189,
-   "wall_ms": 7758,
+   "wall_ms": 11809,
    "match_ms": 2198999,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -10973,43 +10975,79 @@
   },
   {
    "seq": 190,
-   "wall_ms": 7773,
+   "wall_ms": 18369,
    "match_ms": 2198999,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00422",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1560
   },
   {
    "seq": 191,
-   "wall_ms": 7788,
+   "wall_ms": 24559,
    "match_ms": 2198999,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00422",
-   "status": "cached",
-   "detail": "cached",
+   "status": "retry",
+   "detail": "rejected: ur/fan title mentions names not in FACTS: ka, pehla (only use players and clubs from FACTS); ur/fan title must be written in Urdu script (names may stay in English); ur/fan body mentions names not in FACTS: ke, ne, mein, shandar, kar, diya, Is, khoobsurat, par, madad, ki (only use players and clubs from FACTS); ur/fan body must be written in Urdu script (names may stay in English); ur/fan why_it_matters mentions names not in FACTS: Yeh, pehla, ka, rukh, badal, raha, hai, aur, ko, barat, dila (only use players and clubs from FACTS); ur/fan why_it_matters must be written in Urdu script (names may stay in English); ur/analyst title mentions names not in FACTS: ka, aur, analysis (only use players and clubs from FACTS); ur/analyst title must be written in Urdu script (names may stay in English); ur/analyst body mentions names not in FACTS: ke, ne, mein, aur, ki, raftar, se, apna, pehla, kiya, jise, ho, gaya (only use players and clubs from FACTS); ur/analyst body must be written in Urdu script (names may stay in English); ur/analyst why_it_matters mentions names not in FACTS: Yeh, low, probability, strike, deadlock, todti, hai, aur, ki, ko, faida, deti (only use players and clubs from FACTS); ur/analyst why_it_matters must be written in Urdu script (names may stay in English)",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1744
   },
   {
    "seq": 192,
-   "wall_ms": 7802,
+   "wall_ms": 30240,
    "match_ms": 2198999,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00422",
-   "status": "cached",
-   "detail": "cached",
+   "status": "retry",
+   "detail": "rejected: ur/analyst title must be written in Urdu script (names may stay in English); ur/analyst body must be written in Urdu script (names may stay in English)",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1417
   },
   {
    "seq": 193,
-   "wall_ms": 7802,
+   "wall_ms": 36431,
+   "match_ms": 2198999,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e00422",
+   "status": "retry",
+   "detail": "rejected: ur/fan title must be written in Urdu script (names may stay in English)",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 1627
+  },
+  {
+   "seq": 194,
+   "wall_ms": 46865,
+   "match_ms": 2198999,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e00422",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-3.5-flash",
+   "latency_ms": 10434
+  },
+  {
+   "seq": 195,
+   "wall_ms": 48644,
+   "match_ms": 2198999,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e00422",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 1770
+  },
+  {
+   "seq": 196,
+   "wall_ms": 48646,
    "match_ms": 2198999,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -11018,8 +11056,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 194,
-   "wall_ms": 7805,
+   "seq": 197,
+   "wall_ms": 48651,
    "match_ms": 2279077,
    "source": "replayer",
    "target": "stats_agent",
@@ -11027,8 +11065,8 @@
    "detail": "5 events"
   },
   {
-   "seq": 195,
-   "wall_ms": 7861,
+   "seq": 198,
+   "wall_ms": 48694,
    "match_ms": 2279077,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11036,8 +11074,8 @@
    "detail": "snapshot + moments at 38'"
   },
   {
-   "seq": 196,
-   "wall_ms": 7862,
+   "seq": 199,
+   "wall_ms": 48695,
    "match_ms": 2338203,
    "source": "replayer",
    "target": "stats_agent",
@@ -11045,8 +11083,8 @@
    "detail": "10 events"
   },
   {
-   "seq": 197,
-   "wall_ms": 7913,
+   "seq": 200,
+   "wall_ms": 48726,
    "match_ms": 2338203,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11054,8 +11092,8 @@
    "detail": "snapshot + moments at 39'"
   },
   {
-   "seq": 198,
-   "wall_ms": 7914,
+   "seq": 201,
+   "wall_ms": 48727,
    "match_ms": 2387856,
    "source": "replayer",
    "target": "stats_agent",
@@ -11063,8 +11101,8 @@
    "detail": "10 events"
   },
   {
-   "seq": 199,
-   "wall_ms": 7970,
+   "seq": 202,
+   "wall_ms": 48761,
    "match_ms": 2387856,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11072,8 +11110,8 @@
    "detail": "snapshot + moments at 40'"
   },
   {
-   "seq": 200,
-   "wall_ms": 7972,
+   "seq": 203,
+   "wall_ms": 48762,
    "match_ms": 2459793,
    "source": "replayer",
    "target": "stats_agent",
@@ -11081,8 +11119,8 @@
    "detail": "13 events"
   },
   {
-   "seq": 201,
-   "wall_ms": 8031,
+   "seq": 204,
+   "wall_ms": 48793,
    "match_ms": 2459793,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11090,8 +11128,8 @@
    "detail": "snapshot + moments at 41'"
   },
   {
-   "seq": 202,
-   "wall_ms": 8035,
+   "seq": 205,
+   "wall_ms": 48794,
    "match_ms": 2519623,
    "source": "replayer",
    "target": "stats_agent",
@@ -11099,8 +11137,8 @@
    "detail": "7 events"
   },
   {
-   "seq": 203,
-   "wall_ms": 8082,
+   "seq": 206,
+   "wall_ms": 48826,
    "match_ms": 2519623,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11108,8 +11146,8 @@
    "detail": "snapshot + moments at 42'"
   },
   {
-   "seq": 204,
-   "wall_ms": 8083,
+   "seq": 207,
+   "wall_ms": 48827,
    "match_ms": 2578000,
    "source": "replayer",
    "target": "stats_agent",
@@ -11117,8 +11155,8 @@
    "detail": "16 events"
   },
   {
-   "seq": 205,
-   "wall_ms": 8128,
+   "seq": 208,
+   "wall_ms": 48859,
    "match_ms": 2578000,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11126,8 +11164,8 @@
    "detail": "snapshot + moments at 43'"
   },
   {
-   "seq": 206,
-   "wall_ms": 8129,
+   "seq": 209,
+   "wall_ms": 48860,
    "match_ms": 2607004,
    "source": "replayer",
    "target": "stats_agent",
@@ -11135,8 +11173,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 207,
-   "wall_ms": 8182,
+   "seq": 210,
+   "wall_ms": 48895,
    "match_ms": 2607004,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11144,8 +11182,8 @@
    "detail": "snapshot + moments at 44'"
   },
   {
-   "seq": 208,
-   "wall_ms": 8182,
+   "seq": 211,
+   "wall_ms": 48895,
    "match_ms": 2607004,
    "source": "stats_agent",
    "target": "producer",
@@ -11154,8 +11192,8 @@
    "detail": "yellow_card (importance 0.30)"
   },
   {
-   "seq": 209,
-   "wall_ms": 8183,
+   "seq": 212,
+   "wall_ms": 48896,
    "match_ms": 2607004,
    "source": "producer",
    "target": "template_writer",
@@ -11164,8 +11202,8 @@
    "detail": "route=template: importance 0.30 < 0.45"
   },
   {
-   "seq": 210,
-   "wall_ms": 8184,
+   "seq": 213,
+   "wall_ms": 48897,
    "match_ms": 2607004,
    "source": "template_writer",
    "target": "publisher",
@@ -11174,8 +11212,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 211,
-   "wall_ms": 8186,
+   "seq": 214,
+   "wall_ms": 48899,
    "match_ms": 2697042,
    "source": "replayer",
    "target": "stats_agent",
@@ -11183,8 +11221,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 212,
-   "wall_ms": 8235,
+   "seq": 215,
+   "wall_ms": 48969,
    "match_ms": 2697042,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11192,8 +11230,8 @@
    "detail": "snapshot + moments at 45'"
   },
   {
-   "seq": 213,
-   "wall_ms": 8236,
+   "seq": 216,
+   "wall_ms": 48970,
    "match_ms": 2758716,
    "source": "replayer",
    "target": "stats_agent",
@@ -11201,8 +11239,8 @@
    "detail": "15 events"
   },
   {
-   "seq": 214,
-   "wall_ms": 8288,
+   "seq": 217,
+   "wall_ms": 49019,
    "match_ms": 2758716,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11210,8 +11248,8 @@
    "detail": "snapshot + moments at 45+1'"
   },
   {
-   "seq": 215,
-   "wall_ms": 8289,
+   "seq": 218,
+   "wall_ms": 49021,
    "match_ms": 2819065,
    "source": "replayer",
    "target": "stats_agent",
@@ -11219,8 +11257,8 @@
    "detail": "12 events"
   },
   {
-   "seq": 216,
-   "wall_ms": 8343,
+   "seq": 219,
+   "wall_ms": 49078,
    "match_ms": 2819065,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11228,8 +11266,8 @@
    "detail": "snapshot + moments at 45+2'"
   },
   {
-   "seq": 217,
-   "wall_ms": 8344,
+   "seq": 220,
+   "wall_ms": 49079,
    "match_ms": 2870430,
    "source": "replayer",
    "target": "stats_agent",
@@ -11237,8 +11275,8 @@
    "detail": "10 events"
   },
   {
-   "seq": 218,
-   "wall_ms": 8402,
+   "seq": 221,
+   "wall_ms": 49133,
    "match_ms": 2870430,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11246,8 +11284,8 @@
    "detail": "snapshot + moments at 45+3'"
   },
   {
-   "seq": 219,
-   "wall_ms": 8403,
+   "seq": 222,
+   "wall_ms": 49134,
    "match_ms": 2931953,
    "source": "replayer",
    "target": "stats_agent",
@@ -11255,8 +11293,8 @@
    "detail": "15 events"
   },
   {
-   "seq": 220,
-   "wall_ms": 8457,
+   "seq": 223,
+   "wall_ms": 49176,
    "match_ms": 2931953,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11264,8 +11302,8 @@
    "detail": "snapshot + moments at 46'"
   },
   {
-   "seq": 221,
-   "wall_ms": 8458,
+   "seq": 224,
+   "wall_ms": 49176,
    "match_ms": 2887257,
    "source": "stats_agent",
    "target": "producer",
@@ -11274,8 +11312,8 @@
    "detail": "half_time (importance 0.70)"
   },
   {
-   "seq": 222,
-   "wall_ms": 8458,
+   "seq": 225,
+   "wall_ms": 49176,
    "match_ms": 2887257,
    "source": "producer",
    "target": "insight_agent",
@@ -11284,8 +11322,8 @@
    "detail": "route=full: importance 0.70 >= 0.6"
   },
   {
-   "seq": 223,
-   "wall_ms": 8473,
+   "seq": 226,
+   "wall_ms": 49190,
    "match_ms": 2887257,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11296,8 +11334,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 224,
-   "wall_ms": 8473,
+   "seq": 227,
+   "wall_ms": 49190,
    "match_ms": 2887257,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -11306,44 +11344,10 @@
    "detail": ""
   },
   {
-   "seq": 225,
-   "wall_ms": 8484,
-   "match_ms": 2887257,
-   "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "half_time:e00541",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 226,
-   "wall_ms": 8484,
-   "match_ms": 2887257,
-   "source": "narrator_agent",
-   "target": "personalizer_agent",
-   "moment_id": "half_time:e00541",
-   "status": "ok",
-   "detail": ""
-  },
-  {
-   "seq": 227,
-   "wall_ms": 8498,
-   "match_ms": 2887257,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "half_time:e00541",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 228,
-   "wall_ms": 8512,
+   "wall_ms": 49202,
    "match_ms": 2887257,
-   "source": "personalizer_agent",
+   "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "half_time:e00541",
    "status": "cached",
@@ -11353,7 +11357,17 @@
   },
   {
    "seq": 229,
-   "wall_ms": 8525,
+   "wall_ms": 49202,
+   "match_ms": 2887257,
+   "source": "narrator_agent",
+   "target": "personalizer_agent",
+   "moment_id": "half_time:e00541",
+   "status": "ok",
+   "detail": ""
+  },
+  {
+   "seq": 230,
+   "wall_ms": 49215,
    "match_ms": 2887257,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11364,8 +11378,32 @@
    "latency_ms": 0
   },
   {
-   "seq": 230,
-   "wall_ms": 8525,
+   "seq": 231,
+   "wall_ms": 49230,
+   "match_ms": 2887257,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "half_time:e00541",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 232,
+   "wall_ms": 49234,
+   "match_ms": 2887257,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "half_time:e00541",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 233,
+   "wall_ms": 49234,
    "match_ms": 2887257,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -11374,8 +11412,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 231,
-   "wall_ms": 8527,
+   "seq": 234,
+   "wall_ms": 49237,
    "match_ms": 2998365,
    "source": "replayer",
    "target": "stats_agent",
@@ -11383,8 +11421,8 @@
    "detail": "15 events"
   },
   {
-   "seq": 232,
-   "wall_ms": 8582,
+   "seq": 235,
+   "wall_ms": 49277,
    "match_ms": 2998365,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11392,8 +11430,8 @@
    "detail": "snapshot + moments at 47'"
   },
   {
-   "seq": 233,
-   "wall_ms": 8583,
+   "seq": 236,
+   "wall_ms": 49279,
    "match_ms": 3058125,
    "source": "replayer",
    "target": "stats_agent",
@@ -11401,8 +11439,8 @@
    "detail": "15 events"
   },
   {
-   "seq": 234,
-   "wall_ms": 8652,
+   "seq": 237,
+   "wall_ms": 49322,
    "match_ms": 3058125,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11410,8 +11448,8 @@
    "detail": "snapshot + moments at 48'"
   },
   {
-   "seq": 235,
-   "wall_ms": 8652,
+   "seq": 238,
+   "wall_ms": 49322,
    "match_ms": 3000000,
    "source": "stats_agent",
    "target": "producer",
@@ -11420,8 +11458,8 @@
    "detail": "pressure_surge (importance 0.50)"
   },
   {
-   "seq": 236,
-   "wall_ms": 8652,
+   "seq": 239,
+   "wall_ms": 49322,
    "match_ms": 3034813,
    "source": "stats_agent",
    "target": "producer",
@@ -11430,8 +11468,8 @@
    "detail": "shot_milestone (importance 0.25)"
   },
   {
-   "seq": 237,
-   "wall_ms": 8654,
+   "seq": 240,
+   "wall_ms": 49323,
    "match_ms": 3000000,
    "source": "producer",
    "target": "insight_agent",
@@ -11440,8 +11478,8 @@
    "detail": "route=insight: importance 0.50 >= 0.45"
   },
   {
-   "seq": 238,
-   "wall_ms": 8654,
+   "seq": 241,
+   "wall_ms": 49323,
    "match_ms": 3034813,
    "source": "producer",
    "target": "template_writer",
@@ -11450,42 +11488,10 @@
    "detail": "route=template: importance 0.25 < 0.45"
   },
   {
-   "seq": 239,
-   "wall_ms": 8669,
-   "match_ms": 3000000,
-   "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "pressure_surge:away:t49",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 240,
-   "wall_ms": 8669,
-   "match_ms": 3000000,
-   "source": "insight_agent",
-   "target": "personalizer_agent",
-   "moment_id": "pressure_surge:away:t49",
-   "status": "ok",
-   "detail": ""
-  },
-  {
-   "seq": 241,
-   "wall_ms": 8669,
-   "match_ms": 3034813,
-   "source": "template_writer",
-   "target": "publisher",
-   "moment_id": "shot_milestone:e00580",
-   "status": "ok",
-   "detail": "6 cards"
-  },
-  {
    "seq": 242,
-   "wall_ms": 8683,
+   "wall_ms": 49332,
    "match_ms": 3000000,
-   "source": "personalizer_agent",
+   "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "pressure_surge:away:t49",
    "status": "cached",
@@ -11495,19 +11501,27 @@
   },
   {
    "seq": 243,
-   "wall_ms": 8695,
+   "wall_ms": 49332,
    "match_ms": 3000000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "source": "insight_agent",
+   "target": "personalizer_agent",
    "moment_id": "pressure_surge:away:t49",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "status": "ok",
+   "detail": ""
   },
   {
    "seq": 244,
-   "wall_ms": 8709,
+   "wall_ms": 49333,
+   "match_ms": 3034813,
+   "source": "template_writer",
+   "target": "publisher",
+   "moment_id": "shot_milestone:e00580",
+   "status": "ok",
+   "detail": "6 cards"
+  },
+  {
+   "seq": 245,
+   "wall_ms": 49346,
    "match_ms": 3000000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11518,8 +11532,32 @@
    "latency_ms": 0
   },
   {
-   "seq": 245,
-   "wall_ms": 8709,
+   "seq": 246,
+   "wall_ms": 49351,
+   "match_ms": 3000000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "pressure_surge:away:t49",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 247,
+   "wall_ms": 49361,
+   "match_ms": 3000000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "pressure_surge:away:t49",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 248,
+   "wall_ms": 49361,
    "match_ms": 3000000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -11528,8 +11566,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 246,
-   "wall_ms": 8711,
+   "seq": 249,
+   "wall_ms": 49363,
    "match_ms": 3114889,
    "source": "replayer",
    "target": "stats_agent",
@@ -11537,8 +11575,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 247,
-   "wall_ms": 8766,
+   "seq": 250,
+   "wall_ms": 49405,
    "match_ms": 3114889,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11546,8 +11584,8 @@
    "detail": "snapshot + moments at 49'"
   },
   {
-   "seq": 248,
-   "wall_ms": 8768,
+   "seq": 251,
+   "wall_ms": 49406,
    "match_ms": 3179491,
    "source": "replayer",
    "target": "stats_agent",
@@ -11555,8 +11593,8 @@
    "detail": "13 events"
   },
   {
-   "seq": 249,
-   "wall_ms": 8836,
+   "seq": 252,
+   "wall_ms": 49449,
    "match_ms": 3179491,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11564,8 +11602,8 @@
    "detail": "snapshot + moments at 50'"
   },
   {
-   "seq": 250,
-   "wall_ms": 8837,
+   "seq": 253,
+   "wall_ms": 49450,
    "match_ms": 3239326,
    "source": "replayer",
    "target": "stats_agent",
@@ -11573,8 +11611,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 251,
-   "wall_ms": 8908,
+   "seq": 254,
+   "wall_ms": 49493,
    "match_ms": 3239326,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11582,8 +11620,8 @@
    "detail": "snapshot + moments at 51'"
   },
   {
-   "seq": 252,
-   "wall_ms": 8908,
+   "seq": 255,
+   "wall_ms": 49493,
    "match_ms": 3192239,
    "source": "stats_agent",
    "target": "producer",
@@ -11592,8 +11630,8 @@
    "detail": "yellow_card (importance 0.30)"
   },
   {
-   "seq": 253,
-   "wall_ms": 8908,
+   "seq": 256,
+   "wall_ms": 49493,
    "match_ms": 3237733,
    "source": "stats_agent",
    "target": "producer",
@@ -11602,8 +11640,8 @@
    "detail": "big_chance (importance 0.76)"
   },
   {
-   "seq": 254,
-   "wall_ms": 8909,
+   "seq": 257,
+   "wall_ms": 49493,
    "match_ms": 3192239,
    "source": "producer",
    "target": "template_writer",
@@ -11612,8 +11650,8 @@
    "detail": "route=template: importance 0.30 < 0.45"
   },
   {
-   "seq": 255,
-   "wall_ms": 8910,
+   "seq": 258,
+   "wall_ms": 49494,
    "match_ms": 3237733,
    "source": "producer",
    "target": "insight_agent",
@@ -11622,8 +11660,8 @@
    "detail": "route=full: importance 0.76 >= 0.6"
   },
   {
-   "seq": 256,
-   "wall_ms": 8910,
+   "seq": 259,
+   "wall_ms": 49494,
    "match_ms": 3192239,
    "source": "template_writer",
    "target": "publisher",
@@ -11632,8 +11670,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 257,
-   "wall_ms": 8923,
+   "seq": 260,
+   "wall_ms": 49506,
    "match_ms": 3237733,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11644,8 +11682,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 258,
-   "wall_ms": 8923,
+   "seq": 261,
+   "wall_ms": 49506,
    "match_ms": 3237733,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -11654,44 +11692,10 @@
    "detail": ""
   },
   {
-   "seq": 259,
-   "wall_ms": 8939,
-   "match_ms": 3237733,
-   "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "big_chance:e00617",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 260,
-   "wall_ms": 8939,
-   "match_ms": 3237733,
-   "source": "narrator_agent",
-   "target": "personalizer_agent",
-   "moment_id": "big_chance:e00617",
-   "status": "ok",
-   "detail": ""
-  },
-  {
-   "seq": 261,
-   "wall_ms": 8953,
-   "match_ms": 3237733,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "big_chance:e00617",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 262,
-   "wall_ms": 8968,
+   "wall_ms": 49519,
    "match_ms": 3237733,
-   "source": "personalizer_agent",
+   "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "big_chance:e00617",
    "status": "cached",
@@ -11701,7 +11705,17 @@
   },
   {
    "seq": 263,
-   "wall_ms": 8982,
+   "wall_ms": 49519,
+   "match_ms": 3237733,
+   "source": "narrator_agent",
+   "target": "personalizer_agent",
+   "moment_id": "big_chance:e00617",
+   "status": "ok",
+   "detail": ""
+  },
+  {
+   "seq": 264,
+   "wall_ms": 49524,
    "match_ms": 3237733,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11712,8 +11726,32 @@
    "latency_ms": 0
   },
   {
-   "seq": 264,
-   "wall_ms": 8982,
+   "seq": 265,
+   "wall_ms": 49536,
+   "match_ms": 3237733,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "big_chance:e00617",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 266,
+   "wall_ms": 49547,
+   "match_ms": 3237733,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "big_chance:e00617",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 267,
+   "wall_ms": 49547,
    "match_ms": 3237733,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -11722,8 +11760,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 265,
-   "wall_ms": 8985,
+   "seq": 268,
+   "wall_ms": 49549,
    "match_ms": 3298968,
    "source": "replayer",
    "target": "stats_agent",
@@ -11731,8 +11769,8 @@
    "detail": "12 events"
   },
   {
-   "seq": 266,
-   "wall_ms": 9049,
+   "seq": 269,
+   "wall_ms": 49590,
    "match_ms": 3298968,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11740,8 +11778,8 @@
    "detail": "snapshot + moments at 52'"
   },
   {
-   "seq": 267,
-   "wall_ms": 9049,
+   "seq": 270,
+   "wall_ms": 49591,
    "match_ms": 3240000,
    "source": "stats_agent",
    "target": "producer",
@@ -11750,8 +11788,8 @@
    "detail": "momentum_shift (importance 0.60)"
   },
   {
-   "seq": 268,
-   "wall_ms": 9050,
+   "seq": 271,
+   "wall_ms": 49591,
    "match_ms": 3240000,
    "source": "producer",
    "target": "insight_agent",
@@ -11760,8 +11798,8 @@
    "detail": "route=full: importance 0.60 >= 0.6"
   },
   {
-   "seq": 269,
-   "wall_ms": 9063,
+   "seq": 272,
+   "wall_ms": 49604,
    "match_ms": 3240000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11772,8 +11810,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 270,
-   "wall_ms": 9063,
+   "seq": 273,
+   "wall_ms": 49604,
    "match_ms": 3240000,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -11782,44 +11820,10 @@
    "detail": ""
   },
   {
-   "seq": 271,
-   "wall_ms": 9076,
-   "match_ms": 3240000,
-   "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t53",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 272,
-   "wall_ms": 9076,
-   "match_ms": 3240000,
-   "source": "narrator_agent",
-   "target": "personalizer_agent",
-   "moment_id": "momentum_shift:t53",
-   "status": "ok",
-   "detail": ""
-  },
-  {
-   "seq": 273,
-   "wall_ms": 9091,
-   "match_ms": 3240000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t53",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 274,
-   "wall_ms": 9105,
+   "wall_ms": 49614,
    "match_ms": 3240000,
-   "source": "personalizer_agent",
+   "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "momentum_shift:t53",
    "status": "cached",
@@ -11829,7 +11833,17 @@
   },
   {
    "seq": 275,
-   "wall_ms": 9119,
+   "wall_ms": 49614,
+   "match_ms": 3240000,
+   "source": "narrator_agent",
+   "target": "personalizer_agent",
+   "moment_id": "momentum_shift:t53",
+   "status": "ok",
+   "detail": ""
+  },
+  {
+   "seq": 276,
+   "wall_ms": 49630,
    "match_ms": 3240000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11840,8 +11854,32 @@
    "latency_ms": 0
   },
   {
-   "seq": 276,
-   "wall_ms": 9119,
+   "seq": 277,
+   "wall_ms": 49640,
+   "match_ms": 3240000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t53",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 278,
+   "wall_ms": 49653,
+   "match_ms": 3240000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t53",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 279,
+   "wall_ms": 49654,
    "match_ms": 3240000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -11850,8 +11888,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 277,
-   "wall_ms": 9122,
+   "seq": 280,
+   "wall_ms": 49657,
    "match_ms": 3353985,
    "source": "replayer",
    "target": "stats_agent",
@@ -11859,8 +11897,8 @@
    "detail": "10 events"
   },
   {
-   "seq": 278,
-   "wall_ms": 9187,
+   "seq": 281,
+   "wall_ms": 49703,
    "match_ms": 3353985,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11868,8 +11906,8 @@
    "detail": "snapshot + moments at 53'"
   },
   {
-   "seq": 279,
-   "wall_ms": 9188,
+   "seq": 282,
+   "wall_ms": 49704,
    "match_ms": 3392977,
    "source": "replayer",
    "target": "stats_agent",
@@ -11877,8 +11915,8 @@
    "detail": "8 events"
   },
   {
-   "seq": 280,
-   "wall_ms": 9256,
+   "seq": 283,
+   "wall_ms": 49751,
    "match_ms": 3392977,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11886,8 +11924,8 @@
    "detail": "snapshot + moments at 54'"
   },
   {
-   "seq": 281,
-   "wall_ms": 9258,
+   "seq": 284,
+   "wall_ms": 49752,
    "match_ms": 3449308,
    "source": "replayer",
    "target": "stats_agent",
@@ -11895,8 +11933,8 @@
    "detail": "8 events"
   },
   {
-   "seq": 282,
-   "wall_ms": 9331,
+   "seq": 285,
+   "wall_ms": 49796,
    "match_ms": 3449308,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11904,8 +11942,8 @@
    "detail": "snapshot + moments at 55'"
   },
   {
-   "seq": 283,
-   "wall_ms": 9332,
+   "seq": 286,
+   "wall_ms": 49797,
    "match_ms": 3539531,
    "source": "replayer",
    "target": "stats_agent",
@@ -11913,8 +11951,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 284,
-   "wall_ms": 9404,
+   "seq": 287,
+   "wall_ms": 49844,
    "match_ms": 3539531,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11922,8 +11960,8 @@
    "detail": "snapshot + moments at 56'"
   },
   {
-   "seq": 285,
-   "wall_ms": 9405,
+   "seq": 288,
+   "wall_ms": 49845,
    "match_ms": 3598313,
    "source": "replayer",
    "target": "stats_agent",
@@ -11931,8 +11969,8 @@
    "detail": "7 events"
   },
   {
-   "seq": 286,
-   "wall_ms": 9472,
+   "seq": 289,
+   "wall_ms": 49887,
    "match_ms": 3598313,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11940,8 +11978,8 @@
    "detail": "snapshot + moments at 57'"
   },
   {
-   "seq": 287,
-   "wall_ms": 9472,
+   "seq": 290,
+   "wall_ms": 49887,
    "match_ms": 3598313,
    "source": "stats_agent",
    "target": "producer",
@@ -11950,8 +11988,8 @@
    "detail": "substitution (importance 0.15)"
   },
   {
-   "seq": 288,
-   "wall_ms": 9473,
+   "seq": 291,
+   "wall_ms": 49887,
    "match_ms": 3598313,
    "source": "producer",
    "target": "template_writer",
@@ -11960,8 +11998,8 @@
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
-   "seq": 289,
-   "wall_ms": 9474,
+   "seq": 292,
+   "wall_ms": 49888,
    "match_ms": 3598313,
    "source": "template_writer",
    "target": "publisher",
@@ -11970,8 +12008,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 290,
-   "wall_ms": 9475,
+   "seq": 293,
+   "wall_ms": 49889,
    "match_ms": 3635796,
    "source": "replayer",
    "target": "stats_agent",
@@ -11979,8 +12017,8 @@
    "detail": "5 events"
   },
   {
-   "seq": 291,
-   "wall_ms": 9552,
+   "seq": 294,
+   "wall_ms": 49934,
    "match_ms": 3635796,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11988,8 +12026,8 @@
    "detail": "snapshot + moments at 58'"
   },
   {
-   "seq": 292,
-   "wall_ms": 9552,
+   "seq": 295,
+   "wall_ms": 49934,
    "match_ms": 3635796,
    "source": "stats_agent",
    "target": "producer",
@@ -11998,8 +12036,8 @@
    "detail": "yellow_card (importance 0.30)"
   },
   {
-   "seq": 293,
-   "wall_ms": 9553,
+   "seq": 296,
+   "wall_ms": 49935,
    "match_ms": 3635796,
    "source": "producer",
    "target": "template_writer",
@@ -12008,8 +12046,8 @@
    "detail": "route=template: importance 0.30 < 0.45"
   },
   {
-   "seq": 294,
-   "wall_ms": 9553,
+   "seq": 297,
+   "wall_ms": 49936,
    "match_ms": 3635796,
    "source": "template_writer",
    "target": "publisher",
@@ -12018,8 +12056,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 295,
-   "wall_ms": 9555,
+   "seq": 298,
+   "wall_ms": 49937,
    "match_ms": 3719747,
    "source": "replayer",
    "target": "stats_agent",
@@ -12027,8 +12065,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 296,
-   "wall_ms": 9648,
+   "seq": 299,
+   "wall_ms": 49986,
    "match_ms": 3719747,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12036,8 +12074,8 @@
    "detail": "snapshot + moments at 59'"
   },
   {
-   "seq": 297,
-   "wall_ms": 9649,
+   "seq": 300,
+   "wall_ms": 49988,
    "match_ms": 3776239,
    "source": "replayer",
    "target": "stats_agent",
@@ -12045,8 +12083,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 298,
-   "wall_ms": 9728,
+   "seq": 301,
+   "wall_ms": 50039,
    "match_ms": 3776239,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12054,8 +12092,8 @@
    "detail": "snapshot + moments at 60'"
   },
   {
-   "seq": 299,
-   "wall_ms": 9731,
+   "seq": 302,
+   "wall_ms": 50040,
    "match_ms": 3837788,
    "source": "replayer",
    "target": "stats_agent",
@@ -12063,8 +12101,8 @@
    "detail": "22 events"
   },
   {
-   "seq": 300,
-   "wall_ms": 9800,
+   "seq": 303,
+   "wall_ms": 50100,
    "match_ms": 3837788,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12072,8 +12110,8 @@
    "detail": "snapshot + moments at 61'"
   },
   {
-   "seq": 301,
-   "wall_ms": 9801,
+   "seq": 304,
+   "wall_ms": 50101,
    "match_ms": 3878768,
    "source": "replayer",
    "target": "stats_agent",
@@ -12081,8 +12119,8 @@
    "detail": "14 events"
   },
   {
-   "seq": 302,
-   "wall_ms": 9883,
+   "seq": 305,
+   "wall_ms": 50153,
    "match_ms": 3878768,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12090,8 +12128,8 @@
    "detail": "snapshot + moments at 62'"
   },
   {
-   "seq": 303,
-   "wall_ms": 9884,
+   "seq": 306,
+   "wall_ms": 50154,
    "match_ms": 3958219,
    "source": "replayer",
    "target": "stats_agent",
@@ -12099,8 +12137,8 @@
    "detail": "8 events"
   },
   {
-   "seq": 304,
-   "wall_ms": 9957,
+   "seq": 307,
+   "wall_ms": 50205,
    "match_ms": 3958219,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12108,8 +12146,8 @@
    "detail": "snapshot + moments at 63'"
   },
   {
-   "seq": 305,
-   "wall_ms": 9957,
+   "seq": 308,
+   "wall_ms": 50205,
    "match_ms": 3900000,
    "source": "stats_agent",
    "target": "producer",
@@ -12118,8 +12156,8 @@
    "detail": "pressure_surge (importance 0.50)"
   },
   {
-   "seq": 306,
-   "wall_ms": 9957,
+   "seq": 309,
+   "wall_ms": 50206,
    "match_ms": 3903766,
    "source": "stats_agent",
    "target": "producer",
@@ -12128,8 +12166,8 @@
    "detail": "substitution (importance 0.15)"
   },
   {
-   "seq": 307,
-   "wall_ms": 9957,
+   "seq": 310,
+   "wall_ms": 50206,
    "match_ms": 3922091,
    "source": "stats_agent",
    "target": "producer",
@@ -12138,8 +12176,8 @@
    "detail": "substitution (importance 0.15)"
   },
   {
-   "seq": 308,
-   "wall_ms": 9958,
+   "seq": 311,
+   "wall_ms": 50207,
    "match_ms": 3900000,
    "source": "producer",
    "target": "insight_agent",
@@ -12148,8 +12186,8 @@
    "detail": "route=insight: importance 0.50 >= 0.45"
   },
   {
-   "seq": 309,
-   "wall_ms": 9958,
+   "seq": 312,
+   "wall_ms": 50207,
    "match_ms": 3903766,
    "source": "producer",
    "target": "template_writer",
@@ -12158,8 +12196,8 @@
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
-   "seq": 310,
-   "wall_ms": 9958,
+   "seq": 313,
+   "wall_ms": 50207,
    "match_ms": 3922091,
    "source": "producer",
    "target": "template_writer",
@@ -12168,8 +12206,8 @@
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
-   "seq": 311,
-   "wall_ms": 9971,
+   "seq": 314,
+   "wall_ms": 50212,
    "match_ms": 3900000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -12180,8 +12218,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 312,
-   "wall_ms": 9971,
+   "seq": 315,
+   "wall_ms": 50212,
    "match_ms": 3900000,
    "source": "insight_agent",
    "target": "personalizer_agent",
@@ -12190,8 +12228,8 @@
    "detail": ""
   },
   {
-   "seq": 313,
-   "wall_ms": 9972,
+   "seq": 316,
+   "wall_ms": 50213,
    "match_ms": 3903766,
    "source": "template_writer",
    "target": "publisher",
@@ -12200,8 +12238,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 314,
-   "wall_ms": 9973,
+   "seq": 317,
+   "wall_ms": 50214,
    "match_ms": 3922091,
    "source": "template_writer",
    "target": "publisher",
@@ -12210,44 +12248,44 @@
    "detail": "6 cards"
   },
   {
-   "seq": 315,
-   "wall_ms": 9988,
-   "match_ms": 3900000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "pressure_surge:home:t64",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 316,
-   "wall_ms": 10002,
-   "match_ms": 3900000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "pressure_surge:home:t64",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 317,
-   "wall_ms": 10016,
-   "match_ms": 3900000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "pressure_surge:home:t64",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 318,
-   "wall_ms": 10017,
+   "wall_ms": 50226,
+   "match_ms": 3900000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "pressure_surge:home:t64",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 319,
+   "wall_ms": 50238,
+   "match_ms": 3900000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "pressure_surge:home:t64",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 320,
+   "wall_ms": 50243,
+   "match_ms": 3900000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "pressure_surge:home:t64",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 321,
+   "wall_ms": 50243,
    "match_ms": 3900000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -12256,8 +12294,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 319,
-   "wall_ms": 10022,
+   "seq": 322,
+   "wall_ms": 50247,
    "match_ms": 3990479,
    "source": "replayer",
    "target": "stats_agent",
@@ -12265,8 +12303,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 320,
-   "wall_ms": 10097,
+   "seq": 323,
+   "wall_ms": 50301,
    "match_ms": 3990479,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12274,8 +12312,8 @@
    "detail": "snapshot + moments at 64'"
   },
   {
-   "seq": 321,
-   "wall_ms": 10098,
+   "seq": 324,
+   "wall_ms": 50302,
    "match_ms": 4076941,
    "source": "replayer",
    "target": "stats_agent",
@@ -12283,8 +12321,8 @@
    "detail": "7 events"
   },
   {
-   "seq": 322,
-   "wall_ms": 10190,
+   "seq": 325,
+   "wall_ms": 50355,
    "match_ms": 4076941,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12292,8 +12330,8 @@
    "detail": "snapshot + moments at 65'"
   },
   {
-   "seq": 323,
-   "wall_ms": 10190,
+   "seq": 326,
+   "wall_ms": 50355,
    "match_ms": 4020000,
    "source": "stats_agent",
    "target": "producer",
@@ -12302,8 +12340,8 @@
    "detail": "momentum_shift (importance 0.60)"
   },
   {
-   "seq": 324,
-   "wall_ms": 10190,
+   "seq": 327,
+   "wall_ms": 50356,
    "match_ms": 4028022,
    "source": "stats_agent",
    "target": "producer",
@@ -12312,8 +12350,8 @@
    "detail": "substitution (importance 0.15)"
   },
   {
-   "seq": 325,
-   "wall_ms": 10191,
+   "seq": 328,
+   "wall_ms": 50356,
    "match_ms": 4020000,
    "source": "producer",
    "target": "insight_agent",
@@ -12322,8 +12360,8 @@
    "detail": "route=full: importance 0.60 >= 0.6"
   },
   {
-   "seq": 326,
-   "wall_ms": 10192,
+   "seq": 329,
+   "wall_ms": 50357,
    "match_ms": 4028022,
    "source": "producer",
    "target": "template_writer",
@@ -12332,42 +12370,10 @@
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
-   "seq": 327,
-   "wall_ms": 10206,
-   "match_ms": 4020000,
-   "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t66",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 328,
-   "wall_ms": 10206,
-   "match_ms": 4020000,
-   "source": "insight_agent",
-   "target": "narrator_agent",
-   "moment_id": "momentum_shift:t66",
-   "status": "ok",
-   "detail": ""
-  },
-  {
-   "seq": 329,
-   "wall_ms": 10207,
-   "match_ms": 4028022,
-   "source": "template_writer",
-   "target": "publisher",
-   "moment_id": "substitution:e00753",
-   "status": "ok",
-   "detail": "6 cards"
-  },
-  {
    "seq": 330,
-   "wall_ms": 10218,
+   "wall_ms": 50367,
    "match_ms": 4020000,
-   "source": "narrator_agent",
+   "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "momentum_shift:t66",
    "status": "cached",
@@ -12377,31 +12383,29 @@
   },
   {
    "seq": 331,
-   "wall_ms": 10218,
+   "wall_ms": 50367,
    "match_ms": 4020000,
-   "source": "narrator_agent",
-   "target": "personalizer_agent",
+   "source": "insight_agent",
+   "target": "narrator_agent",
    "moment_id": "momentum_shift:t66",
    "status": "ok",
    "detail": ""
   },
   {
    "seq": 332,
-   "wall_ms": 10233,
-   "match_ms": 4020000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t66",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "wall_ms": 50368,
+   "match_ms": 4028022,
+   "source": "template_writer",
+   "target": "publisher",
+   "moment_id": "substitution:e00753",
+   "status": "ok",
+   "detail": "6 cards"
   },
   {
    "seq": 333,
-   "wall_ms": 10248,
+   "wall_ms": 50372,
    "match_ms": 4020000,
-   "source": "personalizer_agent",
+   "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "momentum_shift:t66",
    "status": "cached",
@@ -12411,7 +12415,17 @@
   },
   {
    "seq": 334,
-   "wall_ms": 10263,
+   "wall_ms": 50372,
+   "match_ms": 4020000,
+   "source": "narrator_agent",
+   "target": "personalizer_agent",
+   "moment_id": "momentum_shift:t66",
+   "status": "ok",
+   "detail": ""
+  },
+  {
+   "seq": 335,
+   "wall_ms": 50378,
    "match_ms": 4020000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -12422,8 +12436,32 @@
    "latency_ms": 0
   },
   {
-   "seq": 335,
-   "wall_ms": 10263,
+   "seq": 336,
+   "wall_ms": 50389,
+   "match_ms": 4020000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t66",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 337,
+   "wall_ms": 50401,
+   "match_ms": 4020000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t66",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 338,
+   "wall_ms": 50401,
    "match_ms": 4020000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -12432,8 +12470,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 336,
-   "wall_ms": 10265,
+   "seq": 339,
+   "wall_ms": 50403,
    "match_ms": 4135559,
    "source": "replayer",
    "target": "stats_agent",
@@ -12441,8 +12479,8 @@
    "detail": "6 events"
   },
   {
-   "seq": 337,
-   "wall_ms": 10339,
+   "seq": 340,
+   "wall_ms": 50450,
    "match_ms": 4135559,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12450,8 +12488,8 @@
    "detail": "snapshot + moments at 66'"
   },
   {
-   "seq": 338,
-   "wall_ms": 10340,
+   "seq": 341,
+   "wall_ms": 50450,
    "match_ms": 4101003,
    "source": "stats_agent",
    "target": "producer",
@@ -12460,8 +12498,8 @@
    "detail": "substitution (importance 0.15)"
   },
   {
-   "seq": 339,
-   "wall_ms": 10340,
+   "seq": 342,
+   "wall_ms": 50450,
    "match_ms": 4133803,
    "source": "stats_agent",
    "target": "producer",
@@ -12470,8 +12508,8 @@
    "detail": "rocket_shot (importance 0.40)"
   },
   {
-   "seq": 340,
-   "wall_ms": 10340,
+   "seq": 343,
+   "wall_ms": 50450,
    "match_ms": 4135559,
    "source": "stats_agent",
    "target": "producer",
@@ -12480,8 +12518,8 @@
    "detail": "goal (importance 1.00)"
   },
   {
-   "seq": 341,
-   "wall_ms": 10340,
+   "seq": 344,
+   "wall_ms": 50451,
    "match_ms": 4101003,
    "source": "producer",
    "target": "template_writer",
@@ -12490,8 +12528,8 @@
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
-   "seq": 342,
-   "wall_ms": 10341,
+   "seq": 345,
+   "wall_ms": 50451,
    "match_ms": 4133803,
    "source": "producer",
    "target": "template_writer",
@@ -12500,8 +12538,8 @@
    "detail": "route=template: importance 0.40 < 0.45"
   },
   {
-   "seq": 343,
-   "wall_ms": 10341,
+   "seq": 346,
+   "wall_ms": 50452,
    "match_ms": 4135559,
    "source": "producer",
    "target": "insight_agent",
@@ -12510,8 +12548,8 @@
    "detail": "route=full: importance 1.00 >= 0.6"
   },
   {
-   "seq": 344,
-   "wall_ms": 10342,
+   "seq": 347,
+   "wall_ms": 50452,
    "match_ms": 4101003,
    "source": "template_writer",
    "target": "publisher",
@@ -12520,8 +12558,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 345,
-   "wall_ms": 10343,
+   "seq": 348,
+   "wall_ms": 50453,
    "match_ms": 4133803,
    "source": "template_writer",
    "target": "publisher",
@@ -12530,20 +12568,20 @@
    "detail": "6 cards"
   },
   {
-   "seq": 346,
-   "wall_ms": 10355,
+   "seq": 349,
+   "wall_ms": 54106,
    "match_ms": 4135559,
    "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00765",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1230
   },
   {
-   "seq": 347,
-   "wall_ms": 10355,
+   "seq": 350,
+   "wall_ms": 54108,
    "match_ms": 4135559,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -12552,20 +12590,20 @@
    "detail": ""
   },
   {
-   "seq": 348,
-   "wall_ms": 10368,
+   "seq": 351,
+   "wall_ms": 59940,
    "match_ms": 4135559,
    "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00765",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1068
   },
   {
-   "seq": 349,
-   "wall_ms": 10368,
+   "seq": 352,
+   "wall_ms": 59945,
    "match_ms": 4135559,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -12574,44 +12612,44 @@
    "detail": ""
   },
   {
-   "seq": 350,
-   "wall_ms": 10384,
-   "match_ms": 4135559,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "goal:e00765",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 351,
-   "wall_ms": 10397,
-   "match_ms": 4135559,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "goal:e00765",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 352,
-   "wall_ms": 10408,
-   "match_ms": 4135559,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "goal:e00765",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 353,
-   "wall_ms": 10409,
+   "wall_ms": 66257,
+   "match_ms": 4135559,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e00765",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 1393
+  },
+  {
+   "seq": 354,
+   "wall_ms": 72615,
+   "match_ms": 4135559,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e00765",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 1735
+  },
+  {
+   "seq": 355,
+   "wall_ms": 78541,
+   "match_ms": 4135559,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e00765",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 1670
+  },
+  {
+   "seq": 356,
+   "wall_ms": 78547,
    "match_ms": 4135559,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -12620,8 +12658,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 354,
-   "wall_ms": 10413,
+   "seq": 357,
+   "wall_ms": 78554,
    "match_ms": 4196639,
    "source": "replayer",
    "target": "stats_agent",
@@ -12629,8 +12667,8 @@
    "detail": "4 events"
   },
   {
-   "seq": 355,
-   "wall_ms": 10498,
+   "seq": 358,
+   "wall_ms": 78622,
    "match_ms": 4196639,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12638,8 +12676,8 @@
    "detail": "snapshot + moments at 67'"
   },
   {
-   "seq": 356,
-   "wall_ms": 10499,
+   "seq": 359,
+   "wall_ms": 78623,
    "match_ms": 4247149,
    "source": "replayer",
    "target": "stats_agent",
@@ -12647,8 +12685,8 @@
    "detail": "6 events"
   },
   {
-   "seq": 357,
-   "wall_ms": 10580,
+   "seq": 360,
+   "wall_ms": 78679,
    "match_ms": 4247149,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12656,8 +12694,8 @@
    "detail": "snapshot + moments at 68'"
   },
   {
-   "seq": 358,
-   "wall_ms": 10582,
+   "seq": 361,
+   "wall_ms": 78681,
    "match_ms": 4314621,
    "source": "replayer",
    "target": "stats_agent",
@@ -12665,8 +12703,8 @@
    "detail": "7 events"
   },
   {
-   "seq": 359,
-   "wall_ms": 10679,
+   "seq": 362,
+   "wall_ms": 78738,
    "match_ms": 4314621,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12674,8 +12712,8 @@
    "detail": "snapshot + moments at 69'"
   },
   {
-   "seq": 360,
-   "wall_ms": 10682,
+   "seq": 363,
+   "wall_ms": 78739,
    "match_ms": 4375010,
    "source": "replayer",
    "target": "stats_agent",
@@ -12683,8 +12721,8 @@
    "detail": "14 events"
   },
   {
-   "seq": 361,
-   "wall_ms": 10782,
+   "seq": 364,
+   "wall_ms": 78801,
    "match_ms": 4375010,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12692,8 +12730,8 @@
    "detail": "snapshot + moments at 70'"
   },
   {
-   "seq": 362,
-   "wall_ms": 10783,
+   "seq": 365,
+   "wall_ms": 78803,
    "match_ms": 4407564,
    "source": "replayer",
    "target": "stats_agent",
@@ -12701,8 +12739,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 363,
-   "wall_ms": 10904,
+   "seq": 366,
+   "wall_ms": 78862,
    "match_ms": 4407564,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12710,8 +12748,8 @@
    "detail": "snapshot + moments at 71'"
   },
   {
-   "seq": 364,
-   "wall_ms": 10904,
+   "seq": 367,
+   "wall_ms": 78863,
    "match_ms": 4407564,
    "source": "stats_agent",
    "target": "producer",
@@ -12720,8 +12758,8 @@
    "detail": "yellow_card (importance 0.30)"
   },
   {
-   "seq": 365,
-   "wall_ms": 10905,
+   "seq": 368,
+   "wall_ms": 78864,
    "match_ms": 4407564,
    "source": "producer",
    "target": "template_writer",
@@ -12730,8 +12768,8 @@
    "detail": "route=template: importance 0.30 < 0.45"
   },
   {
-   "seq": 366,
-   "wall_ms": 10906,
+   "seq": 369,
+   "wall_ms": 78866,
    "match_ms": 4407564,
    "source": "template_writer",
    "target": "publisher",
@@ -12740,8 +12778,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 367,
-   "wall_ms": 10907,
+   "seq": 370,
+   "wall_ms": 78870,
    "match_ms": 4498728,
    "source": "replayer",
    "target": "stats_agent",
@@ -12749,8 +12787,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 368,
-   "wall_ms": 11001,
+   "seq": 371,
+   "wall_ms": 78923,
    "match_ms": 4498728,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12758,8 +12796,8 @@
    "detail": "snapshot + moments at 72'"
   },
   {
-   "seq": 369,
-   "wall_ms": 11002,
+   "seq": 372,
+   "wall_ms": 78924,
    "match_ms": 4533154,
    "source": "replayer",
    "target": "stats_agent",
@@ -12767,8 +12805,8 @@
    "detail": "6 events"
   },
   {
-   "seq": 370,
-   "wall_ms": 11094,
+   "seq": 373,
+   "wall_ms": 78975,
    "match_ms": 4533154,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12776,8 +12814,8 @@
    "detail": "snapshot + moments at 73'"
   },
   {
-   "seq": 371,
-   "wall_ms": 11095,
+   "seq": 374,
+   "wall_ms": 78976,
    "match_ms": 4617557,
    "source": "replayer",
    "target": "stats_agent",
@@ -12785,8 +12823,8 @@
    "detail": "10 events"
   },
   {
-   "seq": 372,
-   "wall_ms": 11197,
+   "seq": 375,
+   "wall_ms": 79027,
    "match_ms": 4617557,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12794,8 +12832,8 @@
    "detail": "snapshot + moments at 74'"
   },
   {
-   "seq": 373,
-   "wall_ms": 11198,
+   "seq": 376,
+   "wall_ms": 79029,
    "match_ms": 4676954,
    "source": "replayer",
    "target": "stats_agent",
@@ -12803,8 +12841,8 @@
    "detail": "14 events"
   },
   {
-   "seq": 374,
-   "wall_ms": 11307,
+   "seq": 377,
+   "wall_ms": 79082,
    "match_ms": 4676954,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12812,8 +12850,8 @@
    "detail": "snapshot + moments at 75'"
   },
   {
-   "seq": 375,
-   "wall_ms": 11309,
+   "seq": 378,
+   "wall_ms": 79083,
    "match_ms": 4736210,
    "source": "replayer",
    "target": "stats_agent",
@@ -12821,8 +12859,8 @@
    "detail": "14 events"
   },
   {
-   "seq": 376,
-   "wall_ms": 11409,
+   "seq": 379,
+   "wall_ms": 79133,
    "match_ms": 4736210,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12830,8 +12868,8 @@
    "detail": "snapshot + moments at 76'"
   },
   {
-   "seq": 377,
-   "wall_ms": 11409,
+   "seq": 380,
+   "wall_ms": 79133,
    "match_ms": 4680000,
    "source": "stats_agent",
    "target": "producer",
@@ -12840,8 +12878,8 @@
    "detail": "momentum_shift (importance 0.60)"
   },
   {
-   "seq": 378,
-   "wall_ms": 11409,
+   "seq": 381,
+   "wall_ms": 79133,
    "match_ms": 4736210,
    "source": "stats_agent",
    "target": "producer",
@@ -12850,8 +12888,8 @@
    "detail": "substitution (importance 0.15)"
   },
   {
-   "seq": 379,
-   "wall_ms": 11411,
+   "seq": 382,
+   "wall_ms": 79134,
    "match_ms": 4680000,
    "source": "producer",
    "target": "insight_agent",
@@ -12860,8 +12898,8 @@
    "detail": "route=full: importance 0.60 >= 0.6"
   },
   {
-   "seq": 380,
-   "wall_ms": 11413,
+   "seq": 383,
+   "wall_ms": 79134,
    "match_ms": 4736210,
    "source": "producer",
    "target": "template_writer",
@@ -12870,42 +12908,10 @@
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
-   "seq": 381,
-   "wall_ms": 11431,
-   "match_ms": 4680000,
-   "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t77",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 382,
-   "wall_ms": 11431,
-   "match_ms": 4680000,
-   "source": "insight_agent",
-   "target": "narrator_agent",
-   "moment_id": "momentum_shift:t77",
-   "status": "ok",
-   "detail": ""
-  },
-  {
-   "seq": 383,
-   "wall_ms": 11432,
-   "match_ms": 4736210,
-   "source": "template_writer",
-   "target": "publisher",
-   "moment_id": "substitution:e00858",
-   "status": "ok",
-   "detail": "6 cards"
-  },
-  {
    "seq": 384,
-   "wall_ms": 11444,
+   "wall_ms": 79146,
    "match_ms": 4680000,
-   "source": "narrator_agent",
+   "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "momentum_shift:t77",
    "status": "cached",
@@ -12915,31 +12921,29 @@
   },
   {
    "seq": 385,
-   "wall_ms": 11444,
+   "wall_ms": 79146,
    "match_ms": 4680000,
-   "source": "narrator_agent",
-   "target": "personalizer_agent",
+   "source": "insight_agent",
+   "target": "narrator_agent",
    "moment_id": "momentum_shift:t77",
    "status": "ok",
    "detail": ""
   },
   {
    "seq": 386,
-   "wall_ms": 11457,
-   "match_ms": 4680000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t77",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "wall_ms": 79147,
+   "match_ms": 4736210,
+   "source": "template_writer",
+   "target": "publisher",
+   "moment_id": "substitution:e00858",
+   "status": "ok",
+   "detail": "6 cards"
   },
   {
    "seq": 387,
-   "wall_ms": 11472,
+   "wall_ms": 79156,
    "match_ms": 4680000,
-   "source": "personalizer_agent",
+   "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "momentum_shift:t77",
    "status": "cached",
@@ -12949,7 +12953,17 @@
   },
   {
    "seq": 388,
-   "wall_ms": 11488,
+   "wall_ms": 79157,
+   "match_ms": 4680000,
+   "source": "narrator_agent",
+   "target": "personalizer_agent",
+   "moment_id": "momentum_shift:t77",
+   "status": "ok",
+   "detail": ""
+  },
+  {
+   "seq": 389,
+   "wall_ms": 79167,
    "match_ms": 4680000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -12960,8 +12974,32 @@
    "latency_ms": 0
   },
   {
-   "seq": 389,
-   "wall_ms": 11488,
+   "seq": 390,
+   "wall_ms": 79181,
+   "match_ms": 4680000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t77",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 391,
+   "wall_ms": 79191,
+   "match_ms": 4680000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t77",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 392,
+   "wall_ms": 79191,
    "match_ms": 4680000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -12970,8 +13008,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 390,
-   "wall_ms": 11491,
+   "seq": 393,
+   "wall_ms": 79193,
    "match_ms": 4776809,
    "source": "replayer",
    "target": "stats_agent",
@@ -12979,8 +13017,8 @@
    "detail": "5 events"
   },
   {
-   "seq": 391,
-   "wall_ms": 11601,
+   "seq": 394,
+   "wall_ms": 79248,
    "match_ms": 4776809,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -12988,8 +13026,8 @@
    "detail": "snapshot + moments at 77'"
   },
   {
-   "seq": 392,
-   "wall_ms": 11602,
+   "seq": 395,
+   "wall_ms": 79249,
    "match_ms": 4859386,
    "source": "replayer",
    "target": "stats_agent",
@@ -12997,8 +13035,8 @@
    "detail": "12 events"
   },
   {
-   "seq": 393,
-   "wall_ms": 11713,
+   "seq": 396,
+   "wall_ms": 79304,
    "match_ms": 4859386,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13006,8 +13044,8 @@
    "detail": "snapshot + moments at 78'"
   },
   {
-   "seq": 394,
-   "wall_ms": 11714,
+   "seq": 397,
+   "wall_ms": 79305,
    "match_ms": 4918158,
    "source": "replayer",
    "target": "stats_agent",
@@ -13015,8 +13053,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 395,
-   "wall_ms": 11839,
+   "seq": 398,
+   "wall_ms": 79358,
    "match_ms": 4918158,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13024,8 +13062,8 @@
    "detail": "snapshot + moments at 79'"
   },
   {
-   "seq": 396,
-   "wall_ms": 11842,
+   "seq": 399,
+   "wall_ms": 79359,
    "match_ms": 4975538,
    "source": "replayer",
    "target": "stats_agent",
@@ -13033,8 +13071,8 @@
    "detail": "8 events"
   },
   {
-   "seq": 397,
-   "wall_ms": 11971,
+   "seq": 400,
+   "wall_ms": 79413,
    "match_ms": 4975538,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13042,8 +13080,8 @@
    "detail": "snapshot + moments at 80'"
   },
   {
-   "seq": 398,
-   "wall_ms": 11971,
+   "seq": 401,
+   "wall_ms": 79413,
    "match_ms": 4920000,
    "source": "stats_agent",
    "target": "producer",
@@ -13052,8 +13090,8 @@
    "detail": "pressure_surge (importance 0.50)"
   },
   {
-   "seq": 399,
-   "wall_ms": 11972,
+   "seq": 402,
+   "wall_ms": 79414,
    "match_ms": 4920000,
    "source": "producer",
    "target": "insight_agent",
@@ -13062,44 +13100,10 @@
    "detail": "route=insight: importance 0.50 >= 0.45"
   },
   {
-   "seq": 400,
-   "wall_ms": 11985,
-   "match_ms": 4920000,
-   "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "pressure_surge:away:t81",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 401,
-   "wall_ms": 11985,
-   "match_ms": 4920000,
-   "source": "insight_agent",
-   "target": "personalizer_agent",
-   "moment_id": "pressure_surge:away:t81",
-   "status": "ok",
-   "detail": ""
-  },
-  {
-   "seq": 402,
-   "wall_ms": 11999,
-   "match_ms": 4920000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "pressure_surge:away:t81",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 403,
-   "wall_ms": 12017,
+   "wall_ms": 79418,
    "match_ms": 4920000,
-   "source": "personalizer_agent",
+   "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "pressure_surge:away:t81",
    "status": "cached",
@@ -13109,7 +13113,17 @@
   },
   {
    "seq": 404,
-   "wall_ms": 12032,
+   "wall_ms": 79418,
+   "match_ms": 4920000,
+   "source": "insight_agent",
+   "target": "personalizer_agent",
+   "moment_id": "pressure_surge:away:t81",
+   "status": "ok",
+   "detail": ""
+  },
+  {
+   "seq": 405,
+   "wall_ms": 79429,
    "match_ms": 4920000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -13120,8 +13134,32 @@
    "latency_ms": 0
   },
   {
-   "seq": 405,
-   "wall_ms": 12032,
+   "seq": 406,
+   "wall_ms": 79440,
+   "match_ms": 4920000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "pressure_surge:away:t81",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 407,
+   "wall_ms": 79445,
+   "match_ms": 4920000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "pressure_surge:away:t81",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 408,
+   "wall_ms": 79445,
    "match_ms": 4920000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -13130,8 +13168,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 406,
-   "wall_ms": 12035,
+   "seq": 409,
+   "wall_ms": 79447,
    "match_ms": 5038865,
    "source": "replayer",
    "target": "stats_agent",
@@ -13139,8 +13177,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 407,
-   "wall_ms": 12160,
+   "seq": 410,
+   "wall_ms": 79499,
    "match_ms": 5038865,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13148,8 +13186,8 @@
    "detail": "snapshot + moments at 81'"
   },
   {
-   "seq": 408,
-   "wall_ms": 12161,
+   "seq": 411,
+   "wall_ms": 79500,
    "match_ms": 5094491,
    "source": "replayer",
    "target": "stats_agent",
@@ -13157,8 +13195,8 @@
    "detail": "13 events"
   },
   {
-   "seq": 409,
-   "wall_ms": 12279,
+   "seq": 412,
+   "wall_ms": 79556,
    "match_ms": 5094491,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13166,8 +13204,8 @@
    "detail": "snapshot + moments at 82'"
   },
   {
-   "seq": 410,
-   "wall_ms": 12280,
+   "seq": 413,
+   "wall_ms": 79558,
    "match_ms": 5159397,
    "source": "replayer",
    "target": "stats_agent",
@@ -13175,8 +13213,8 @@
    "detail": "10 events"
   },
   {
-   "seq": 411,
-   "wall_ms": 12386,
+   "seq": 414,
+   "wall_ms": 79618,
    "match_ms": 5159397,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13184,8 +13222,8 @@
    "detail": "snapshot + moments at 83'"
   },
   {
-   "seq": 412,
-   "wall_ms": 12387,
+   "seq": 415,
+   "wall_ms": 79618,
    "match_ms": 5134170,
    "source": "stats_agent",
    "target": "producer",
@@ -13194,8 +13232,8 @@
    "detail": "substitution (importance 0.15)"
   },
   {
-   "seq": 413,
-   "wall_ms": 12387,
+   "seq": 416,
+   "wall_ms": 79619,
    "match_ms": 5134170,
    "source": "producer",
    "target": "template_writer",
@@ -13204,8 +13242,8 @@
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
-   "seq": 414,
-   "wall_ms": 12388,
+   "seq": 417,
+   "wall_ms": 79620,
    "match_ms": 5134170,
    "source": "template_writer",
    "target": "publisher",
@@ -13214,8 +13252,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 415,
-   "wall_ms": 12393,
+   "seq": 418,
+   "wall_ms": 79622,
    "match_ms": 5209939,
    "source": "replayer",
    "target": "stats_agent",
@@ -13223,8 +13261,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 416,
-   "wall_ms": 12495,
+   "seq": 419,
+   "wall_ms": 79682,
    "match_ms": 5209939,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13232,8 +13270,8 @@
    "detail": "snapshot + moments at 84'"
   },
   {
-   "seq": 417,
-   "wall_ms": 12497,
+   "seq": 420,
+   "wall_ms": 79683,
    "match_ms": 5276920,
    "source": "replayer",
    "target": "stats_agent",
@@ -13241,8 +13279,8 @@
    "detail": "13 events"
   },
   {
-   "seq": 418,
-   "wall_ms": 12608,
+   "seq": 421,
+   "wall_ms": 79739,
    "match_ms": 5276920,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13250,8 +13288,8 @@
    "detail": "snapshot + moments at 85'"
   },
   {
-   "seq": 419,
-   "wall_ms": 12609,
+   "seq": 422,
+   "wall_ms": 79739,
    "match_ms": 5266368,
    "source": "stats_agent",
    "target": "producer",
@@ -13260,8 +13298,8 @@
    "detail": "big_chance (importance 0.79)"
   },
   {
-   "seq": 420,
-   "wall_ms": 12612,
+   "seq": 423,
+   "wall_ms": 79740,
    "match_ms": 5266368,
    "source": "producer",
    "target": "insight_agent",
@@ -13270,8 +13308,8 @@
    "detail": "route=full: importance 0.79 >= 0.6"
   },
   {
-   "seq": 421,
-   "wall_ms": 12628,
+   "seq": 424,
+   "wall_ms": 79751,
    "match_ms": 5266368,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -13282,8 +13320,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 422,
-   "wall_ms": 12629,
+   "seq": 425,
+   "wall_ms": 79751,
    "match_ms": 5266368,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -13292,44 +13330,10 @@
    "detail": ""
   },
   {
-   "seq": 423,
-   "wall_ms": 12641,
-   "match_ms": 5266368,
-   "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "big_chance:e00948",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 424,
-   "wall_ms": 12641,
-   "match_ms": 5266368,
-   "source": "narrator_agent",
-   "target": "personalizer_agent",
-   "moment_id": "big_chance:e00948",
-   "status": "ok",
-   "detail": ""
-  },
-  {
-   "seq": 425,
-   "wall_ms": 12655,
-   "match_ms": 5266368,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "big_chance:e00948",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 426,
-   "wall_ms": 12668,
+   "wall_ms": 79761,
    "match_ms": 5266368,
-   "source": "personalizer_agent",
+   "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "big_chance:e00948",
    "status": "cached",
@@ -13339,7 +13343,17 @@
   },
   {
    "seq": 427,
-   "wall_ms": 12683,
+   "wall_ms": 79761,
+   "match_ms": 5266368,
+   "source": "narrator_agent",
+   "target": "personalizer_agent",
+   "moment_id": "big_chance:e00948",
+   "status": "ok",
+   "detail": ""
+  },
+  {
+   "seq": 428,
+   "wall_ms": 79772,
    "match_ms": 5266368,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -13350,8 +13364,32 @@
    "latency_ms": 0
   },
   {
-   "seq": 428,
-   "wall_ms": 12683,
+   "seq": 429,
+   "wall_ms": 79783,
+   "match_ms": 5266368,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "big_chance:e00948",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 430,
+   "wall_ms": 79794,
+   "match_ms": 5266368,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "big_chance:e00948",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 431,
+   "wall_ms": 79794,
    "match_ms": 5266368,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -13360,8 +13398,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 429,
-   "wall_ms": 12685,
+   "seq": 432,
+   "wall_ms": 79796,
    "match_ms": 5327138,
    "source": "replayer",
    "target": "stats_agent",
@@ -13369,8 +13407,8 @@
    "detail": "8 events"
   },
   {
-   "seq": 430,
-   "wall_ms": 12802,
+   "seq": 433,
+   "wall_ms": 79852,
    "match_ms": 5327138,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13378,8 +13416,8 @@
    "detail": "snapshot + moments at 86'"
   },
   {
-   "seq": 431,
-   "wall_ms": 12802,
+   "seq": 434,
+   "wall_ms": 79852,
    "match_ms": 5280000,
    "source": "stats_agent",
    "target": "producer",
@@ -13388,8 +13426,8 @@
    "detail": "momentum_shift (importance 0.60)"
   },
   {
-   "seq": 432,
-   "wall_ms": 12803,
+   "seq": 435,
+   "wall_ms": 79852,
    "match_ms": 5280000,
    "source": "stats_agent",
    "target": "producer",
@@ -13398,8 +13436,8 @@
    "detail": "pressure_surge (importance 0.50)"
   },
   {
-   "seq": 433,
-   "wall_ms": 12803,
+   "seq": 436,
+   "wall_ms": 79853,
    "match_ms": 5280000,
    "source": "producer",
    "target": "insight_agent",
@@ -13408,8 +13446,8 @@
    "detail": "route=full: importance 0.60 >= 0.6"
   },
   {
-   "seq": 434,
-   "wall_ms": 12804,
+   "seq": 437,
+   "wall_ms": 79853,
    "match_ms": 5280000,
    "source": "producer",
    "target": "insight_agent",
@@ -13418,8 +13456,8 @@
    "detail": "route=insight: importance 0.50 >= 0.45"
   },
   {
-   "seq": 435,
-   "wall_ms": 12826,
+   "seq": 438,
+   "wall_ms": 79863,
    "match_ms": 5280000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -13430,8 +13468,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 436,
-   "wall_ms": 12826,
+   "seq": 439,
+   "wall_ms": 79863,
    "match_ms": 5280000,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -13440,68 +13478,34 @@
    "detail": ""
   },
   {
-   "seq": 437,
-   "wall_ms": 12844,
-   "match_ms": 5280000,
-   "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "pressure_surge:home:t87",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 438,
-   "wall_ms": 12844,
-   "match_ms": 5280000,
-   "source": "insight_agent",
-   "target": "personalizer_agent",
-   "moment_id": "pressure_surge:home:t87",
-   "status": "ok",
-   "detail": ""
-  },
-  {
-   "seq": 439,
-   "wall_ms": 12855,
-   "match_ms": 5280000,
-   "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t87",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 440,
-   "wall_ms": 12855,
+   "wall_ms": 79868,
    "match_ms": 5280000,
-   "source": "narrator_agent",
-   "target": "personalizer_agent",
-   "moment_id": "momentum_shift:t87",
-   "status": "ok",
-   "detail": ""
+   "source": "insight_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "pressure_surge:home:t87",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
   },
   {
    "seq": 441,
-   "wall_ms": 12870,
+   "wall_ms": 79868,
    "match_ms": 5280000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "source": "insight_agent",
+   "target": "personalizer_agent",
    "moment_id": "pressure_surge:home:t87",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "status": "ok",
+   "detail": ""
   },
   {
    "seq": 442,
-   "wall_ms": 12885,
+   "wall_ms": 79878,
    "match_ms": 5280000,
-   "source": "personalizer_agent",
+   "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "pressure_surge:home:t87",
+   "moment_id": "momentum_shift:t87",
    "status": "cached",
    "detail": "cached",
    "provider": "gemini:gemini-flash-lite-latest",
@@ -13509,7 +13513,17 @@
   },
   {
    "seq": 443,
-   "wall_ms": 12899,
+   "wall_ms": 79878,
+   "match_ms": 5280000,
+   "source": "narrator_agent",
+   "target": "personalizer_agent",
+   "moment_id": "momentum_shift:t87",
+   "status": "ok",
+   "detail": ""
+  },
+  {
+   "seq": 444,
+   "wall_ms": 79889,
    "match_ms": 5280000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -13520,8 +13534,32 @@
    "latency_ms": 0
   },
   {
-   "seq": 444,
-   "wall_ms": 12900,
+   "seq": 445,
+   "wall_ms": 79901,
+   "match_ms": 5280000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "pressure_surge:home:t87",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 446,
+   "wall_ms": 79906,
+   "match_ms": 5280000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "pressure_surge:home:t87",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 447,
+   "wall_ms": 79906,
    "match_ms": 5280000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -13530,44 +13568,44 @@
    "detail": "6 cards"
   },
   {
-   "seq": 445,
-   "wall_ms": 12914,
-   "match_ms": 5280000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t87",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 446,
-   "wall_ms": 12931,
-   "match_ms": 5280000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t87",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 447,
-   "wall_ms": 12947,
-   "match_ms": 5280000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t87",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 448,
-   "wall_ms": 12947,
+   "wall_ms": 79920,
+   "match_ms": 5280000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t87",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 449,
+   "wall_ms": 79936,
+   "match_ms": 5280000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t87",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 450,
+   "wall_ms": 79948,
+   "match_ms": 5280000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t87",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 451,
+   "wall_ms": 79948,
    "match_ms": 5280000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -13576,8 +13614,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 449,
-   "wall_ms": 12951,
+   "seq": 452,
+   "wall_ms": 79950,
    "match_ms": 5395235,
    "source": "replayer",
    "target": "stats_agent",
@@ -13585,8 +13623,8 @@
    "detail": "14 events"
   },
   {
-   "seq": 450,
-   "wall_ms": 13060,
+   "seq": 453,
+   "wall_ms": 80010,
    "match_ms": 5395235,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13594,8 +13632,8 @@
    "detail": "snapshot + moments at 87'"
   },
   {
-   "seq": 451,
-   "wall_ms": 13061,
+   "seq": 454,
+   "wall_ms": 80011,
    "match_ms": 5458379,
    "source": "replayer",
    "target": "stats_agent",
@@ -13603,8 +13641,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 452,
-   "wall_ms": 13197,
+   "seq": 455,
+   "wall_ms": 80067,
    "match_ms": 5458379,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13612,8 +13650,8 @@
    "detail": "snapshot + moments at 88'"
   },
   {
-   "seq": 453,
-   "wall_ms": 13198,
+   "seq": 456,
+   "wall_ms": 80068,
    "match_ms": 5512668,
    "source": "replayer",
    "target": "stats_agent",
@@ -13621,8 +13659,8 @@
    "detail": "10 events"
   },
   {
-   "seq": 454,
-   "wall_ms": 13320,
+   "seq": 457,
+   "wall_ms": 80130,
    "match_ms": 5512668,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13630,8 +13668,8 @@
    "detail": "snapshot + moments at 89'"
   },
   {
-   "seq": 455,
-   "wall_ms": 13321,
+   "seq": 458,
+   "wall_ms": 80131,
    "match_ms": 5575465,
    "source": "replayer",
    "target": "stats_agent",
@@ -13639,8 +13677,8 @@
    "detail": "13 events"
   },
   {
-   "seq": 456,
-   "wall_ms": 13464,
+   "seq": 459,
+   "wall_ms": 80199,
    "match_ms": 5575465,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13648,8 +13686,8 @@
    "detail": "snapshot + moments at 90'"
   },
   {
-   "seq": 457,
-   "wall_ms": 13465,
+   "seq": 460,
+   "wall_ms": 80200,
    "match_ms": 5639064,
    "source": "replayer",
    "target": "stats_agent",
@@ -13657,8 +13695,8 @@
    "detail": "10 events"
   },
   {
-   "seq": 458,
-   "wall_ms": 13589,
+   "seq": 461,
+   "wall_ms": 80271,
    "match_ms": 5639064,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13666,8 +13704,8 @@
    "detail": "snapshot + moments at 90+1'"
   },
   {
-   "seq": 459,
-   "wall_ms": 13590,
+   "seq": 462,
+   "wall_ms": 80271,
    "match_ms": 5599819,
    "source": "stats_agent",
    "target": "producer",
@@ -13676,8 +13714,8 @@
    "detail": "rocket_shot (importance 0.40)"
   },
   {
-   "seq": 460,
-   "wall_ms": 13591,
+   "seq": 463,
+   "wall_ms": 80272,
    "match_ms": 5599819,
    "source": "producer",
    "target": "template_writer",
@@ -13686,8 +13724,8 @@
    "detail": "route=template: importance 0.40 < 0.45"
   },
   {
-   "seq": 461,
-   "wall_ms": 13592,
+   "seq": 464,
+   "wall_ms": 80273,
    "match_ms": 5599819,
    "source": "template_writer",
    "target": "publisher",
@@ -13696,8 +13734,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 462,
-   "wall_ms": 13594,
+   "seq": 465,
+   "wall_ms": 80274,
    "match_ms": 5697708,
    "source": "replayer",
    "target": "stats_agent",
@@ -13705,8 +13743,8 @@
    "detail": "12 events"
   },
   {
-   "seq": 463,
-   "wall_ms": 13716,
+   "seq": 466,
+   "wall_ms": 80358,
    "match_ms": 5697708,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13714,8 +13752,8 @@
    "detail": "snapshot + moments at 90+2'"
   },
   {
-   "seq": 464,
-   "wall_ms": 13716,
+   "seq": 467,
+   "wall_ms": 80358,
    "match_ms": 5652465,
    "source": "stats_agent",
    "target": "producer",
@@ -13724,8 +13762,8 @@
    "detail": "pass_milestone (importance 0.30)"
   },
   {
-   "seq": 465,
-   "wall_ms": 13717,
+   "seq": 468,
+   "wall_ms": 80360,
    "match_ms": 5652465,
    "source": "producer",
    "target": "template_writer",
@@ -13734,8 +13772,8 @@
    "detail": "route=template: importance 0.30 < 0.45"
   },
   {
-   "seq": 466,
-   "wall_ms": 13718,
+   "seq": 469,
+   "wall_ms": 80361,
    "match_ms": 5652465,
    "source": "template_writer",
    "target": "publisher",
@@ -13744,8 +13782,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 467,
-   "wall_ms": 13722,
+   "seq": 470,
+   "wall_ms": 80362,
    "match_ms": 5733528,
    "source": "replayer",
    "target": "stats_agent",
@@ -13753,8 +13791,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 468,
-   "wall_ms": 13869,
+   "seq": 471,
+   "wall_ms": 80431,
    "match_ms": 5733528,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13762,8 +13800,8 @@
    "detail": "snapshot + moments at 90+3'"
   },
   {
-   "seq": 469,
-   "wall_ms": 13869,
+   "seq": 472,
+   "wall_ms": 80432,
    "match_ms": 5732456,
    "source": "stats_agent",
    "target": "producer",
@@ -13772,8 +13810,8 @@
    "detail": "shot_milestone (importance 0.25)"
   },
   {
-   "seq": 470,
-   "wall_ms": 13869,
+   "seq": 473,
+   "wall_ms": 80432,
    "match_ms": 5733528,
    "source": "stats_agent",
    "target": "producer",
@@ -13782,8 +13820,8 @@
    "detail": "goal (importance 1.00)"
   },
   {
-   "seq": 471,
-   "wall_ms": 13871,
+   "seq": 474,
+   "wall_ms": 80433,
    "match_ms": 5732456,
    "source": "producer",
    "target": "template_writer",
@@ -13792,8 +13830,8 @@
    "detail": "route=template: importance 0.25 < 0.45"
   },
   {
-   "seq": 472,
-   "wall_ms": 13872,
+   "seq": 475,
+   "wall_ms": 80434,
    "match_ms": 5733528,
    "source": "producer",
    "target": "insight_agent",
@@ -13802,8 +13840,8 @@
    "detail": "route=full: importance 1.00 >= 0.6"
   },
   {
-   "seq": 473,
-   "wall_ms": 13873,
+   "seq": 476,
+   "wall_ms": 80436,
    "match_ms": 5732456,
    "source": "template_writer",
    "target": "publisher",
@@ -13812,20 +13850,20 @@
    "detail": "6 cards"
   },
   {
-   "seq": 474,
-   "wall_ms": 13894,
+   "seq": 477,
+   "wall_ms": 84085,
    "match_ms": 5733528,
    "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e01035",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1205
   },
   {
-   "seq": 475,
-   "wall_ms": 13894,
+   "seq": 478,
+   "wall_ms": 84088,
    "match_ms": 5733528,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -13834,20 +13872,20 @@
    "detail": ""
   },
   {
-   "seq": 476,
-   "wall_ms": 13911,
+   "seq": 479,
+   "wall_ms": 90777,
    "match_ms": 5733528,
    "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e01035",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1908
   },
   {
-   "seq": 477,
-   "wall_ms": 13911,
+   "seq": 480,
+   "wall_ms": 90778,
    "match_ms": 5733528,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -13856,44 +13894,44 @@
    "detail": ""
   },
   {
-   "seq": 478,
-   "wall_ms": 13931,
-   "match_ms": 5733528,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "goal:e01035",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 479,
-   "wall_ms": 13952,
-   "match_ms": 5733528,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "goal:e01035",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 480,
-   "wall_ms": 13966,
-   "match_ms": 5733528,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "goal:e01035",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 481,
-   "wall_ms": 13966,
+   "wall_ms": 96435,
+   "match_ms": 5733528,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e01035",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 1559
+  },
+  {
+   "seq": 482,
+   "wall_ms": 102400,
+   "match_ms": 5733528,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e01035",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 1524
+  },
+  {
+   "seq": 483,
+   "wall_ms": 108632,
+   "match_ms": 5733528,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e01035",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 1769
+  },
+  {
+   "seq": 484,
+   "wall_ms": 108634,
    "match_ms": 5733528,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -13902,8 +13940,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 482,
-   "wall_ms": 13968,
+   "seq": 485,
+   "wall_ms": 108638,
    "match_ms": 5816291,
    "source": "replayer",
    "target": "stats_agent",
@@ -13911,8 +13949,8 @@
    "detail": "3 events"
   },
   {
-   "seq": 483,
-   "wall_ms": 14110,
+   "seq": 486,
+   "wall_ms": 108795,
    "match_ms": 5816291,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13920,8 +13958,8 @@
    "detail": "snapshot + moments at 90+4'"
   },
   {
-   "seq": 484,
-   "wall_ms": 14111,
+   "seq": 487,
+   "wall_ms": 108797,
    "match_ms": 5878167,
    "source": "replayer",
    "target": "stats_agent",
@@ -13929,8 +13967,8 @@
    "detail": "15 events"
   },
   {
-   "seq": 485,
-   "wall_ms": 14229,
+   "seq": 488,
+   "wall_ms": 108946,
    "match_ms": 5878167,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13938,8 +13976,8 @@
    "detail": "snapshot + moments at 90+5'"
   },
   {
-   "seq": 486,
-   "wall_ms": 14230,
+   "seq": 489,
+   "wall_ms": 108947,
    "match_ms": 5889523,
    "source": "replayer",
    "target": "stats_agent",
@@ -13947,8 +13985,8 @@
    "detail": "2 events"
   },
   {
-   "seq": 487,
-   "wall_ms": 14349,
+   "seq": 490,
+   "wall_ms": 109091,
    "match_ms": 5889523,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -13956,8 +13994,8 @@
    "detail": "snapshot + moments at 90+6'"
   },
   {
-   "seq": 488,
-   "wall_ms": 14349,
+   "seq": 491,
+   "wall_ms": 109091,
    "match_ms": 5889523,
    "source": "stats_agent",
    "target": "producer",
@@ -13966,8 +14004,8 @@
    "detail": "full_time (importance 0.85)"
   },
   {
-   "seq": 489,
-   "wall_ms": 14350,
+   "seq": 492,
+   "wall_ms": 109092,
    "match_ms": 5889523,
    "source": "producer",
    "target": "narrator_agent",
@@ -13976,44 +14014,10 @@
    "detail": "route=recap: full time: recap"
   },
   {
-   "seq": 490,
-   "wall_ms": 14363,
-   "match_ms": 5889523,
-   "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "full_time:e01055",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
-   "seq": 491,
-   "wall_ms": 14363,
-   "match_ms": 5889523,
-   "source": "narrator_agent",
-   "target": "personalizer_agent",
-   "moment_id": "full_time:e01055",
-   "status": "ok",
-   "detail": ""
-  },
-  {
-   "seq": 492,
-   "wall_ms": 14383,
-   "match_ms": 5889523,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "full_time:e01055",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 493,
-   "wall_ms": 14399,
+   "wall_ms": 109112,
    "match_ms": 5889523,
-   "source": "personalizer_agent",
+   "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
    "moment_id": "full_time:e01055",
    "status": "cached",
@@ -14023,19 +14027,53 @@
   },
   {
    "seq": 494,
-   "wall_ms": 21733,
+   "wall_ms": 109112,
    "match_ms": 5889523,
-   "source": "personalizer_agent",
-   "target": "verifier",
+   "source": "narrator_agent",
+   "target": "personalizer_agent",
    "moment_id": "full_time:e01055",
    "status": "ok",
-   "detail": "ok",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 7333
+   "detail": ""
   },
   {
    "seq": 495,
-   "wall_ms": 21737,
+   "wall_ms": 109124,
+   "match_ms": 5889523,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "full_time:e01055",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 496,
+   "wall_ms": 109142,
+   "match_ms": 5889523,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "full_time:e01055",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 497,
+   "wall_ms": 109164,
+   "match_ms": 5889523,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "full_time:e01055",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 498,
+   "wall_ms": 109164,
    "match_ms": 5889523,
    "source": "personalizer_agent",
    "target": "publisher",

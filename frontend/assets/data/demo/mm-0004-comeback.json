@@ -1,7 +1,7 @@
 {
  "bundle_version": "1.0",
  "match_id": "mm-0004-comeback",
- "generated_at": "2026-10-03T11:12:59+00:00",
+ "generated_at": "2026-10-03T12:15:36+00:00",
  "pipeline": {
   "languages": [
    "en",
@@ -19,20 +19,23 @@
   ],
   "full_threshold": 0.6,
   "insight_threshold": 0.45,
-  "bake_seconds": 12
+  "bake_seconds": 263
  },
  "counters": {
   "events": 1024,
-  "handoff_ok": 316,
+  "handoff_ok": 341,
   "moments": 34,
   "route_full": 14,
-  "handoff_cached": 94,
-  "llm_cached": 94,
+  "handoff_cached": 69,
+  "llm_cached": 69,
   "consecutive_llm_failures": 0,
   "cards": 218,
   "route_template": 14,
   "handoff_skipped": 14,
+  "llm_ok": 25,
   "route_insight": 5,
+  "handoff_retry": 1,
+  "llm_rejected": 1,
   "route_recap": 1
  },
  "recap": {
@@ -2047,9 +2050,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ar",
-   "title": "إميل كوينبي يفتتح التسجيل",
-   "body": "في الدقيقة 18 أحرز الجناح الأيمن إميل كوينبي هدفا لصالح أيرونمير أثلتيك بتسديدة سرعتها 97 كم/س ومن قيمة أهداف متوقعة 0.12 بناء على تمريرة لارس ماروال لتصبح النتيجة ريفرماوث روفرز 0-1 أيرونمير أثلتيك.",
-   "why_it_matters": "هذا الاختراق يترجم ضغط أيرونمير أثلتيك المتصاعد ويوجه الزخم لصالحهم.",
+   "title": "هدف مبكر لـ Emil Quenby",
+   "body": "في الدقيقة 18، سجل الجناح الأيمن Emil Quenby أول أهدافه في اللقاء من تسديدة بقوة 97 كم/س وبقيمة xG بلغت 0.12 بعد تمريرة حاسمة من Lars Maraval، لتصبح النتيجة Rivermouth Rovers 0-1 Ironmere Athletic.",
+   "why_it_matters": "هذا الهدف يترجم تفوق Ironmere Athletic واستحواذهم بنسبة 52 بالمئة إلى تقدم مستحق على لوحة النتيجة.",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -2078,9 +2081,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ar",
-   "title": "هدف جميل لأيرونمير أثلتيك",
-   "body": "في الدقيقة 18 سجل اللاعب إميل كوينبي هدفا رائعا ليتقدم فريقه على ريفرماوث روفرز. هذا الهدف يمنح الفريق دفعة معنوية كبيرة في المباراة.",
-   "why_it_matters": "هذا الهدف يترجم الضغط المستمر ويدفع الفريق نحو السيطرة الكاملة على اللقاء.",
+   "title": "إميل كوينبي يفتتح التسجيل",
+   "body": "سجل الجناح الأيمن Emil Quenby هدفه الأول الرائع لصالح نادي Ironmere Athletic في الدقيقة 18 لتصبح النتيجة Rivermouth Rovers 0-1 Ironmere Athletic. هذا الهدف يمنح الفريق تقدماً مستحقاً ويسعد الجماهير.",
+   "why_it_matters": "هذا الهدف الأول يغير مجريات اللقاء لصالح Ironmere Athletic ويمنحهم دفعة معنوية كبيرة.",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -2109,9 +2112,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "en",
-   "title": "Quenby Goal Analysis",
-   "body": "Right winger Emil Quenby scored in the 18' minute with a 97 kmh shot from an xG of 0.12, following an assist by Lars Maraval. The score is now Rivermouth Rovers 0-1 Ironmere Athletic.",
-   "why_it_matters": "This breakthrough capitalizes on Ironmere Athletic's mounting pressure and shifts the momentum firmly in their favor.",
+   "title": "Quenby Opens The Scoring",
+   "body": "In the 18' minute, right winger Emil Quenby scored his first goal of the match for Ironmere Athletic with a 97 km/h shot from an xG of 0.12, assisted by Lars Maraval. This opens the scoring, making it Rivermouth Rovers 0-1 Ironmere Athletic.",
+   "why_it_matters": "This breakthrough capitalises on Ironmere Athletic's sustained pressure and shifts the match momentum firmly in their favor.",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -2140,9 +2143,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "en",
-   "title": "Emil Quenby Strikes First",
-   "body": "Right winger Emil Quenby scored a brilliant goal for Ironmere Athletic in the 18' minute to take the lead. This wonderful strike brings immense joy to every supporter cheering for Ironmere Athletic.",
-   "why_it_matters": "This breakthrough capitalizes on Ironmere Athletic's mounting pressure and shifts the momentum firmly in their favor.",
+   "title": "Quenby Scores First",
+   "body": "Emil Quenby fires a wonderful shot to give Ironmere Athletic the lead in the first half. The brilliant goal makes it Rivermouth Rovers 0-1 Ironmere Athletic.",
+   "why_it_matters": "This breakthrough capitalises on Ironmere Athletic's sustained pressure and shifts the match momentum firmly in their favor.",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -2172,8 +2175,8 @@
    "audience": "analyst",
    "language": "ur",
    "title": "Emil Quenby کا پہلا گول",
-   "body": "18' منٹ پر Emil Quenby نے 0.12 xG اور 97 kmh رفتار کے ساتھ اسکور کیا۔ Lars Maraval کے اسسٹ کی بدولت اسکور Rivermouth Rovers 0-1 Ironmere Athletic ہو گیا۔",
-   "why_it_matters": "یہ گول Ironmere Athletic کی بہتر پوزیشن اور دباؤ کا نتیجہ ہے۔",
+   "body": "18' پر right winger Emil Quenby نے 97 km/h کی رفتار سے شاٹ مار کر Ironmere Athletic کے لیے اسکور 0-1 کیا، جس میں xG 0.12 تھا اور assist Lars Maraval نے کیا۔ یہ گول Rivermouth Rovers 0-1 Ironmere Athletic کے ساتھ اسکور کھولتا ہے۔",
+   "why_it_matters": "یہ برتری Ironmere Athletic کی بہتر پوزیشن اور دباؤ کا نتیجہ ہے۔",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -2202,9 +2205,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ur",
-   "title": "ایمیل کوئنبی کا شاندار گول",
-   "body": "پہلے ہاف کے 18' منٹ میں ایمیل کوئنبی نے شاندار گول کر کے Ironmere Athletic کو برتری دلائی۔ اسکور اب Rivermouth Rovers 0-1 Ironmere Athletic ہے۔",
-   "why_it_matters": "اس گول نے Ironmere Athletic کے حق میں میچ کا پالا پلٹ دیا ہے۔",
+   "title": "ایميل کوئنبی کا پہلا گول",
+   "body": "18' میں ایمیل کوئنبی نے شاندار گول کر کے Ironmere Athletic کو برتری دلائی۔ یہ اس میچ کا پہلا گول ہے۔",
+   "why_it_matters": "اس گول سے ٹیم کا حوصلہ بڑھ گیا ہے۔",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -2234,7 +2237,7 @@
    "audience": "fan",
    "language": "en",
    "title": "Quenby Opens The Scoring",
-   "body": "Emil Quenby fires a thunderous 97 kmh shot into the net in the 18' minute to give Ironmere Athletic the lead!",
+   "body": "Emil Quenby unleashes a thunderous 97 km/h strike! The Ironmere Athletic right winger buries it in the 18' minute to open the scoring!",
    "data": {
     "score_home": 0,
     "score_away": 1,
@@ -2614,9 +2617,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ar",
-   "title": "مارارفال يسجل بتسديدة سرعتها 99 كم/ساعة",
-   "body": "في الدقيقة 35 سجل المهاجم Lars Maraval هدفا بقيمة xg تبلغ 0.15 وتبرز الإحصائيات وصول xg الإجمالي لفريق Ironmere Athletic إلى 1.1 مع النتيجة Rivermouth Rovers 0-2 Ironmere Athletic.",
-   "why_it_matters": "الاستفادة من الفرص الصعبة في فترة اتسمت بالفوضى يعزز تفوق Ironmere Athletic الرقمي.",
+   "title": "مارافال يسجل ويضاعف تقدم أيرونمير أثلتيك",
+   "body": "في الدقيقة 35', أحرز Lars Maraval هدفه الأول في المباراة بقوة تسديدة بلغت 99 km/h ومن قيمة xG بلغت 0.15. النتيجة أصبحت Rivermouth Rovers 0-2 Ironmere Athletic.",
+   "why_it_matters": "هذا الإنهاء الناجح يوسع الفارق ويعاقب Rivermouth Rovers رغم استحواذه بنسبة 58%.",
    "data": {
     "score_home": 0,
     "score_away": 2,
@@ -2644,9 +2647,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ar",
-   "title": "هدف رائع لمارفال يعزز تقدم الفريق",
-   "body": "في الدقيقة 35 من الشوط الأول، أحرز المهاجم Lars Maraval هدفا رائعا لتصبح النتيجة Rivermouth Rovers 0-2 Ironmere Athletic. هذا الهدف يمنح المشجعين فرحة كبيرة وسيطرة واضحة في اللقاء.",
-   "why_it_matters": "استغلال الفرص الرائعة يمنح Ironmere Athletic تفوقا كبيرا ومطمئنا.",
+   "title": "هدف رائع لمارافال مع أيرونمير أثلتيك",
+   "body": "سجل Lars Maraval هدفه الأول في الدقيقة 35' ليوسع التقدم لصالح Ironmere Athletic. هذه اللحظة الرائعة تمنح الفريق فرحة كبيرة وتؤكد تفوقه.",
+   "why_it_matters": "هذا الهدف الجميل يترجم سيطرة الفريق على مجريات اللعب ويسعد الجماهير.",
    "data": {
     "score_home": 0,
     "score_away": 2,
@@ -2674,9 +2677,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "en",
-   "title": "Maraval Strikes with 99 kmh Shot",
-   "body": "In the 35' of the first half, striker Lars Maraval scored with a 99 kmh shot carrying an xg of 0.15, making it Rivermouth Rovers 0-2 Ironmere Athletic. This extends the team xg to 1.1 with 4 shots on target.",
-   "why_it_matters": "Capitalizing on low-xG opportunities efficiently increases the team's control over the match.",
+   "title": "Ironmere Athletic xG 1.1 Conversion",
+   "body": "Lars Maraval scored his first goal of the match in the 35' minute with a shot speed of 99 km/h from an xG of 0.15. The goal extends Ironmere Athletic's lead to 0-2 over Rivermouth Rovers.",
+   "why_it_matters": "The clinical finish capitalizes on Ironmere Athletic's momentum, punishing Rivermouth Rovers despite their 58 possession percentage.",
    "data": {
     "score_home": 0,
     "score_away": 2,
@@ -2704,9 +2707,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "en",
-   "title": "Maraval Scores Again for Ironmere Athletic",
-   "body": "Striker Lars Maraval fired in a brilliant goal in the 35' to put Ironmere Athletic further ahead. This wonderful moment brings great joy to the supporters.",
-   "why_it_matters": "Scoring goals builds immense confidence and helps secure the victory.",
+   "title": "Maraval Doubles the Lead",
+   "body": "Lars Maraval scores his first goal of the match in the 35' minute to make it 0-2 for Ironmere Athletic. What a wonderful strike to bring joy to the supporters!",
+   "why_it_matters": "This important goal strengthens the lead against Rivermouth Rovers.",
    "data": {
     "score_home": 0,
     "score_away": 2,
@@ -2734,9 +2737,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ur",
-   "title": "Lars Maraval کا شاندار گول",
-   "body": "35' پر Lars Maraval نے 99 kmh کی رفتار سے شاٹ مار کر اسکور Rivermouth Rovers 0-2 Ironmere Athletic کر دیا۔ xg 0.15 کے ساتھ Ironmere Athletic کا کل xg 1.1 ہو گیا ہے۔",
-   "why_it_matters": "اس موقع کا فائدہ اٹھانا Ironmere Athletic کی میچ پر گرفت مضبوط کرتا ہے۔",
+   "title": "لارس مارാവل کا گول اور xG 0.15",
+   "body": "35' منٹ میں لارس مارാവل نے 99 km/h کی رفتار سے شاٹ مار کر آئرنمیر ایتھلیٹک کی برتری 0-2 کر دی، جس کا xG 0.15 تھا۔",
+   "why_it_matters": "یہ کم توقع والے موقع کو گول میں بدلنے کی ایک بہترین مثال ہے۔",
    "data": {
     "score_home": 0,
     "score_away": 2,
@@ -2764,9 +2767,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ur",
-   "title": "Ironmere Athletic برتری حاصل کرتا ہے",
-   "body": "Lars Maraval نے 35' میں شاندار گول کر کے Ironmere Athletic کی برتری کو بڑھا دیا۔ اب اسکور Rivermouth Rovers 0-2 Ironmere Athletic ہو گیا ہے۔",
-   "why_it_matters": "یہ گول Ironmere Athletic کی پوزیشن کو مزید مستحکم کرتا ہے۔",
+   "title": "مارാവل کا شاندار گول",
+   "body": "35' منٹ میں لارس مارാവل نے آئرنمیر ایتھلیٹک کے لیے میچ کا اپنا پہلا گول کر کے برتری کو 0-2 کر دیا۔",
+   "why_it_matters": "اس شاندار گول نے ٹیم کی پوزیشن کو مزید مستحکم کر دیا ہے۔",
    "data": {
     "score_home": 0,
     "score_away": 2,
@@ -2794,8 +2797,8 @@
    "type": "commentary",
    "audience": "fan",
    "language": "en",
-   "title": "Maraval Doubles Ironmere Athletic Lead",
-   "body": "Lars Maraval unleashes a thunderous 99 kmh strike in the 35' to double the lead! It is now Rivermouth Rovers 0-2 Ironmere Athletic!",
+   "title": "Maraval Extends Ironmere Lead",
+   "body": "Lars Maraval unleashes an unstoppable 99 km/h strike in the 35' minute! Ironmere Athletic leads Rivermouth Rovers 0-2!",
    "data": {
     "score_home": 0,
     "score_away": 2,
@@ -4856,9 +4859,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ar",
-   "title": "هدف زيفالو يقلص الفارق",
-   "body": "في الدقيقة 60، سجل المهاجم Ilyas Zevalo بكرة بلغت سرعتها 88 كم/س وقيمة xG تبلغ 0.27. جاء الهدف بمساعدة من Leon Coldbeck لتصبح النتيجة Rivermouth Rovers 1-2 Ironmere Athletic.",
-   "why_it_matters": "هذا الهدف يترجم سيطرة Rivermouth Rovers واستحواذهم بنسبة 59 بالمئة إلى أهداف فعلية في اللقاء.",
+   "title": "إلياس زيفالو يسجل من مسافة",
+   "body": "في الدقيقة 60، أحرز إلياس زيفالو هدفه الأول بقيمة xG تبلغ 0.27 وسرعة تسديدة وصلت إلى 88 كم/س بعد تمريرة من ليون كولدبيك لتصبح النتيجة ريفِماوث روفرز 1-2 أيرونمير أثليتيك.",
+   "why_it_matters": "يستفيد ريفِماوث روفرز من السيطرة التي بلغت نسبة الاستحواذ فيها 59 بالمئة لتقليص النتيجة.",
    "data": {
     "score_home": 1,
     "score_away": 2,
@@ -4887,9 +4890,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ar",
-   "title": "إلياس زيفالو يسجل هدفا رائعا",
-   "body": "في الدقيقة 60 سجل المهاجم إلياس زيفالو هدف التقليص لنادي Rivermouth Rovers بتسديدة قوية. أصبحت النتيجة الآن Rivermouth Rovers 1-2 Ironmere Athletic بعد تمريرة من Leon Coldbeck.",
-   "why_it_matters": "هذا الهدف يعيد الفريق إلى أجواء المباراة ويمنحه دفعة معنوية كبيرة.",
+   "title": "هدف تقليص الفارق لريفِماوث",
+   "body": "سجل المهاجم إلياس زيفالو هدفه الأول في الدقيقة 60 بتمريرة من ليون كولدبيك ليصبح النتيجة ريفِماوث روفرز 1-2 أيرونمير أثليتيك.",
+   "why_it_matters": "هذا الهدف يمنح ريفِماوث روفرز أملاً كبيراً للعودة في المباراة.",
    "data": {
     "score_home": 1,
     "score_away": 2,
@@ -4918,9 +4921,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "en",
-   "title": "Zevalo goal cuts deficit to 1-2",
-   "body": "Striker Ilyas Zevalo scored in 60' with an 88 km/h shot from an xG of 0.27, assisted by Leon Coldbeck. Rivermouth Rovers now trail Ironmere Athletic 1-2 with a team xG of 1.66.",
-   "why_it_matters": "The strike rewards Rivermouth Rovers for controlling 59 percent possession and building offensive pressure.",
+   "title": "Zevalo Goal: Rivermouth Rovers 1-2 Ironmere Athletic",
+   "body": "In 60', striker Ilyas Zevalo converts his first goal of the match with an xG of 0.27 and a shot speed of 88 kmh, following an assist by Leon Coldbeck.",
+   "why_it_matters": "This goal capitalizes on Rivermouth Rovers' 59 possession percentage and 1.66 total xG to narrow the deficit.",
    "data": {
     "score_home": 1,
     "score_away": 2,
@@ -4949,9 +4952,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "en",
-   "title": "Zevalo scores!",
-   "body": "Striker Ilyas Zevalo scored for Rivermouth Rovers at 60' after receiving a great pass from Leon Coldbeck. Rivermouth Rovers is now down 1-2 against Ironmere Athletic.",
-   "why_it_matters": "This goal brings Rivermouth Rovers right back into the game.",
+   "title": "Zevalo gives hope!",
+   "body": "Striker Ilyas Zevalo scores his first goal of the match in the 60' to bring Rivermouth Rovers right back into it. Leon Coldbeck provided the assist to make the score Rivermouth Rovers 1-2 Ironmere Athletic.",
+   "why_it_matters": "This goal rewards Rivermouth Rovers with a fighting chance after dominating possession.",
    "data": {
     "score_home": 1,
     "score_away": 2,
@@ -4980,9 +4983,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ur",
-   "title": "زیوالو کی گول سے واپسی",
-   "body": "60' منٹ پر striker الییاس زیوالو نے Leon Coldbeck کی اسسٹ پر 88 km/h کی رفتار سے گول کیا۔ اس گول کا xG 0.27 تھا اور سکور اب Rivermouth Rovers 1-2 Ironmere Athletic ہے۔",
-   "why_it_matters": "یہ گول Rivermouth Rovers کی مسلسل دباؤ کی حکمت عملی کا نتیجہ ہے۔",
+   "title": "زیوالو کا گول اور تجزیہ",
+   "body": "60' پر الیاس زیوالو نے لیون کولڈبیک کی اسسٹ پر گول کیا۔ اس شاٹ کی رفتار 88 کلومیٹر فی گھنٹہ اور xG 0.27 تھی، جس سے سکور ریورماؤتھ روورز 1-2 آئرنمیر ایتھلیٹک ہو گیا۔",
+   "why_it_matters": "یہ گول 59 فیصد پজیشن اور بہتر اعداد و شمار رکھنے والی ریورماؤتھ روورز کی ٹیم کے لیے میچ میں واپسی کا اہم ذریعہ ہے۔",
    "data": {
     "score_home": 1,
     "score_away": 2,
@@ -5011,9 +5014,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ur",
-   "title": "الییاس زیوالو کا شاندار گول",
-   "body": "سیکنڈ ہاف کے 60' منٹ میں الییاس زیوالو نے شاندار گول کر کے سکور کو Rivermouth Rovers 1-2 Ironmere Athletic کر دیا۔ یہ گول اس میچ کا ایک یادگار لمحہ ہے۔",
-   "why_it_matters": "اس گول نے Rivermouth Rovers کی امیدوں کو پھر سے زندہ کر دیا ہے۔",
+   "title": "زیوالو کا شاندار گول",
+   "body": "دوسرے ہاف کے 60ویں منٹ میں الیاس زیوالو نے پہلا گول کر کے ٹیم کی امیدیں بحال کر دیں۔ سکور اب ریورماؤتھ روورز 1 اور آئرنمیر ایتھلیٹک 2 ہو گیا ہے۔",
+   "why_it_matters": "یہ گول ٹیم کی زبردست کوششوں کا نتیجہ ہے جس سے میچ کا رخ بدل سکتا ہے۔",
    "data": {
     "score_home": 1,
     "score_away": 2,
@@ -5042,8 +5045,8 @@
    "type": "commentary",
    "audience": "fan",
    "language": "en",
-   "title": "Zevalo strikes to narrow the deficit",
-   "body": "In the 60' minute, Ilyas Zevalo scores an incredible 88 km/h rocket from Leon Coldbeck's assist to narrow the deficit to 1-2!",
+   "title": "Zevalo pulls one back",
+   "body": "In the 60', Ilyas Zevalo fires an 88 kmh rocket from a Leon Coldbeck assist to pull one back for Rivermouth Rovers!",
    "data": {
     "score_home": 1,
     "score_away": 2,
@@ -5804,9 +5807,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ar",
-   "title": "تحليل هدف Zane Orbeza في الدقيقة 72",
-   "body": "أحرز قلب الدفاع Zane Orbeza هدفاً من تسديدة سرعتها 79 كم/س بقيمة xG تبلغ 0.3 وبمساعدة من Nico Tshavu لتصبح النتيجة Rivermouth Rovers 2-2 Ironmere Athletic محققاً هدفه الأول في المباراة.",
-   "why_it_matters": "يستفيد الفريق من نسبة الاستحواذ البالغة 59 بالمئة للسيطرة على مجريات اللعب وتغيير الزخم لصالحهم.",
+   "title": "تحليل هدف التعادل لـ Rivermouth Rovers",
+   "body": "في الدقيقة 72 أحرز قلب الدفاع Zane Orbeza هدفه الأول بقوة تسديدة بلغت 79 كم/س وقيمة xG تقدر بـ 0.3 بمساعدة من Nico Tshavu لتصبح النتيجة Rivermouth Rovers 2-2 Ironmere Athletic مع امتلاك الكرة بنسبة 59 بالمئة.",
+   "why_it_matters": "يعكس هذا الهدف الضغط المستمر والسيطرة الميدانية المستمرة طوال اللقاء.",
    "data": {
     "score_home": 2,
     "score_away": 2,
@@ -5835,9 +5838,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ar",
-   "title": "هدف رائع لريفرموث روفرز",
-   "body": "سجل Zane Orbeza هدفاً جميلاً في الدقيقة 72 ليجعل النتيجة تعادل المثير. هذا هو هدفه الأول في المباراة وسط فرحة كبيرة من المشجعين.",
-   "why_it_matters": "هذا الهدف يعيد الفريق إلى أجواء المباراة بشكل قَوِيّ ومميز.",
+   "title": "هدف التعادل لفريق Rivermouth Rovers",
+   "body": "في الدقيقة 72 سجل اللاعب Zane Orbeza هدفا رائعا ليصبح التعادل إيجابيا بين الفريقين. هذه اللحظة تعيد الأمل لأنصار Rivermouth Rovers في المدرجات.",
+   "why_it_matters": "هذا التعادل يمنح الفريق دفعة معنوية كبيرة في اللحظات الحاسمة من المباراة.",
    "data": {
     "score_home": 2,
     "score_away": 2,
@@ -5866,9 +5869,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "en",
-   "title": "Orbeza Strikes at 72'",
-   "body": "Centre-back Zane Orbeza scored his 1th goal this match in the 72' minute via a 79 km/h shot with 0.3 xG, assisted by Nico Tshavu to make it Rivermouth Rovers 2-2 Ironmere Athletic. Rivermouth Rovers held 59 possession before this strike.",
-   "why_it_matters": "This goal capitalizes on Rivermouth Rovers' sustained pressure and dominant 59 possession percentage to shift momentum firmly back in their favour.",
+   "title": "Orbeza Equaliser at 72'",
+   "body": "Centre-back Zane Orbeza scored his first goal of the match with an xG of 0.3 and a shot speed of 79 kmh, assisted by Nico Tshavu to make the score Rivermouth Rovers 2-2 Ironmere Athletic. This strike levels the score as Rivermouth Rovers maintain 59 percent possession.",
+   "why_it_matters": "The equaliser rewards Rivermouth Rovers' mounting pressure and shifts momentum decisively back to the home side.",
    "data": {
     "score_home": 2,
     "score_away": 2,
@@ -5897,9 +5900,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "en",
-   "title": "Orbeza Scores For Rovers",
-   "body": "Zane Orbeza scored a brilliant goal in the 72' minute with help from Nico Tshavu. The score is now level at 2-2.",
-   "why_it_matters": "This wonderful goal brings great excitement to the fans as the team fights hard.",
+   "title": "Zane Orbeza Brings Rivermouth Rovers Level",
+   "body": "Centre-back Zane Orbeza scores a crucial goal in the 72' minute to make it Rivermouth Rovers 2-2 Ironmere Athletic. Rivermouth Rovers fans can celebrate this wonderful equaliser!",
+   "why_it_matters": "The equaliser rewards Rivermouth Rovers' mounting pressure and shifts momentum decisively back to the home side.",
    "data": {
     "score_home": 2,
     "score_away": 2,
@@ -5928,9 +5931,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ur",
-   "title": "اوربيزا کا شاندار گول",
-   "body": "Zane Orbeza نے 72' منٹ میں 79 km/h کی رفتار سے شاٹ مار کر xG 0.3 پر گول کیا۔ اس میں Nico Tshavu نے اسسٹ کیا اور سکور Rivermouth Rovers 2-2 Ironmere Athletic ہو گیا۔",
-   "why_it_matters": "اس گول سے Rivermouth Rovers کی 59 فیصد پوزیشن اور برتری ظاہر ہوتی ہے۔",
+   "title": "زین اوربیزا کا اہم برابر ساز گول",
+   "body": "72' منٹ پر سینٹر بیک زین اوربیزا نے 0.3 xG اور 79 کلومیٹر فی گھنٹہ کی رفتار سے اپنا پہلا گول سکور کیا، جس میں نیکو تشاوی نے اسسٹ کیا۔ اس گول سے سکور Rivermouth Rovers 2-2 Ironmere Athletic ہو گیا جبکہ Rivermouth Rovers کے پاس 59 فیصد پوزیشن تھی۔",
+   "why_it_matters": "یہ گول Rivermouth Rovers کے مسلسل دباؤ کا نتیجہ ہے اور اس سے ٹیم کی پوزیشن مضبوط ہوئی ہے۔",
    "data": {
     "score_home": 2,
     "score_away": 2,
@@ -5959,9 +5962,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ur",
-   "title": "اوربيزا يعود بالروفرز",
-   "body": "سینٹر بیک Zane Orbeza نے 72' منٹ میں گول کر کے Rivermouth Rovers اور Ironmere Athletic کا سکور 2-2 کر دیا۔ اس میچ میں یہ ان کا 1 واں گول تھا۔",
-   "why_it_matters": "اس گول نے Rivermouth Rovers کے لیے میچ کا پلہ پھر سے بھاری کر دیا۔",
+   "title": "زین اوربیزا کا شاندار گول",
+   "body": "گیم کے 72' منٹ میں زین اوربیزا نے گول کر کے سکور برابر کر دیا۔ اس خوبصورت گول میں نیکو تشاوی نے مدد کی۔",
+   "why_it_matters": "یہ گول ٹیم کے لیے بہت اہم ثابت ہوا اور اس نے میچ کا رخ بدل دیا۔",
    "data": {
     "score_home": 2,
     "score_away": 2,
@@ -5990,8 +5993,8 @@
    "type": "commentary",
    "audience": "fan",
    "language": "en",
-   "title": "Orbeza Restores Rovers Lead",
-   "body": "Zane Orbeza strikes in the 72' minute! Assisted by Nico Tshavu, a 79 km/h rocket restores the lead for Rivermouth Rovers!",
+   "title": "Orbeza Equalises for Rivermouth Rovers",
+   "body": "Zane Orbeza levels it for Rivermouth Rovers in the 72' minute! Assisted by Nico Tshavu, it's 2-2!",
    "data": {
     "score_home": 2,
     "score_away": 2,
@@ -6496,9 +6499,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ar",
-   "title": "زاين أوربيزا يحسم المباراة بهدف متأخر",
-   "body": "سجل قلب الدفاع زاين أوربيزا في الدقيقة 88 بتسديدة بلغت سرعتها 84 كم/س ومعدل أهداف متوقعة 0.27، بعد تمريرة حاسمة من ليون كولبيك لتصبح النتيجة ريفرموث روفرز 3-2 أيرونمير أتلتيك، محرزاً هدفه الثاني في اللقاء.",
-   "why_it_matters": "هذا الهدف المتأخر أعاد التقدم لريفرموث روفرز وأثر بشكل حاسم على اتجاه المباراة في دقائقها الأخيرة.",
+   "title": "هدف حاسم من أوربيزا",
+   "body": "في الدقيقة 88 أحرز قلب الدفاع زين أوربيزا هدفه الثاني بقوة 84 كم/س وصناعـة ليون كولدفيك ليصبح النتيجة 3-2.",
+   "why_it_matters": "يعكس هذا الهدف تفوق Rivermouth Rovers بـ 2.35 في الأهداف المتوقعة واستغلال الاستحواذ بنسبة 58%.",
    "data": {
     "score_home": 3,
     "score_away": 2,
@@ -6527,9 +6530,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "ar",
-   "title": "هدف متأخر رائع لريفرموث روفرز",
-   "body": "سجل زاين أوربيزا هدفه الرائع في الدقيقة 88 ليمنح فريقه التقدم على أيرونمير أتلتيك بنتيجة 3-2. هذا هو الهدف الثاني له في المباراة ليجعل الجماهير تحتفل بانتصار حماسي.",
-   "why_it_matters": "هذا الهدف القاتل أعاد التقدم لريفرموث روفرز في اللحظات الأخيرة من اللقاء.",
+   "title": "هدف متأخر يمنح التقدم",
+   "body": "في الدقيقة 88 سجل زين أوربيزا هدفه الثاني ليتقدم فريقنا بهدفين مقابل ثلاثة.",
+   "why_it_matters": "هذا الهدف الرائع يشعل حماس المدرجات ويقربنا من تحقيق الفوز الثمين.",
    "data": {
     "score_home": 3,
     "score_away": 2,
@@ -6558,9 +6561,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "en",
-   "title": "Zane Orbeza 88' Winner",
-   "body": "Centre-back Zane Orbeza scored his second goal of the match in 88' with an xG of 0.27 and 84 kmh shot speed, assisted by Leon Coldbeck. Rivermouth Rovers leads 3-2.",
-   "why_it_matters": "This late goal restores the lead for Rivermouth Rovers and shifts the balance of the match in the final minutes.",
+   "title": "Orbeza Secures 3-2 Lead at 88'",
+   "body": "Centre-back Zane Orbeza scored his second goal of the match from an xG of 0.27 and 84 kmh shot speed, assisted by Leon Coldbeck in the 88' minute.",
+   "why_it_matters": "This late goal capitalizes on Rivermouth Rovers' superior expected goals of 2.35 and heavy possession.",
    "data": {
     "score_home": 3,
     "score_away": 2,
@@ -6589,9 +6592,9 @@
    "type": "insight",
    "audience": "fan",
    "language": "en",
-   "title": "Zane Orbeza wins it late",
-   "body": "Zane Orbeza scores a brilliant goal in the 88' minute to make it 3-2 for Rivermouth Rovers. This magical moment gives the team a precious lead near the end.",
-   "why_it_matters": "This late goal restores the lead for Rivermouth Rovers and shifts the balance of the match in the final minutes.",
+   "title": "Orbeza Strikes Late for Rivermouth",
+   "body": "In the 88' minute, Zane Orbeza scored his second goal to give Rivermouth Rovers a thrilling 3-2 lead against Ironmere Athletic.",
+   "why_it_matters": "This late goal changes the score and rewards the team for creating great chances all match.",
    "data": {
     "score_home": 3,
     "score_away": 2,
@@ -6620,9 +6623,9 @@
    "type": "insight",
    "audience": "analyst",
    "language": "ur",
-   "title": "زین اوربیزا کا فیصلہ کن گول",
-   "body": "ریورماؤتھ روورز کے سینٹر بیک زین اوربیزا نے 88' منٹ میں 0.27 xG اور 84 کلومیٹر فی گھنٹہ کی رفتار سے گول سکور کیا۔ لیون کولڈبیک کے اسسٹ سے بننے والا یہ گول سکور کو ریورماؤتھ روورز 3-2 آئرنمیر ایتھلیٹک کرتا ہے اور یہ اس میچ میں ان کا دوسرا گول ہے۔",
-   "why_it_matters": "یہ گول میچ کے آخری لمحات میں ریورماؤتھ روورز کی پوزیشن کو مستحکم کرتا ہے۔",
+   "title": "زین اوربیزا کا 0.27 xG گول",
+   "body": "88' منٹ میں سینٹر بیک زین اوربیزا نے 84 kmh کی رفتار سے شاٹ مار کر اپنا دوسرا گول اسکور کیا۔ اس گول میں لیون کولڈبیک نے اسسٹ کیا جس سے اسکور ریورماؤتھ روورز 3-2 آئرنمیر ایتھلیٹک ہو گیا۔",
+   "why_it_matters": "یہ دیر سے ہونے والا گول ریورماؤتھ روورز کی 2.35 xG اور 58 فیصد بال پজেশন کی برتری کا منہ بولتا ثبوت ہے۔",
    "data": {
     "score_home": 3,
     "score_away": 2,
@@ -6652,8 +6655,8 @@
    "audience": "fan",
    "language": "ur",
    "title": "زین اوربیزا کا شاندار گول",
-   "body": "زین اوربیزا نے 88' منٹ میں شاندار گول کر کے ریورماؤتھ روورز کو برتری دلائی۔ یہ اس میچ میں زین اوربیزا کا دوسرا گول ہے۔",
-   "why_it_matters": "یہ آخری منٹوں کا گول ریورماؤتھ روورز کی جیت کی امید کو مضبوط کرتا ہے۔",
+   "body": "میچ کے 88' ویں منٹ میں سینٹر بیک زین اوربیزا نے ریورماؤتھ روورز کے لیے اپنا دوسرا گول کر کے ٹیم کو برتری دلائی۔ اس شاندار گول پر شائقین خوشی سے جھوم اٹھے ہیں۔",
+   "why_it_matters": "یہ دیرپا گول میچ کا رخ بدلنے کی پوری صلاحیت رکھتا ہے۔",
    "data": {
     "score_home": 3,
     "score_away": 2,
@@ -6682,8 +6685,8 @@
    "type": "commentary",
    "audience": "fan",
    "language": "en",
-   "title": "Zane Orbeza secures late winner",
-   "body": "Zane Orbeza scores in the 88' minute to make it Rivermouth Rovers 3-2 Ironmere Athletic, his second goal of the match!",
+   "title": "Orbeza Puts Rivermouth Ahead Late",
+   "body": "Zane Orbeza scores in the 88' minute! His second goal of the match puts Rivermouth Rovers ahead 3-2 against Ironmere Athletic!",
    "data": {
     "score_home": 3,
     "score_away": 2,
@@ -7043,7 +7046,7 @@
  "handoffs": [
   {
    "seq": 1,
-   "wall_ms": 3430,
+   "wall_ms": 2622,
    "match_ms": 59923,
    "source": "replayer",
    "target": "stats_agent",
@@ -7052,7 +7055,7 @@
   },
   {
    "seq": 2,
-   "wall_ms": 3455,
+   "wall_ms": 2649,
    "match_ms": 59923,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7061,7 +7064,7 @@
   },
   {
    "seq": 3,
-   "wall_ms": 3456,
+   "wall_ms": 2650,
    "match_ms": 119175,
    "source": "replayer",
    "target": "stats_agent",
@@ -7070,7 +7073,7 @@
   },
   {
    "seq": 4,
-   "wall_ms": 3472,
+   "wall_ms": 2670,
    "match_ms": 119175,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7079,7 +7082,7 @@
   },
   {
    "seq": 5,
-   "wall_ms": 3473,
+   "wall_ms": 2673,
    "match_ms": 179761,
    "source": "replayer",
    "target": "stats_agent",
@@ -7088,7 +7091,7 @@
   },
   {
    "seq": 6,
-   "wall_ms": 3490,
+   "wall_ms": 2699,
    "match_ms": 179761,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7097,7 +7100,7 @@
   },
   {
    "seq": 7,
-   "wall_ms": 3490,
+   "wall_ms": 2699,
    "match_ms": 178140,
    "source": "stats_agent",
    "target": "producer",
@@ -7107,7 +7110,7 @@
   },
   {
    "seq": 8,
-   "wall_ms": 3491,
+   "wall_ms": 2700,
    "match_ms": 178140,
    "source": "producer",
    "target": "insight_agent",
@@ -7117,7 +7120,7 @@
   },
   {
    "seq": 9,
-   "wall_ms": 3504,
+   "wall_ms": 2721,
    "match_ms": 178140,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7129,7 +7132,7 @@
   },
   {
    "seq": 10,
-   "wall_ms": 3504,
+   "wall_ms": 2721,
    "match_ms": 178140,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -7139,7 +7142,7 @@
   },
   {
    "seq": 11,
-   "wall_ms": 3520,
+   "wall_ms": 2739,
    "match_ms": 178140,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7151,7 +7154,7 @@
   },
   {
    "seq": 12,
-   "wall_ms": 3520,
+   "wall_ms": 2739,
    "match_ms": 178140,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -7161,7 +7164,7 @@
   },
   {
    "seq": 13,
-   "wall_ms": 3532,
+   "wall_ms": 2763,
    "match_ms": 178140,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7173,7 +7176,7 @@
   },
   {
    "seq": 14,
-   "wall_ms": 3545,
+   "wall_ms": 2780,
    "match_ms": 178140,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7185,7 +7188,7 @@
   },
   {
    "seq": 15,
-   "wall_ms": 3560,
+   "wall_ms": 2799,
    "match_ms": 178140,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7197,7 +7200,7 @@
   },
   {
    "seq": 16,
-   "wall_ms": 3560,
+   "wall_ms": 2799,
    "match_ms": 178140,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -7207,7 +7210,7 @@
   },
   {
    "seq": 17,
-   "wall_ms": 3564,
+   "wall_ms": 2802,
    "match_ms": 237129,
    "source": "replayer",
    "target": "stats_agent",
@@ -7216,7 +7219,7 @@
   },
   {
    "seq": 18,
-   "wall_ms": 3583,
+   "wall_ms": 2829,
    "match_ms": 237129,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7225,7 +7228,7 @@
   },
   {
    "seq": 19,
-   "wall_ms": 3584,
+   "wall_ms": 2831,
    "match_ms": 294626,
    "source": "replayer",
    "target": "stats_agent",
@@ -7234,7 +7237,7 @@
   },
   {
    "seq": 20,
-   "wall_ms": 3605,
+   "wall_ms": 2859,
    "match_ms": 294626,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7243,7 +7246,7 @@
   },
   {
    "seq": 21,
-   "wall_ms": 3606,
+   "wall_ms": 2861,
    "match_ms": 358593,
    "source": "replayer",
    "target": "stats_agent",
@@ -7252,7 +7255,7 @@
   },
   {
    "seq": 22,
-   "wall_ms": 3625,
+   "wall_ms": 2892,
    "match_ms": 358593,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7261,7 +7264,7 @@
   },
   {
    "seq": 23,
-   "wall_ms": 3625,
+   "wall_ms": 2892,
    "match_ms": 358593,
    "source": "stats_agent",
    "target": "producer",
@@ -7271,7 +7274,7 @@
   },
   {
    "seq": 24,
-   "wall_ms": 3626,
+   "wall_ms": 2893,
    "match_ms": 358593,
    "source": "producer",
    "target": "insight_agent",
@@ -7281,7 +7284,7 @@
   },
   {
    "seq": 25,
-   "wall_ms": 3638,
+   "wall_ms": 2899,
    "match_ms": 358593,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7293,7 +7296,7 @@
   },
   {
    "seq": 26,
-   "wall_ms": 3638,
+   "wall_ms": 2899,
    "match_ms": 358593,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -7303,7 +7306,7 @@
   },
   {
    "seq": 27,
-   "wall_ms": 3651,
+   "wall_ms": 2916,
    "match_ms": 358593,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7315,7 +7318,7 @@
   },
   {
    "seq": 28,
-   "wall_ms": 3652,
+   "wall_ms": 2916,
    "match_ms": 358593,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -7325,7 +7328,7 @@
   },
   {
    "seq": 29,
-   "wall_ms": 3666,
+   "wall_ms": 2939,
    "match_ms": 358593,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7337,7 +7340,7 @@
   },
   {
    "seq": 30,
-   "wall_ms": 3679,
+   "wall_ms": 2957,
    "match_ms": 358593,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7349,7 +7352,7 @@
   },
   {
    "seq": 31,
-   "wall_ms": 3694,
+   "wall_ms": 2979,
    "match_ms": 358593,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7361,7 +7364,7 @@
   },
   {
    "seq": 32,
-   "wall_ms": 3694,
+   "wall_ms": 2979,
    "match_ms": 358593,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -7371,7 +7374,7 @@
   },
   {
    "seq": 33,
-   "wall_ms": 3696,
+   "wall_ms": 2983,
    "match_ms": 412460,
    "source": "replayer",
    "target": "stats_agent",
@@ -7380,7 +7383,7 @@
   },
   {
    "seq": 34,
-   "wall_ms": 3715,
+   "wall_ms": 3012,
    "match_ms": 412460,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7389,7 +7392,7 @@
   },
   {
    "seq": 35,
-   "wall_ms": 3715,
+   "wall_ms": 3012,
    "match_ms": 360000,
    "source": "stats_agent",
    "target": "producer",
@@ -7399,7 +7402,7 @@
   },
   {
    "seq": 36,
-   "wall_ms": 3716,
+   "wall_ms": 3014,
    "match_ms": 360000,
    "source": "producer",
    "target": "insight_agent",
@@ -7409,7 +7412,7 @@
   },
   {
    "seq": 37,
-   "wall_ms": 3727,
+   "wall_ms": 3020,
    "match_ms": 360000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7421,7 +7424,7 @@
   },
   {
    "seq": 38,
-   "wall_ms": 3727,
+   "wall_ms": 3020,
    "match_ms": 360000,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -7431,7 +7434,7 @@
   },
   {
    "seq": 39,
-   "wall_ms": 3738,
+   "wall_ms": 3037,
    "match_ms": 360000,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7443,7 +7446,7 @@
   },
   {
    "seq": 40,
-   "wall_ms": 3738,
+   "wall_ms": 3037,
    "match_ms": 360000,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -7453,7 +7456,7 @@
   },
   {
    "seq": 41,
-   "wall_ms": 3751,
+   "wall_ms": 3044,
    "match_ms": 360000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7465,7 +7468,7 @@
   },
   {
    "seq": 42,
-   "wall_ms": 3767,
+   "wall_ms": 3060,
    "match_ms": 360000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7477,7 +7480,7 @@
   },
   {
    "seq": 43,
-   "wall_ms": 3780,
+   "wall_ms": 3082,
    "match_ms": 360000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7489,7 +7492,7 @@
   },
   {
    "seq": 44,
-   "wall_ms": 3780,
+   "wall_ms": 3082,
    "match_ms": 360000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -7499,7 +7502,7 @@
   },
   {
    "seq": 45,
-   "wall_ms": 3783,
+   "wall_ms": 3086,
    "match_ms": 479090,
    "source": "replayer",
    "target": "stats_agent",
@@ -7508,7 +7511,7 @@
   },
   {
    "seq": 46,
-   "wall_ms": 3804,
+   "wall_ms": 3112,
    "match_ms": 479090,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7517,7 +7520,7 @@
   },
   {
    "seq": 47,
-   "wall_ms": 3806,
+   "wall_ms": 3114,
    "match_ms": 537821,
    "source": "replayer",
    "target": "stats_agent",
@@ -7526,7 +7529,7 @@
   },
   {
    "seq": 48,
-   "wall_ms": 3825,
+   "wall_ms": 3146,
    "match_ms": 537821,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7535,7 +7538,7 @@
   },
   {
    "seq": 49,
-   "wall_ms": 3828,
+   "wall_ms": 3147,
    "match_ms": 583865,
    "source": "replayer",
    "target": "stats_agent",
@@ -7544,7 +7547,7 @@
   },
   {
    "seq": 50,
-   "wall_ms": 3848,
+   "wall_ms": 3171,
    "match_ms": 583865,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7553,7 +7556,7 @@
   },
   {
    "seq": 51,
-   "wall_ms": 3849,
+   "wall_ms": 3173,
    "match_ms": 653846,
    "source": "replayer",
    "target": "stats_agent",
@@ -7562,7 +7565,7 @@
   },
   {
    "seq": 52,
-   "wall_ms": 3870,
+   "wall_ms": 3200,
    "match_ms": 653846,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7571,7 +7574,7 @@
   },
   {
    "seq": 53,
-   "wall_ms": 3871,
+   "wall_ms": 3202,
    "match_ms": 698405,
    "source": "replayer",
    "target": "stats_agent",
@@ -7580,7 +7583,7 @@
   },
   {
    "seq": 54,
-   "wall_ms": 3893,
+   "wall_ms": 3235,
    "match_ms": 698405,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7589,7 +7592,7 @@
   },
   {
    "seq": 55,
-   "wall_ms": 3893,
+   "wall_ms": 3235,
    "match_ms": 696941,
    "source": "stats_agent",
    "target": "producer",
@@ -7599,7 +7602,7 @@
   },
   {
    "seq": 56,
-   "wall_ms": 3895,
+   "wall_ms": 3237,
    "match_ms": 696941,
    "source": "producer",
    "target": "template_writer",
@@ -7609,7 +7612,7 @@
   },
   {
    "seq": 57,
-   "wall_ms": 3897,
+   "wall_ms": 3239,
    "match_ms": 696941,
    "source": "template_writer",
    "target": "publisher",
@@ -7619,7 +7622,7 @@
   },
   {
    "seq": 58,
-   "wall_ms": 3899,
+   "wall_ms": 3243,
    "match_ms": 777860,
    "source": "replayer",
    "target": "stats_agent",
@@ -7628,7 +7631,7 @@
   },
   {
    "seq": 59,
-   "wall_ms": 3922,
+   "wall_ms": 3296,
    "match_ms": 777860,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7637,7 +7640,7 @@
   },
   {
    "seq": 60,
-   "wall_ms": 3923,
+   "wall_ms": 3298,
    "match_ms": 836047,
    "source": "replayer",
    "target": "stats_agent",
@@ -7646,7 +7649,7 @@
   },
   {
    "seq": 61,
-   "wall_ms": 3949,
+   "wall_ms": 3334,
    "match_ms": 836047,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7655,7 +7658,7 @@
   },
   {
    "seq": 62,
-   "wall_ms": 3950,
+   "wall_ms": 3336,
    "match_ms": 897809,
    "source": "replayer",
    "target": "stats_agent",
@@ -7664,7 +7667,7 @@
   },
   {
    "seq": 63,
-   "wall_ms": 3980,
+   "wall_ms": 3376,
    "match_ms": 897809,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7673,7 +7676,7 @@
   },
   {
    "seq": 64,
-   "wall_ms": 3982,
+   "wall_ms": 3378,
    "match_ms": 958978,
    "source": "replayer",
    "target": "stats_agent",
@@ -7682,7 +7685,7 @@
   },
   {
    "seq": 65,
-   "wall_ms": 4013,
+   "wall_ms": 3413,
    "match_ms": 958978,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7691,7 +7694,7 @@
   },
   {
    "seq": 66,
-   "wall_ms": 4015,
+   "wall_ms": 3415,
    "match_ms": 1009471,
    "source": "replayer",
    "target": "stats_agent",
@@ -7700,7 +7703,7 @@
   },
   {
    "seq": 67,
-   "wall_ms": 4044,
+   "wall_ms": 3455,
    "match_ms": 1009471,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7709,7 +7712,7 @@
   },
   {
    "seq": 68,
-   "wall_ms": 4046,
+   "wall_ms": 3457,
    "match_ms": 1052190,
    "source": "replayer",
    "target": "stats_agent",
@@ -7718,7 +7721,7 @@
   },
   {
    "seq": 69,
-   "wall_ms": 4082,
+   "wall_ms": 3499,
    "match_ms": 1052190,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7727,7 +7730,7 @@
   },
   {
    "seq": 70,
-   "wall_ms": 4082,
+   "wall_ms": 3499,
    "match_ms": 1052190,
    "source": "stats_agent",
    "target": "producer",
@@ -7737,7 +7740,7 @@
   },
   {
    "seq": 71,
-   "wall_ms": 4083,
+   "wall_ms": 3501,
    "match_ms": 1052190,
    "source": "producer",
    "target": "insight_agent",
@@ -7747,19 +7750,19 @@
   },
   {
    "seq": 72,
-   "wall_ms": 4101,
+   "wall_ms": 7374,
    "match_ms": 1052190,
    "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00208",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 3871
   },
   {
    "seq": 73,
-   "wall_ms": 4101,
+   "wall_ms": 7376,
    "match_ms": 1052190,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -7769,19 +7772,19 @@
   },
   {
    "seq": 74,
-   "wall_ms": 4118,
+   "wall_ms": 10630,
    "match_ms": 1052190,
    "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00208",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1116
   },
   {
    "seq": 75,
-   "wall_ms": 4118,
+   "wall_ms": 10631,
    "match_ms": 1052190,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -7791,43 +7794,43 @@
   },
   {
    "seq": 76,
-   "wall_ms": 4130,
+   "wall_ms": 19250,
    "match_ms": 1052190,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00208",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 3741
   },
   {
    "seq": 77,
-   "wall_ms": 4145,
+   "wall_ms": 23559,
    "match_ms": 1052190,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00208",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 2040
   },
   {
    "seq": 78,
-   "wall_ms": 4156,
+   "wall_ms": 29373,
    "match_ms": 1052190,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00208",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1872
   },
   {
    "seq": 79,
-   "wall_ms": 4156,
+   "wall_ms": 29377,
    "match_ms": 1052190,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -7837,7 +7840,7 @@
   },
   {
    "seq": 80,
-   "wall_ms": 4160,
+   "wall_ms": 29388,
    "match_ms": 1137134,
    "source": "replayer",
    "target": "stats_agent",
@@ -7846,7 +7849,7 @@
   },
   {
    "seq": 81,
-   "wall_ms": 4188,
+   "wall_ms": 29429,
    "match_ms": 1137134,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7855,7 +7858,7 @@
   },
   {
    "seq": 82,
-   "wall_ms": 4189,
+   "wall_ms": 29430,
    "match_ms": 1197333,
    "source": "replayer",
    "target": "stats_agent",
@@ -7864,7 +7867,7 @@
   },
   {
    "seq": 83,
-   "wall_ms": 4222,
+   "wall_ms": 29450,
    "match_ms": 1197333,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -7873,7 +7876,7 @@
   },
   {
    "seq": 84,
-   "wall_ms": 4222,
+   "wall_ms": 29450,
    "match_ms": 1151620,
    "source": "stats_agent",
    "target": "producer",
@@ -7883,7 +7886,7 @@
   },
   {
    "seq": 85,
-   "wall_ms": 4223,
+   "wall_ms": 29450,
    "match_ms": 1151620,
    "source": "producer",
    "target": "insight_agent",
@@ -7893,7 +7896,7 @@
   },
   {
    "seq": 86,
-   "wall_ms": 4236,
+   "wall_ms": 29463,
    "match_ms": 1151620,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7905,7 +7908,7 @@
   },
   {
    "seq": 87,
-   "wall_ms": 4236,
+   "wall_ms": 29463,
    "match_ms": 1151620,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -7915,7 +7918,7 @@
   },
   {
    "seq": 88,
-   "wall_ms": 4249,
+   "wall_ms": 29472,
    "match_ms": 1151620,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7927,7 +7930,7 @@
   },
   {
    "seq": 89,
-   "wall_ms": 4249,
+   "wall_ms": 29472,
    "match_ms": 1151620,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -7937,7 +7940,7 @@
   },
   {
    "seq": 90,
-   "wall_ms": 4262,
+   "wall_ms": 29478,
    "match_ms": 1151620,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7949,7 +7952,7 @@
   },
   {
    "seq": 91,
-   "wall_ms": 4277,
+   "wall_ms": 29489,
    "match_ms": 1151620,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7961,7 +7964,7 @@
   },
   {
    "seq": 92,
-   "wall_ms": 4289,
+   "wall_ms": 29499,
    "match_ms": 1151620,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -7973,7 +7976,7 @@
   },
   {
    "seq": 93,
-   "wall_ms": 4289,
+   "wall_ms": 29499,
    "match_ms": 1151620,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -7983,7 +7986,7 @@
   },
   {
    "seq": 94,
-   "wall_ms": 4292,
+   "wall_ms": 29501,
    "match_ms": 1254420,
    "source": "replayer",
    "target": "stats_agent",
@@ -7992,7 +7995,7 @@
   },
   {
    "seq": 95,
-   "wall_ms": 4319,
+   "wall_ms": 29521,
    "match_ms": 1254420,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8001,7 +8004,7 @@
   },
   {
    "seq": 96,
-   "wall_ms": 4320,
+   "wall_ms": 29522,
    "match_ms": 1313867,
    "source": "replayer",
    "target": "stats_agent",
@@ -8010,7 +8013,7 @@
   },
   {
    "seq": 97,
-   "wall_ms": 4358,
+   "wall_ms": 29542,
    "match_ms": 1313867,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8019,7 +8022,7 @@
   },
   {
    "seq": 98,
-   "wall_ms": 4361,
+   "wall_ms": 29543,
    "match_ms": 1375489,
    "source": "replayer",
    "target": "stats_agent",
@@ -8028,7 +8031,7 @@
   },
   {
    "seq": 99,
-   "wall_ms": 4390,
+   "wall_ms": 29564,
    "match_ms": 1375489,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8037,7 +8040,7 @@
   },
   {
    "seq": 100,
-   "wall_ms": 4392,
+   "wall_ms": 29565,
    "match_ms": 1419278,
    "source": "replayer",
    "target": "stats_agent",
@@ -8046,7 +8049,7 @@
   },
   {
    "seq": 101,
-   "wall_ms": 4422,
+   "wall_ms": 29588,
    "match_ms": 1419278,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8055,7 +8058,7 @@
   },
   {
    "seq": 102,
-   "wall_ms": 4424,
+   "wall_ms": 29589,
    "match_ms": 1479923,
    "source": "replayer",
    "target": "stats_agent",
@@ -8064,7 +8067,7 @@
   },
   {
    "seq": 103,
-   "wall_ms": 4455,
+   "wall_ms": 29612,
    "match_ms": 1479923,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8073,7 +8076,7 @@
   },
   {
    "seq": 104,
-   "wall_ms": 4457,
+   "wall_ms": 29613,
    "match_ms": 1557568,
    "source": "replayer",
    "target": "stats_agent",
@@ -8082,7 +8085,7 @@
   },
   {
    "seq": 105,
-   "wall_ms": 4488,
+   "wall_ms": 29636,
    "match_ms": 1557568,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8091,7 +8094,7 @@
   },
   {
    "seq": 106,
-   "wall_ms": 4488,
+   "wall_ms": 29636,
    "match_ms": 1500000,
    "source": "stats_agent",
    "target": "producer",
@@ -8101,7 +8104,7 @@
   },
   {
    "seq": 107,
-   "wall_ms": 4489,
+   "wall_ms": 29637,
    "match_ms": 1500000,
    "source": "producer",
    "target": "insight_agent",
@@ -8111,7 +8114,7 @@
   },
   {
    "seq": 108,
-   "wall_ms": 4505,
+   "wall_ms": 29647,
    "match_ms": 1500000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8123,7 +8126,7 @@
   },
   {
    "seq": 109,
-   "wall_ms": 4505,
+   "wall_ms": 29647,
    "match_ms": 1500000,
    "source": "insight_agent",
    "target": "personalizer_agent",
@@ -8133,7 +8136,7 @@
   },
   {
    "seq": 110,
-   "wall_ms": 4519,
+   "wall_ms": 29658,
    "match_ms": 1500000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8145,7 +8148,7 @@
   },
   {
    "seq": 111,
-   "wall_ms": 4531,
+   "wall_ms": 29669,
    "match_ms": 1500000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8157,7 +8160,7 @@
   },
   {
    "seq": 112,
-   "wall_ms": 4547,
+   "wall_ms": 29681,
    "match_ms": 1500000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8169,7 +8172,7 @@
   },
   {
    "seq": 113,
-   "wall_ms": 4547,
+   "wall_ms": 29681,
    "match_ms": 1500000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -8179,7 +8182,7 @@
   },
   {
    "seq": 114,
-   "wall_ms": 4552,
+   "wall_ms": 29683,
    "match_ms": 1606729,
    "source": "replayer",
    "target": "stats_agent",
@@ -8188,7 +8191,7 @@
   },
   {
    "seq": 115,
-   "wall_ms": 4597,
+   "wall_ms": 29707,
    "match_ms": 1606729,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8197,7 +8200,7 @@
   },
   {
    "seq": 116,
-   "wall_ms": 4599,
+   "wall_ms": 29708,
    "match_ms": 1674105,
    "source": "replayer",
    "target": "stats_agent",
@@ -8206,7 +8209,7 @@
   },
   {
    "seq": 117,
-   "wall_ms": 4642,
+   "wall_ms": 29732,
    "match_ms": 1674105,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8215,7 +8218,7 @@
   },
   {
    "seq": 118,
-   "wall_ms": 4643,
+   "wall_ms": 29733,
    "match_ms": 1735441,
    "source": "replayer",
    "target": "stats_agent",
@@ -8224,7 +8227,7 @@
   },
   {
    "seq": 119,
-   "wall_ms": 4679,
+   "wall_ms": 29757,
    "match_ms": 1735441,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8233,7 +8236,7 @@
   },
   {
    "seq": 120,
-   "wall_ms": 4681,
+   "wall_ms": 29758,
    "match_ms": 1795004,
    "source": "replayer",
    "target": "stats_agent",
@@ -8242,7 +8245,7 @@
   },
   {
    "seq": 121,
-   "wall_ms": 4723,
+   "wall_ms": 29783,
    "match_ms": 1795004,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8251,7 +8254,7 @@
   },
   {
    "seq": 122,
-   "wall_ms": 4726,
+   "wall_ms": 29784,
    "match_ms": 1857804,
    "source": "replayer",
    "target": "stats_agent",
@@ -8260,7 +8263,7 @@
   },
   {
    "seq": 123,
-   "wall_ms": 4766,
+   "wall_ms": 29810,
    "match_ms": 1857804,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8269,7 +8272,7 @@
   },
   {
    "seq": 124,
-   "wall_ms": 4767,
+   "wall_ms": 29811,
    "match_ms": 1918062,
    "source": "replayer",
    "target": "stats_agent",
@@ -8278,7 +8281,7 @@
   },
   {
    "seq": 125,
-   "wall_ms": 4811,
+   "wall_ms": 29836,
    "match_ms": 1918062,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8287,7 +8290,7 @@
   },
   {
    "seq": 126,
-   "wall_ms": 4812,
+   "wall_ms": 29837,
    "match_ms": 1975457,
    "source": "replayer",
    "target": "stats_agent",
@@ -8296,7 +8299,7 @@
   },
   {
    "seq": 127,
-   "wall_ms": 4852,
+   "wall_ms": 29863,
    "match_ms": 1975457,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8305,7 +8308,7 @@
   },
   {
    "seq": 128,
-   "wall_ms": 4853,
+   "wall_ms": 29864,
    "match_ms": 2033867,
    "source": "replayer",
    "target": "stats_agent",
@@ -8314,7 +8317,7 @@
   },
   {
    "seq": 129,
-   "wall_ms": 4905,
+   "wall_ms": 29890,
    "match_ms": 2033867,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8323,7 +8326,7 @@
   },
   {
    "seq": 130,
-   "wall_ms": 4907,
+   "wall_ms": 29891,
    "match_ms": 2044409,
    "source": "replayer",
    "target": "stats_agent",
@@ -8332,7 +8335,7 @@
   },
   {
    "seq": 131,
-   "wall_ms": 4946,
+   "wall_ms": 29922,
    "match_ms": 2044409,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8341,7 +8344,7 @@
   },
   {
    "seq": 132,
-   "wall_ms": 4946,
+   "wall_ms": 29922,
    "match_ms": 2044409,
    "source": "stats_agent",
    "target": "producer",
@@ -8351,7 +8354,7 @@
   },
   {
    "seq": 133,
-   "wall_ms": 4947,
+   "wall_ms": 29922,
    "match_ms": 2044409,
    "source": "producer",
    "target": "insight_agent",
@@ -8361,19 +8364,19 @@
   },
   {
    "seq": 134,
-   "wall_ms": 4958,
+   "wall_ms": 34641,
    "match_ms": 2044409,
    "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00416",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1133
   },
   {
    "seq": 135,
-   "wall_ms": 4958,
+   "wall_ms": 34645,
    "match_ms": 2044409,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -8383,19 +8386,19 @@
   },
   {
    "seq": 136,
-   "wall_ms": 4972,
+   "wall_ms": 40851,
    "match_ms": 2044409,
    "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00416",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1344
   },
   {
    "seq": 137,
-   "wall_ms": 4972,
+   "wall_ms": 40853,
    "match_ms": 2044409,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -8405,43 +8408,43 @@
   },
   {
    "seq": 138,
-   "wall_ms": 4986,
+   "wall_ms": 47071,
    "match_ms": 2044409,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00416",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1564
   },
   {
    "seq": 139,
-   "wall_ms": 5001,
+   "wall_ms": 53154,
    "match_ms": 2044409,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00416",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1649
   },
   {
    "seq": 140,
-   "wall_ms": 5014,
+   "wall_ms": 61571,
    "match_ms": 2044409,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00416",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 4064
   },
   {
    "seq": 141,
-   "wall_ms": 5014,
+   "wall_ms": 61575,
    "match_ms": 2044409,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -8451,7 +8454,7 @@
   },
   {
    "seq": 142,
-   "wall_ms": 5017,
+   "wall_ms": 61583,
    "match_ms": 2146337,
    "source": "replayer",
    "target": "stats_agent",
@@ -8460,7 +8463,7 @@
   },
   {
    "seq": 143,
-   "wall_ms": 5066,
+   "wall_ms": 61624,
    "match_ms": 2146337,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8469,7 +8472,7 @@
   },
   {
    "seq": 144,
-   "wall_ms": 5067,
+   "wall_ms": 61625,
    "match_ms": 2213761,
    "source": "replayer",
    "target": "stats_agent",
@@ -8478,7 +8481,7 @@
   },
   {
    "seq": 145,
-   "wall_ms": 5117,
+   "wall_ms": 61653,
    "match_ms": 2213761,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8487,7 +8490,7 @@
   },
   {
    "seq": 146,
-   "wall_ms": 5118,
+   "wall_ms": 61654,
    "match_ms": 2279905,
    "source": "replayer",
    "target": "stats_agent",
@@ -8496,7 +8499,7 @@
   },
   {
    "seq": 147,
-   "wall_ms": 5168,
+   "wall_ms": 61683,
    "match_ms": 2279905,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8505,7 +8508,7 @@
   },
   {
    "seq": 148,
-   "wall_ms": 5169,
+   "wall_ms": 61684,
    "match_ms": 2336704,
    "source": "replayer",
    "target": "stats_agent",
@@ -8514,7 +8517,7 @@
   },
   {
    "seq": 149,
-   "wall_ms": 5224,
+   "wall_ms": 61713,
    "match_ms": 2336704,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8523,7 +8526,7 @@
   },
   {
    "seq": 150,
-   "wall_ms": 5224,
+   "wall_ms": 61713,
    "match_ms": 2280000,
    "source": "stats_agent",
    "target": "producer",
@@ -8533,7 +8536,7 @@
   },
   {
    "seq": 151,
-   "wall_ms": 5225,
+   "wall_ms": 61714,
    "match_ms": 2280000,
    "source": "producer",
    "target": "insight_agent",
@@ -8543,7 +8546,7 @@
   },
   {
    "seq": 152,
-   "wall_ms": 5242,
+   "wall_ms": 61725,
    "match_ms": 2280000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8555,7 +8558,7 @@
   },
   {
    "seq": 153,
-   "wall_ms": 5242,
+   "wall_ms": 61725,
    "match_ms": 2280000,
    "source": "insight_agent",
    "target": "personalizer_agent",
@@ -8565,7 +8568,7 @@
   },
   {
    "seq": 154,
-   "wall_ms": 5258,
+   "wall_ms": 61737,
    "match_ms": 2280000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8577,7 +8580,7 @@
   },
   {
    "seq": 155,
-   "wall_ms": 5271,
+   "wall_ms": 61750,
    "match_ms": 2280000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8589,7 +8592,7 @@
   },
   {
    "seq": 156,
-   "wall_ms": 5284,
+   "wall_ms": 61760,
    "match_ms": 2280000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8601,7 +8604,7 @@
   },
   {
    "seq": 157,
-   "wall_ms": 5284,
+   "wall_ms": 61760,
    "match_ms": 2280000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -8611,7 +8614,7 @@
   },
   {
    "seq": 158,
-   "wall_ms": 5286,
+   "wall_ms": 61762,
    "match_ms": 2399156,
    "source": "replayer",
    "target": "stats_agent",
@@ -8620,7 +8623,7 @@
   },
   {
    "seq": 159,
-   "wall_ms": 5340,
+   "wall_ms": 61792,
    "match_ms": 2399156,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8629,7 +8632,7 @@
   },
   {
    "seq": 160,
-   "wall_ms": 5340,
+   "wall_ms": 61792,
    "match_ms": 2340000,
    "source": "stats_agent",
    "target": "producer",
@@ -8639,7 +8642,7 @@
   },
   {
    "seq": 161,
-   "wall_ms": 5342,
+   "wall_ms": 61793,
    "match_ms": 2340000,
    "source": "producer",
    "target": "insight_agent",
@@ -8649,7 +8652,7 @@
   },
   {
    "seq": 162,
-   "wall_ms": 5353,
+   "wall_ms": 61803,
    "match_ms": 2340000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8661,7 +8664,7 @@
   },
   {
    "seq": 163,
-   "wall_ms": 5353,
+   "wall_ms": 61803,
    "match_ms": 2340000,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -8671,7 +8674,7 @@
   },
   {
    "seq": 164,
-   "wall_ms": 5367,
+   "wall_ms": 61807,
    "match_ms": 2340000,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8683,7 +8686,7 @@
   },
   {
    "seq": 165,
-   "wall_ms": 5367,
+   "wall_ms": 61807,
    "match_ms": 2340000,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -8693,7 +8696,7 @@
   },
   {
    "seq": 166,
-   "wall_ms": 5382,
+   "wall_ms": 61817,
    "match_ms": 2340000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8705,7 +8708,7 @@
   },
   {
    "seq": 167,
-   "wall_ms": 5396,
+   "wall_ms": 61829,
    "match_ms": 2340000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8717,7 +8720,7 @@
   },
   {
    "seq": 168,
-   "wall_ms": 5414,
+   "wall_ms": 61840,
    "match_ms": 2340000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8729,7 +8732,7 @@
   },
   {
    "seq": 169,
-   "wall_ms": 5414,
+   "wall_ms": 61840,
    "match_ms": 2340000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -8739,7 +8742,7 @@
   },
   {
    "seq": 170,
-   "wall_ms": 5418,
+   "wall_ms": 61841,
    "match_ms": 2457891,
    "source": "replayer",
    "target": "stats_agent",
@@ -8748,7 +8751,7 @@
   },
   {
    "seq": 171,
-   "wall_ms": 5466,
+   "wall_ms": 61871,
    "match_ms": 2457891,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8757,7 +8760,7 @@
   },
   {
    "seq": 172,
-   "wall_ms": 5467,
+   "wall_ms": 61872,
    "match_ms": 2487434,
    "source": "replayer",
    "target": "stats_agent",
@@ -8766,7 +8769,7 @@
   },
   {
    "seq": 173,
-   "wall_ms": 5534,
+   "wall_ms": 61902,
    "match_ms": 2487434,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8775,7 +8778,7 @@
   },
   {
    "seq": 174,
-   "wall_ms": 5534,
+   "wall_ms": 61902,
    "match_ms": 2487434,
    "source": "stats_agent",
    "target": "producer",
@@ -8785,7 +8788,7 @@
   },
   {
    "seq": 175,
-   "wall_ms": 5534,
+   "wall_ms": 61903,
    "match_ms": 2487434,
    "source": "producer",
    "target": "template_writer",
@@ -8795,7 +8798,7 @@
   },
   {
    "seq": 176,
-   "wall_ms": 5535,
+   "wall_ms": 61904,
    "match_ms": 2487434,
    "source": "template_writer",
    "target": "publisher",
@@ -8805,7 +8808,7 @@
   },
   {
    "seq": 177,
-   "wall_ms": 5537,
+   "wall_ms": 61905,
    "match_ms": 2560206,
    "source": "replayer",
    "target": "stats_agent",
@@ -8814,7 +8817,7 @@
   },
   {
    "seq": 178,
-   "wall_ms": 5608,
+   "wall_ms": 61937,
    "match_ms": 2560206,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8823,7 +8826,7 @@
   },
   {
    "seq": 179,
-   "wall_ms": 5608,
+   "wall_ms": 61937,
    "match_ms": 2560206,
    "source": "stats_agent",
    "target": "producer",
@@ -8833,7 +8836,7 @@
   },
   {
    "seq": 180,
-   "wall_ms": 5609,
+   "wall_ms": 61938,
    "match_ms": 2560206,
    "source": "producer",
    "target": "template_writer",
@@ -8843,7 +8846,7 @@
   },
   {
    "seq": 181,
-   "wall_ms": 5610,
+   "wall_ms": 61939,
    "match_ms": 2560206,
    "source": "template_writer",
    "target": "publisher",
@@ -8853,7 +8856,7 @@
   },
   {
    "seq": 182,
-   "wall_ms": 5612,
+   "wall_ms": 61940,
    "match_ms": 2636328,
    "source": "replayer",
    "target": "stats_agent",
@@ -8862,7 +8865,7 @@
   },
   {
    "seq": 183,
-   "wall_ms": 5666,
+   "wall_ms": 61972,
    "match_ms": 2636328,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -8871,7 +8874,7 @@
   },
   {
    "seq": 184,
-   "wall_ms": 5666,
+   "wall_ms": 61972,
    "match_ms": 2580000,
    "source": "stats_agent",
    "target": "producer",
@@ -8881,7 +8884,7 @@
   },
   {
    "seq": 185,
-   "wall_ms": 5666,
+   "wall_ms": 61972,
    "match_ms": 2627127,
    "source": "stats_agent",
    "target": "producer",
@@ -8891,7 +8894,7 @@
   },
   {
    "seq": 186,
-   "wall_ms": 5667,
+   "wall_ms": 61973,
    "match_ms": 2580000,
    "source": "producer",
    "target": "insight_agent",
@@ -8901,7 +8904,7 @@
   },
   {
    "seq": 187,
-   "wall_ms": 5667,
+   "wall_ms": 61973,
    "match_ms": 2627127,
    "source": "producer",
    "target": "template_writer",
@@ -8911,7 +8914,7 @@
   },
   {
    "seq": 188,
-   "wall_ms": 5680,
+   "wall_ms": 61985,
    "match_ms": 2580000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8923,7 +8926,7 @@
   },
   {
    "seq": 189,
-   "wall_ms": 5680,
+   "wall_ms": 61985,
    "match_ms": 2580000,
    "source": "insight_agent",
    "target": "personalizer_agent",
@@ -8933,7 +8936,7 @@
   },
   {
    "seq": 190,
-   "wall_ms": 5681,
+   "wall_ms": 61986,
    "match_ms": 2627127,
    "source": "template_writer",
    "target": "publisher",
@@ -8943,7 +8946,7 @@
   },
   {
    "seq": 191,
-   "wall_ms": 5699,
+   "wall_ms": 61998,
    "match_ms": 2580000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8955,7 +8958,7 @@
   },
   {
    "seq": 192,
-   "wall_ms": 5714,
+   "wall_ms": 62010,
    "match_ms": 2580000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8967,7 +8970,7 @@
   },
   {
    "seq": 193,
-   "wall_ms": 5727,
+   "wall_ms": 62015,
    "match_ms": 2580000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -8979,7 +8982,7 @@
   },
   {
    "seq": 194,
-   "wall_ms": 5727,
+   "wall_ms": 62015,
    "match_ms": 2580000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -8989,7 +8992,7 @@
   },
   {
    "seq": 195,
-   "wall_ms": 5729,
+   "wall_ms": 62017,
    "match_ms": 2693616,
    "source": "replayer",
    "target": "stats_agent",
@@ -8998,7 +9001,7 @@
   },
   {
    "seq": 196,
-   "wall_ms": 5785,
+   "wall_ms": 62049,
    "match_ms": 2693616,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9007,7 +9010,7 @@
   },
   {
    "seq": 197,
-   "wall_ms": 5786,
+   "wall_ms": 62050,
    "match_ms": 2756124,
    "source": "replayer",
    "target": "stats_agent",
@@ -9016,7 +9019,7 @@
   },
   {
    "seq": 198,
-   "wall_ms": 5844,
+   "wall_ms": 62084,
    "match_ms": 2756124,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9025,7 +9028,7 @@
   },
   {
    "seq": 199,
-   "wall_ms": 5846,
+   "wall_ms": 62085,
    "match_ms": 2818164,
    "source": "replayer",
    "target": "stats_agent",
@@ -9034,7 +9037,7 @@
   },
   {
    "seq": 200,
-   "wall_ms": 5914,
+   "wall_ms": 62117,
    "match_ms": 2818164,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9043,7 +9046,7 @@
   },
   {
    "seq": 201,
-   "wall_ms": 5914,
+   "wall_ms": 62118,
    "match_ms": 2764203,
    "source": "stats_agent",
    "target": "producer",
@@ -9053,7 +9056,7 @@
   },
   {
    "seq": 202,
-   "wall_ms": 5915,
+   "wall_ms": 62118,
    "match_ms": 2764203,
    "source": "producer",
    "target": "template_writer",
@@ -9063,7 +9066,7 @@
   },
   {
    "seq": 203,
-   "wall_ms": 5916,
+   "wall_ms": 62119,
    "match_ms": 2764203,
    "source": "template_writer",
    "target": "publisher",
@@ -9073,7 +9076,7 @@
   },
   {
    "seq": 204,
-   "wall_ms": 5918,
+   "wall_ms": 62121,
    "match_ms": 2878087,
    "source": "replayer",
    "target": "stats_agent",
@@ -9082,7 +9085,7 @@
   },
   {
    "seq": 205,
-   "wall_ms": 5995,
+   "wall_ms": 62162,
    "match_ms": 2878087,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9091,7 +9094,7 @@
   },
   {
    "seq": 206,
-   "wall_ms": 5996,
+   "wall_ms": 62163,
    "match_ms": 2936235,
    "source": "replayer",
    "target": "stats_agent",
@@ -9100,7 +9103,7 @@
   },
   {
    "seq": 207,
-   "wall_ms": 6054,
+   "wall_ms": 62204,
    "match_ms": 2936235,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9109,7 +9112,7 @@
   },
   {
    "seq": 208,
-   "wall_ms": 6054,
+   "wall_ms": 62204,
    "match_ms": 2882225,
    "source": "stats_agent",
    "target": "producer",
@@ -9119,7 +9122,7 @@
   },
   {
    "seq": 209,
-   "wall_ms": 6055,
+   "wall_ms": 62205,
    "match_ms": 2882225,
    "source": "producer",
    "target": "insight_agent",
@@ -9129,7 +9132,7 @@
   },
   {
    "seq": 210,
-   "wall_ms": 6068,
+   "wall_ms": 62209,
    "match_ms": 2882225,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9141,7 +9144,7 @@
   },
   {
    "seq": 211,
-   "wall_ms": 6068,
+   "wall_ms": 62209,
    "match_ms": 2882225,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -9151,7 +9154,7 @@
   },
   {
    "seq": 212,
-   "wall_ms": 6080,
+   "wall_ms": 62219,
    "match_ms": 2882225,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9163,7 +9166,7 @@
   },
   {
    "seq": 213,
-   "wall_ms": 6080,
+   "wall_ms": 62219,
    "match_ms": 2882225,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -9173,7 +9176,7 @@
   },
   {
    "seq": 214,
-   "wall_ms": 6097,
+   "wall_ms": 62230,
    "match_ms": 2882225,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9185,7 +9188,7 @@
   },
   {
    "seq": 215,
-   "wall_ms": 6113,
+   "wall_ms": 62242,
    "match_ms": 2882225,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9197,7 +9200,7 @@
   },
   {
    "seq": 216,
-   "wall_ms": 6126,
+   "wall_ms": 62252,
    "match_ms": 2882225,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9209,7 +9212,7 @@
   },
   {
    "seq": 217,
-   "wall_ms": 6126,
+   "wall_ms": 62252,
    "match_ms": 2882225,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -9219,7 +9222,7 @@
   },
   {
    "seq": 218,
-   "wall_ms": 6128,
+   "wall_ms": 62254,
    "match_ms": 2997195,
    "source": "replayer",
    "target": "stats_agent",
@@ -9228,7 +9231,7 @@
   },
   {
    "seq": 219,
-   "wall_ms": 6188,
+   "wall_ms": 62293,
    "match_ms": 2997195,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9237,7 +9240,7 @@
   },
   {
    "seq": 220,
-   "wall_ms": 6189,
+   "wall_ms": 62293,
    "match_ms": 2996040,
    "source": "stats_agent",
    "target": "producer",
@@ -9247,7 +9250,7 @@
   },
   {
    "seq": 221,
-   "wall_ms": 6190,
+   "wall_ms": 62294,
    "match_ms": 2996040,
    "source": "producer",
    "target": "template_writer",
@@ -9257,7 +9260,7 @@
   },
   {
    "seq": 222,
-   "wall_ms": 6192,
+   "wall_ms": 62295,
    "match_ms": 2996040,
    "source": "template_writer",
    "target": "publisher",
@@ -9267,7 +9270,7 @@
   },
   {
    "seq": 223,
-   "wall_ms": 6194,
+   "wall_ms": 62297,
    "match_ms": 3058745,
    "source": "replayer",
    "target": "stats_agent",
@@ -9276,7 +9279,7 @@
   },
   {
    "seq": 224,
-   "wall_ms": 6251,
+   "wall_ms": 62330,
    "match_ms": 3058745,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9285,7 +9288,7 @@
   },
   {
    "seq": 225,
-   "wall_ms": 6252,
+   "wall_ms": 62331,
    "match_ms": 3119392,
    "source": "replayer",
    "target": "stats_agent",
@@ -9294,7 +9297,7 @@
   },
   {
    "seq": 226,
-   "wall_ms": 6322,
+   "wall_ms": 62366,
    "match_ms": 3119392,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9303,7 +9306,7 @@
   },
   {
    "seq": 227,
-   "wall_ms": 6324,
+   "wall_ms": 62367,
    "match_ms": 3178520,
    "source": "replayer",
    "target": "stats_agent",
@@ -9312,7 +9315,7 @@
   },
   {
    "seq": 228,
-   "wall_ms": 6383,
+   "wall_ms": 62404,
    "match_ms": 3178520,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9321,7 +9324,7 @@
   },
   {
    "seq": 229,
-   "wall_ms": 6384,
+   "wall_ms": 62405,
    "match_ms": 3218679,
    "source": "replayer",
    "target": "stats_agent",
@@ -9330,7 +9333,7 @@
   },
   {
    "seq": 230,
-   "wall_ms": 6449,
+   "wall_ms": 62440,
    "match_ms": 3218679,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9339,7 +9342,7 @@
   },
   {
    "seq": 231,
-   "wall_ms": 6450,
+   "wall_ms": 62441,
    "match_ms": 3298666,
    "source": "replayer",
    "target": "stats_agent",
@@ -9348,7 +9351,7 @@
   },
   {
    "seq": 232,
-   "wall_ms": 6527,
+   "wall_ms": 62477,
    "match_ms": 3298666,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9357,7 +9360,7 @@
   },
   {
    "seq": 233,
-   "wall_ms": 6528,
+   "wall_ms": 62478,
    "match_ms": 3356912,
    "source": "replayer",
    "target": "stats_agent",
@@ -9366,7 +9369,7 @@
   },
   {
    "seq": 234,
-   "wall_ms": 6618,
+   "wall_ms": 62518,
    "match_ms": 3356912,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9375,7 +9378,7 @@
   },
   {
    "seq": 235,
-   "wall_ms": 6619,
+   "wall_ms": 62518,
    "match_ms": 3416433,
    "source": "replayer",
    "target": "stats_agent",
@@ -9384,7 +9387,7 @@
   },
   {
    "seq": 236,
-   "wall_ms": 6715,
+   "wall_ms": 62557,
    "match_ms": 3416433,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9393,7 +9396,7 @@
   },
   {
    "seq": 237,
-   "wall_ms": 6717,
+   "wall_ms": 62558,
    "match_ms": 3470398,
    "source": "replayer",
    "target": "stats_agent",
@@ -9402,7 +9405,7 @@
   },
   {
    "seq": 238,
-   "wall_ms": 6782,
+   "wall_ms": 62606,
    "match_ms": 3470398,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9411,7 +9414,7 @@
   },
   {
    "seq": 239,
-   "wall_ms": 6783,
+   "wall_ms": 62607,
    "match_ms": 3533167,
    "source": "replayer",
    "target": "stats_agent",
@@ -9420,7 +9423,7 @@
   },
   {
    "seq": 240,
-   "wall_ms": 6853,
+   "wall_ms": 62645,
    "match_ms": 3533167,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9429,7 +9432,7 @@
   },
   {
    "seq": 241,
-   "wall_ms": 6855,
+   "wall_ms": 62645,
    "match_ms": 3593105,
    "source": "replayer",
    "target": "stats_agent",
@@ -9438,7 +9441,7 @@
   },
   {
    "seq": 242,
-   "wall_ms": 6932,
+   "wall_ms": 62684,
    "match_ms": 3593105,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9447,7 +9450,7 @@
   },
   {
    "seq": 243,
-   "wall_ms": 6932,
+   "wall_ms": 62684,
    "match_ms": 3541591,
    "source": "stats_agent",
    "target": "producer",
@@ -9457,7 +9460,7 @@
   },
   {
    "seq": 244,
-   "wall_ms": 6932,
+   "wall_ms": 62685,
    "match_ms": 3552921,
    "source": "stats_agent",
    "target": "producer",
@@ -9467,7 +9470,7 @@
   },
   {
    "seq": 245,
-   "wall_ms": 6933,
+   "wall_ms": 62685,
    "match_ms": 3541591,
    "source": "producer",
    "target": "insight_agent",
@@ -9477,7 +9480,7 @@
   },
   {
    "seq": 246,
-   "wall_ms": 6933,
+   "wall_ms": 62686,
    "match_ms": 3552921,
    "source": "producer",
    "target": "template_writer",
@@ -9487,7 +9490,7 @@
   },
   {
    "seq": 247,
-   "wall_ms": 6945,
+   "wall_ms": 62697,
    "match_ms": 3541591,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9499,7 +9502,7 @@
   },
   {
    "seq": 248,
-   "wall_ms": 6945,
+   "wall_ms": 62697,
    "match_ms": 3541591,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -9509,7 +9512,7 @@
   },
   {
    "seq": 249,
-   "wall_ms": 6946,
+   "wall_ms": 62697,
    "match_ms": 3552921,
    "source": "template_writer",
    "target": "publisher",
@@ -9519,7 +9522,7 @@
   },
   {
    "seq": 250,
-   "wall_ms": 6965,
+   "wall_ms": 62708,
    "match_ms": 3541591,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9531,7 +9534,7 @@
   },
   {
    "seq": 251,
-   "wall_ms": 6965,
+   "wall_ms": 62708,
    "match_ms": 3541591,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -9541,7 +9544,7 @@
   },
   {
    "seq": 252,
-   "wall_ms": 6981,
+   "wall_ms": 62719,
    "match_ms": 3541591,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9553,7 +9556,7 @@
   },
   {
    "seq": 253,
-   "wall_ms": 6996,
+   "wall_ms": 62724,
    "match_ms": 3541591,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9565,7 +9568,7 @@
   },
   {
    "seq": 254,
-   "wall_ms": 7010,
+   "wall_ms": 62735,
    "match_ms": 3541591,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9577,7 +9580,7 @@
   },
   {
    "seq": 255,
-   "wall_ms": 7010,
+   "wall_ms": 62735,
    "match_ms": 3541591,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -9587,7 +9590,7 @@
   },
   {
    "seq": 256,
-   "wall_ms": 7012,
+   "wall_ms": 62737,
    "match_ms": 3634075,
    "source": "replayer",
    "target": "stats_agent",
@@ -9596,7 +9599,7 @@
   },
   {
    "seq": 257,
-   "wall_ms": 7086,
+   "wall_ms": 62777,
    "match_ms": 3634075,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9605,7 +9608,7 @@
   },
   {
    "seq": 258,
-   "wall_ms": 7087,
+   "wall_ms": 62778,
    "match_ms": 3719189,
    "source": "replayer",
    "target": "stats_agent",
@@ -9614,7 +9617,7 @@
   },
   {
    "seq": 259,
-   "wall_ms": 7165,
+   "wall_ms": 62820,
    "match_ms": 3719189,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9623,7 +9626,7 @@
   },
   {
    "seq": 260,
-   "wall_ms": 7165,
+   "wall_ms": 62820,
    "match_ms": 3660000,
    "source": "stats_agent",
    "target": "producer",
@@ -9633,7 +9636,7 @@
   },
   {
    "seq": 261,
-   "wall_ms": 7165,
+   "wall_ms": 62820,
    "match_ms": 3669543,
    "source": "stats_agent",
    "target": "producer",
@@ -9643,7 +9646,7 @@
   },
   {
    "seq": 262,
-   "wall_ms": 7166,
+   "wall_ms": 62821,
    "match_ms": 3660000,
    "source": "producer",
    "target": "insight_agent",
@@ -9653,7 +9656,7 @@
   },
   {
    "seq": 263,
-   "wall_ms": 7166,
+   "wall_ms": 62821,
    "match_ms": 3669543,
    "source": "producer",
    "target": "template_writer",
@@ -9663,7 +9666,7 @@
   },
   {
    "seq": 264,
-   "wall_ms": 7182,
+   "wall_ms": 62832,
    "match_ms": 3660000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9675,7 +9678,7 @@
   },
   {
    "seq": 265,
-   "wall_ms": 7182,
+   "wall_ms": 62832,
    "match_ms": 3660000,
    "source": "insight_agent",
    "target": "personalizer_agent",
@@ -9685,7 +9688,7 @@
   },
   {
    "seq": 266,
-   "wall_ms": 7183,
+   "wall_ms": 62833,
    "match_ms": 3669543,
    "source": "template_writer",
    "target": "publisher",
@@ -9695,7 +9698,7 @@
   },
   {
    "seq": 267,
-   "wall_ms": 7198,
+   "wall_ms": 62845,
    "match_ms": 3660000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9707,7 +9710,7 @@
   },
   {
    "seq": 268,
-   "wall_ms": 7211,
+   "wall_ms": 62857,
    "match_ms": 3660000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9719,7 +9722,7 @@
   },
   {
    "seq": 269,
-   "wall_ms": 7228,
+   "wall_ms": 62867,
    "match_ms": 3660000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -9731,7 +9734,7 @@
   },
   {
    "seq": 270,
-   "wall_ms": 7228,
+   "wall_ms": 62867,
    "match_ms": 3660000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -9741,7 +9744,7 @@
   },
   {
    "seq": 271,
-   "wall_ms": 7230,
+   "wall_ms": 62869,
    "match_ms": 3746737,
    "source": "replayer",
    "target": "stats_agent",
@@ -9750,7 +9753,7 @@
   },
   {
    "seq": 272,
-   "wall_ms": 7307,
+   "wall_ms": 62909,
    "match_ms": 3746737,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9759,7 +9762,7 @@
   },
   {
    "seq": 273,
-   "wall_ms": 7307,
+   "wall_ms": 62909,
    "match_ms": 3746737,
    "source": "stats_agent",
    "target": "producer",
@@ -9769,7 +9772,7 @@
   },
   {
    "seq": 274,
-   "wall_ms": 7308,
+   "wall_ms": 62910,
    "match_ms": 3746737,
    "source": "producer",
    "target": "insight_agent",
@@ -9779,19 +9782,31 @@
   },
   {
    "seq": 275,
-   "wall_ms": 7321,
+   "wall_ms": 65041,
    "match_ms": 3746737,
    "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00693",
-   "status": "cached",
-   "detail": "cached",
+   "status": "retry",
+   "detail": "rejected: why_it_matters contradicts FACTS: this goal only pulls one back; the scorers still trail",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 1531
   },
   {
    "seq": 276,
-   "wall_ms": 7322,
+   "wall_ms": 75414,
+   "match_ms": 3746737,
+   "source": "insight_agent",
+   "target": "verifier",
+   "moment_id": "goal:e00693",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 5912
+  },
+  {
+   "seq": 277,
+   "wall_ms": 75417,
    "match_ms": 3746737,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -9800,20 +9815,20 @@
    "detail": ""
   },
   {
-   "seq": 277,
-   "wall_ms": 7334,
+   "seq": 278,
+   "wall_ms": 84297,
    "match_ms": 3746737,
    "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00693",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 8788
   },
   {
-   "seq": 278,
-   "wall_ms": 7334,
+   "seq": 279,
+   "wall_ms": 84300,
    "match_ms": 3746737,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -9822,44 +9837,44 @@
    "detail": ""
   },
   {
-   "seq": 279,
-   "wall_ms": 7346,
-   "match_ms": 3746737,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "goal:e00693",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 280,
-   "wall_ms": 7362,
+   "wall_ms": 102144,
    "match_ms": 3746737,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00693",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 17839
   },
   {
    "seq": 281,
-   "wall_ms": 7377,
+   "wall_ms": 119213,
    "match_ms": 3746737,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00693",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 17063
   },
   {
    "seq": 282,
-   "wall_ms": 7378,
+   "wall_ms": 130924,
+   "match_ms": 3746737,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e00693",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 11706
+  },
+  {
+   "seq": 283,
+   "wall_ms": 130928,
    "match_ms": 3746737,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -9868,8 +9883,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 283,
-   "wall_ms": 7380,
+   "seq": 284,
+   "wall_ms": 130935,
    "match_ms": 3839193,
    "source": "replayer",
    "target": "stats_agent",
@@ -9877,8 +9892,8 @@
    "detail": "2 events"
   },
   {
-   "seq": 284,
-   "wall_ms": 7462,
+   "seq": 285,
+   "wall_ms": 130999,
    "match_ms": 3839193,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9886,48 +9901,48 @@
    "detail": "snapshot + moments at 61'"
   },
   {
-   "seq": 285,
-   "wall_ms": 7462,
+   "seq": 286,
+   "wall_ms": 130999,
    "match_ms": 3815082,
    "source": "stats_agent",
    "target": "producer",
    "moment_id": "substitution:e00694",
-   "status": "ok",
-   "detail": "substitution (importance 0.15)"
-  },
-  {
-   "seq": 286,
-   "wall_ms": 7462,
-   "match_ms": 3839193,
-   "source": "stats_agent",
-   "target": "producer",
-   "moment_id": "substitution:e00695",
    "status": "ok",
    "detail": "substitution (importance 0.15)"
   },
   {
    "seq": 287,
-   "wall_ms": 7463,
+   "wall_ms": 130999,
+   "match_ms": 3839193,
+   "source": "stats_agent",
+   "target": "producer",
+   "moment_id": "substitution:e00695",
+   "status": "ok",
+   "detail": "substitution (importance 0.15)"
+  },
+  {
+   "seq": 288,
+   "wall_ms": 131000,
    "match_ms": 3815082,
    "source": "producer",
    "target": "template_writer",
    "moment_id": "substitution:e00694",
-   "status": "skipped",
-   "detail": "route=template: importance 0.15 < 0.45"
-  },
-  {
-   "seq": 288,
-   "wall_ms": 7463,
-   "match_ms": 3839193,
-   "source": "producer",
-   "target": "template_writer",
-   "moment_id": "substitution:e00695",
    "status": "skipped",
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
    "seq": 289,
-   "wall_ms": 7464,
+   "wall_ms": 131000,
+   "match_ms": 3839193,
+   "source": "producer",
+   "target": "template_writer",
+   "moment_id": "substitution:e00695",
+   "status": "skipped",
+   "detail": "route=template: importance 0.15 < 0.45"
+  },
+  {
+   "seq": 290,
+   "wall_ms": 131001,
    "match_ms": 3815082,
    "source": "template_writer",
    "target": "publisher",
@@ -9936,8 +9951,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 290,
-   "wall_ms": 7464,
+   "seq": 291,
+   "wall_ms": 131001,
    "match_ms": 3839193,
    "source": "template_writer",
    "target": "publisher",
@@ -9946,8 +9961,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 291,
-   "wall_ms": 7467,
+   "seq": 292,
+   "wall_ms": 131004,
    "match_ms": 3896196,
    "source": "replayer",
    "target": "stats_agent",
@@ -9955,8 +9970,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 292,
-   "wall_ms": 7563,
+   "seq": 293,
+   "wall_ms": 131044,
    "match_ms": 3896196,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9964,8 +9979,8 @@
    "detail": "snapshot + moments at 62'"
   },
   {
-   "seq": 293,
-   "wall_ms": 7564,
+   "seq": 294,
+   "wall_ms": 131045,
    "match_ms": 3954581,
    "source": "replayer",
    "target": "stats_agent",
@@ -9973,8 +9988,8 @@
    "detail": "20 events"
   },
   {
-   "seq": 294,
-   "wall_ms": 7649,
+   "seq": 295,
+   "wall_ms": 131089,
    "match_ms": 3954581,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -9982,8 +9997,8 @@
    "detail": "snapshot + moments at 63'"
   },
   {
-   "seq": 295,
-   "wall_ms": 7650,
+   "seq": 296,
+   "wall_ms": 131090,
    "match_ms": 4018182,
    "source": "replayer",
    "target": "stats_agent",
@@ -9991,8 +10006,8 @@
    "detail": "7 events"
   },
   {
-   "seq": 296,
-   "wall_ms": 7735,
+   "seq": 297,
+   "wall_ms": 131135,
    "match_ms": 4018182,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10000,8 +10015,8 @@
    "detail": "snapshot + moments at 64'"
   },
   {
-   "seq": 297,
-   "wall_ms": 7735,
+   "seq": 298,
+   "wall_ms": 131135,
    "match_ms": 3960000,
    "source": "stats_agent",
    "target": "producer",
@@ -10010,8 +10025,8 @@
    "detail": "chaos_spell (importance 0.45)"
   },
   {
-   "seq": 298,
-   "wall_ms": 7735,
+   "seq": 299,
+   "wall_ms": 131135,
    "match_ms": 4018182,
    "source": "stats_agent",
    "target": "producer",
@@ -10020,8 +10035,8 @@
    "detail": "pass_milestone (importance 0.30)"
   },
   {
-   "seq": 299,
-   "wall_ms": 7737,
+   "seq": 300,
+   "wall_ms": 131136,
    "match_ms": 3960000,
    "source": "producer",
    "target": "insight_agent",
@@ -10030,8 +10045,8 @@
    "detail": "route=insight: importance 0.45 >= 0.45"
   },
   {
-   "seq": 300,
-   "wall_ms": 7737,
+   "seq": 301,
+   "wall_ms": 131136,
    "match_ms": 4018182,
    "source": "producer",
    "target": "template_writer",
@@ -10040,8 +10055,8 @@
    "detail": "route=template: importance 0.30 < 0.45"
   },
   {
-   "seq": 301,
-   "wall_ms": 7748,
+   "seq": 302,
+   "wall_ms": 131146,
    "match_ms": 3960000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10052,8 +10067,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 302,
-   "wall_ms": 7748,
+   "seq": 303,
+   "wall_ms": 131146,
    "match_ms": 3960000,
    "source": "insight_agent",
    "target": "personalizer_agent",
@@ -10062,8 +10077,8 @@
    "detail": ""
   },
   {
-   "seq": 303,
-   "wall_ms": 7749,
+   "seq": 304,
+   "wall_ms": 131146,
    "match_ms": 4018182,
    "source": "template_writer",
    "target": "publisher",
@@ -10072,20 +10087,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 304,
-   "wall_ms": 7768,
-   "match_ms": 3960000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "chaos_spell:t65",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 305,
-   "wall_ms": 7784,
+   "wall_ms": 131152,
    "match_ms": 3960000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10097,7 +10100,7 @@
   },
   {
    "seq": 306,
-   "wall_ms": 7796,
+   "wall_ms": 131167,
    "match_ms": 3960000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10109,7 +10112,19 @@
   },
   {
    "seq": 307,
-   "wall_ms": 7796,
+   "wall_ms": 131180,
+   "match_ms": 3960000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "chaos_spell:t65",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 308,
+   "wall_ms": 131180,
    "match_ms": 3960000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -10118,8 +10133,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 308,
-   "wall_ms": 7799,
+   "seq": 309,
+   "wall_ms": 131181,
    "match_ms": 4075241,
    "source": "replayer",
    "target": "stats_agent",
@@ -10127,8 +10142,8 @@
    "detail": "5 events"
   },
   {
-   "seq": 309,
-   "wall_ms": 7882,
+   "seq": 310,
+   "wall_ms": 131237,
    "match_ms": 4075241,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10136,8 +10151,8 @@
    "detail": "snapshot + moments at 65'"
   },
   {
-   "seq": 310,
-   "wall_ms": 7883,
+   "seq": 311,
+   "wall_ms": 131238,
    "match_ms": 4136866,
    "source": "replayer",
    "target": "stats_agent",
@@ -10145,8 +10160,8 @@
    "detail": "7 events"
   },
   {
-   "seq": 311,
-   "wall_ms": 7961,
+   "seq": 312,
+   "wall_ms": 131281,
    "match_ms": 4136866,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10154,8 +10169,8 @@
    "detail": "snapshot + moments at 66'"
   },
   {
-   "seq": 312,
-   "wall_ms": 7962,
+   "seq": 313,
+   "wall_ms": 131282,
    "match_ms": 4199504,
    "source": "replayer",
    "target": "stats_agent",
@@ -10163,8 +10178,8 @@
    "detail": "12 events"
   },
   {
-   "seq": 313,
-   "wall_ms": 8055,
+   "seq": 314,
+   "wall_ms": 131325,
    "match_ms": 4199504,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10172,8 +10187,8 @@
    "detail": "snapshot + moments at 67'"
   },
   {
-   "seq": 314,
-   "wall_ms": 8056,
+   "seq": 315,
+   "wall_ms": 131326,
    "match_ms": 4255906,
    "source": "replayer",
    "target": "stats_agent",
@@ -10181,8 +10196,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 315,
-   "wall_ms": 8147,
+   "seq": 316,
+   "wall_ms": 131370,
    "match_ms": 4255906,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10190,8 +10205,8 @@
    "detail": "snapshot + moments at 68'"
   },
   {
-   "seq": 316,
-   "wall_ms": 8148,
+   "seq": 317,
+   "wall_ms": 131371,
    "match_ms": 4318146,
    "source": "replayer",
    "target": "stats_agent",
@@ -10199,8 +10214,8 @@
    "detail": "14 events"
   },
   {
-   "seq": 317,
-   "wall_ms": 8266,
+   "seq": 318,
+   "wall_ms": 131416,
    "match_ms": 4318146,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10208,8 +10223,8 @@
    "detail": "snapshot + moments at 69'"
   },
   {
-   "seq": 318,
-   "wall_ms": 8267,
+   "seq": 319,
+   "wall_ms": 131417,
    "match_ms": 4376762,
    "source": "replayer",
    "target": "stats_agent",
@@ -10217,8 +10232,8 @@
    "detail": "12 events"
   },
   {
-   "seq": 319,
-   "wall_ms": 8350,
+   "seq": 320,
+   "wall_ms": 131463,
    "match_ms": 4376762,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10226,8 +10241,8 @@
    "detail": "snapshot + moments at 70'"
   },
   {
-   "seq": 320,
-   "wall_ms": 8352,
+   "seq": 321,
+   "wall_ms": 131463,
    "match_ms": 4429477,
    "source": "replayer",
    "target": "stats_agent",
@@ -10235,8 +10250,8 @@
    "detail": "6 events"
   },
   {
-   "seq": 321,
-   "wall_ms": 8453,
+   "seq": 322,
+   "wall_ms": 131512,
    "match_ms": 4429477,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10244,8 +10259,8 @@
    "detail": "snapshot + moments at 71'"
   },
   {
-   "seq": 322,
-   "wall_ms": 8453,
+   "seq": 323,
+   "wall_ms": 131512,
    "match_ms": 4429477,
    "source": "stats_agent",
    "target": "producer",
@@ -10254,8 +10269,8 @@
    "detail": "substitution (importance 0.15)"
   },
   {
-   "seq": 323,
-   "wall_ms": 8454,
+   "seq": 324,
+   "wall_ms": 131513,
    "match_ms": 4429477,
    "source": "producer",
    "target": "template_writer",
@@ -10264,8 +10279,8 @@
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
-   "seq": 324,
-   "wall_ms": 8454,
+   "seq": 325,
+   "wall_ms": 131513,
    "match_ms": 4429477,
    "source": "template_writer",
    "target": "publisher",
@@ -10274,8 +10289,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 325,
-   "wall_ms": 8456,
+   "seq": 326,
+   "wall_ms": 131515,
    "match_ms": 4456689,
    "source": "replayer",
    "target": "stats_agent",
@@ -10283,8 +10298,8 @@
    "detail": "3 events"
   },
   {
-   "seq": 326,
-   "wall_ms": 8541,
+   "seq": 327,
+   "wall_ms": 131560,
    "match_ms": 4456689,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10292,8 +10307,8 @@
    "detail": "snapshot + moments at 72'"
   },
   {
-   "seq": 327,
-   "wall_ms": 8541,
+   "seq": 328,
+   "wall_ms": 131561,
    "match_ms": 4456689,
    "source": "stats_agent",
    "target": "producer",
@@ -10302,8 +10317,8 @@
    "detail": "goal (importance 1.00)"
   },
   {
-   "seq": 328,
-   "wall_ms": 8542,
+   "seq": 329,
+   "wall_ms": 131561,
    "match_ms": 4456689,
    "source": "producer",
    "target": "insight_agent",
@@ -10312,20 +10327,20 @@
    "detail": "route=full: importance 1.00 >= 0.6"
   },
   {
-   "seq": 329,
-   "wall_ms": 8560,
+   "seq": 330,
+   "wall_ms": 147852,
    "match_ms": 4456689,
    "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00803",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 16289
   },
   {
-   "seq": 330,
-   "wall_ms": 8560,
+   "seq": 331,
+   "wall_ms": 147856,
    "match_ms": 4456689,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -10334,20 +10349,20 @@
    "detail": ""
   },
   {
-   "seq": 331,
-   "wall_ms": 8573,
+   "seq": 332,
+   "wall_ms": 159475,
    "match_ms": 4456689,
    "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00803",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 11614
   },
   {
-   "seq": 332,
-   "wall_ms": 8573,
+   "seq": 333,
+   "wall_ms": 159478,
    "match_ms": 4456689,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -10356,44 +10371,44 @@
    "detail": ""
   },
   {
-   "seq": 333,
-   "wall_ms": 8589,
-   "match_ms": 4456689,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "goal:e00803",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 334,
-   "wall_ms": 8602,
+   "wall_ms": 172430,
    "match_ms": 4456689,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00803",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 12947
   },
   {
    "seq": 335,
-   "wall_ms": 8621,
+   "wall_ms": 188488,
    "match_ms": 4456689,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00803",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 16050
   },
   {
    "seq": 336,
-   "wall_ms": 8622,
+   "wall_ms": 202407,
+   "match_ms": 4456689,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e00803",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 13916
+  },
+  {
+   "seq": 337,
+   "wall_ms": 202410,
    "match_ms": 4456689,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -10402,8 +10417,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 337,
-   "wall_ms": 8624,
+   "seq": 338,
+   "wall_ms": 202414,
    "match_ms": 4556367,
    "source": "replayer",
    "target": "stats_agent",
@@ -10411,8 +10426,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 338,
-   "wall_ms": 8730,
+   "seq": 339,
+   "wall_ms": 202472,
    "match_ms": 4556367,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10420,8 +10435,8 @@
    "detail": "snapshot + moments at 73'"
   },
   {
-   "seq": 339,
-   "wall_ms": 8731,
+   "seq": 340,
+   "wall_ms": 202473,
    "match_ms": 4619687,
    "source": "replayer",
    "target": "stats_agent",
@@ -10429,8 +10444,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 340,
-   "wall_ms": 8832,
+   "seq": 341,
+   "wall_ms": 202521,
    "match_ms": 4619687,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10438,8 +10453,8 @@
    "detail": "snapshot + moments at 74'"
   },
   {
-   "seq": 341,
-   "wall_ms": 8835,
+   "seq": 342,
+   "wall_ms": 202522,
    "match_ms": 4679130,
    "source": "replayer",
    "target": "stats_agent",
@@ -10447,8 +10462,8 @@
    "detail": "14 events"
   },
   {
-   "seq": 342,
-   "wall_ms": 8927,
+   "seq": 343,
+   "wall_ms": 202572,
    "match_ms": 4679130,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10456,8 +10471,8 @@
    "detail": "snapshot + moments at 75'"
   },
   {
-   "seq": 343,
-   "wall_ms": 8928,
+   "seq": 344,
+   "wall_ms": 202573,
    "match_ms": 4737520,
    "source": "replayer",
    "target": "stats_agent",
@@ -10465,8 +10480,8 @@
    "detail": "10 events"
   },
   {
-   "seq": 344,
-   "wall_ms": 9031,
+   "seq": 345,
+   "wall_ms": 202628,
    "match_ms": 4737520,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10474,8 +10489,8 @@
    "detail": "snapshot + moments at 76'"
   },
   {
-   "seq": 345,
-   "wall_ms": 9031,
+   "seq": 346,
+   "wall_ms": 202628,
    "match_ms": 4713004,
    "source": "stats_agent",
    "target": "producer",
@@ -10484,8 +10499,8 @@
    "detail": "substitution (importance 0.15)"
   },
   {
-   "seq": 346,
-   "wall_ms": 9032,
+   "seq": 347,
+   "wall_ms": 202629,
    "match_ms": 4713004,
    "source": "producer",
    "target": "template_writer",
@@ -10494,8 +10509,8 @@
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
-   "seq": 347,
-   "wall_ms": 9033,
+   "seq": 348,
+   "wall_ms": 202629,
    "match_ms": 4713004,
    "source": "template_writer",
    "target": "publisher",
@@ -10504,8 +10519,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 348,
-   "wall_ms": 9037,
+   "seq": 349,
+   "wall_ms": 202631,
    "match_ms": 4794312,
    "source": "replayer",
    "target": "stats_agent",
@@ -10513,8 +10528,8 @@
    "detail": "8 events"
   },
   {
-   "seq": 349,
-   "wall_ms": 9120,
+   "seq": 350,
+   "wall_ms": 202683,
    "match_ms": 4794312,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10522,8 +10537,8 @@
    "detail": "snapshot + moments at 77'"
   },
   {
-   "seq": 350,
-   "wall_ms": 9122,
+   "seq": 351,
+   "wall_ms": 202684,
    "match_ms": 4857886,
    "source": "replayer",
    "target": "stats_agent",
@@ -10531,8 +10546,8 @@
    "detail": "16 events"
   },
   {
-   "seq": 351,
-   "wall_ms": 9242,
+   "seq": 352,
+   "wall_ms": 202731,
    "match_ms": 4857886,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10540,8 +10555,8 @@
    "detail": "snapshot + moments at 78'"
   },
   {
-   "seq": 352,
-   "wall_ms": 9243,
+   "seq": 353,
+   "wall_ms": 202732,
    "match_ms": 4907435,
    "source": "replayer",
    "target": "stats_agent",
@@ -10549,8 +10564,8 @@
    "detail": "12 events"
   },
   {
-   "seq": 353,
-   "wall_ms": 9361,
+   "seq": 354,
+   "wall_ms": 202792,
    "match_ms": 4907435,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10558,8 +10573,8 @@
    "detail": "snapshot + moments at 79'"
   },
   {
-   "seq": 354,
-   "wall_ms": 9362,
+   "seq": 355,
+   "wall_ms": 202793,
    "match_ms": 4959197,
    "source": "replayer",
    "target": "stats_agent",
@@ -10567,8 +10582,8 @@
    "detail": "7 events"
   },
   {
-   "seq": 355,
-   "wall_ms": 9467,
+   "seq": 356,
+   "wall_ms": 202852,
    "match_ms": 4959197,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10576,8 +10591,8 @@
    "detail": "snapshot + moments at 80'"
   },
   {
-   "seq": 356,
-   "wall_ms": 9467,
+   "seq": 357,
+   "wall_ms": 202852,
    "match_ms": 4920000,
    "source": "stats_agent",
    "target": "producer",
@@ -10586,8 +10601,8 @@
    "detail": "momentum_shift (importance 0.60)"
   },
   {
-   "seq": 357,
-   "wall_ms": 9467,
+   "seq": 358,
+   "wall_ms": 202852,
    "match_ms": 4928090,
    "source": "stats_agent",
    "target": "producer",
@@ -10596,8 +10611,8 @@
    "detail": "substitution (importance 0.15)"
   },
   {
-   "seq": 358,
-   "wall_ms": 9469,
+   "seq": 359,
+   "wall_ms": 202853,
    "match_ms": 4920000,
    "source": "producer",
    "target": "insight_agent",
@@ -10606,8 +10621,8 @@
    "detail": "route=full: importance 0.60 >= 0.6"
   },
   {
-   "seq": 359,
-   "wall_ms": 9470,
+   "seq": 360,
+   "wall_ms": 202853,
    "match_ms": 4928090,
    "source": "producer",
    "target": "template_writer",
@@ -10616,8 +10631,8 @@
    "detail": "route=template: importance 0.15 < 0.45"
   },
   {
-   "seq": 360,
-   "wall_ms": 9483,
+   "seq": 361,
+   "wall_ms": 202868,
    "match_ms": 4920000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10628,8 +10643,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 361,
-   "wall_ms": 9483,
+   "seq": 362,
+   "wall_ms": 202868,
    "match_ms": 4920000,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -10638,8 +10653,8 @@
    "detail": ""
   },
   {
-   "seq": 362,
-   "wall_ms": 9484,
+   "seq": 363,
+   "wall_ms": 202868,
    "match_ms": 4928090,
    "source": "template_writer",
    "target": "publisher",
@@ -10648,8 +10663,8 @@
    "detail": "6 cards"
   },
   {
-   "seq": 363,
-   "wall_ms": 9498,
+   "seq": 364,
+   "wall_ms": 202879,
    "match_ms": 4920000,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10660,8 +10675,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 364,
-   "wall_ms": 9498,
+   "seq": 365,
+   "wall_ms": 202879,
    "match_ms": 4920000,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -10670,20 +10685,8 @@
    "detail": ""
   },
   {
-   "seq": 365,
-   "wall_ms": 9522,
-   "match_ms": 4920000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t81",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 366,
-   "wall_ms": 9536,
+   "wall_ms": 202892,
    "match_ms": 4920000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10695,7 +10698,7 @@
   },
   {
    "seq": 367,
-   "wall_ms": 9547,
+   "wall_ms": 202904,
    "match_ms": 4920000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -10707,7 +10710,19 @@
   },
   {
    "seq": 368,
-   "wall_ms": 9547,
+   "wall_ms": 202914,
+   "match_ms": 4920000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t81",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 369,
+   "wall_ms": 202914,
    "match_ms": 4920000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -10716,8 +10731,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 369,
-   "wall_ms": 9551,
+   "seq": 370,
+   "wall_ms": 202915,
    "match_ms": 5039442,
    "source": "replayer",
    "target": "stats_agent",
@@ -10725,8 +10740,8 @@
    "detail": "10 events"
   },
   {
-   "seq": 370,
-   "wall_ms": 9672,
+   "seq": 371,
+   "wall_ms": 202964,
    "match_ms": 5039442,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10734,8 +10749,8 @@
    "detail": "snapshot + moments at 81'"
   },
   {
-   "seq": 371,
-   "wall_ms": 9673,
+   "seq": 372,
+   "wall_ms": 202965,
    "match_ms": 5098345,
    "source": "replayer",
    "target": "stats_agent",
@@ -10743,8 +10758,8 @@
    "detail": "15 events"
   },
   {
-   "seq": 372,
-   "wall_ms": 9785,
+   "seq": 373,
+   "wall_ms": 203014,
    "match_ms": 5098345,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10752,8 +10767,8 @@
    "detail": "snapshot + moments at 82'"
   },
   {
-   "seq": 373,
-   "wall_ms": 9787,
+   "seq": 374,
+   "wall_ms": 203015,
    "match_ms": 5144542,
    "source": "replayer",
    "target": "stats_agent",
@@ -10761,8 +10776,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 374,
-   "wall_ms": 9877,
+   "seq": 375,
+   "wall_ms": 203068,
    "match_ms": 5144542,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10770,8 +10785,8 @@
    "detail": "snapshot + moments at 83'"
   },
   {
-   "seq": 375,
-   "wall_ms": 9878,
+   "seq": 376,
+   "wall_ms": 203069,
    "match_ms": 5218467,
    "source": "replayer",
    "target": "stats_agent",
@@ -10779,8 +10794,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 376,
-   "wall_ms": 9987,
+   "seq": 377,
+   "wall_ms": 203119,
    "match_ms": 5218467,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10788,8 +10803,8 @@
    "detail": "snapshot + moments at 84'"
   },
   {
-   "seq": 377,
-   "wall_ms": 9988,
+   "seq": 378,
+   "wall_ms": 203120,
    "match_ms": 5278082,
    "source": "replayer",
    "target": "stats_agent",
@@ -10797,8 +10812,8 @@
    "detail": "14 events"
   },
   {
-   "seq": 378,
-   "wall_ms": 10090,
+   "seq": 379,
+   "wall_ms": 203171,
    "match_ms": 5278082,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10806,8 +10821,8 @@
    "detail": "snapshot + moments at 85'"
   },
   {
-   "seq": 379,
-   "wall_ms": 10091,
+   "seq": 380,
+   "wall_ms": 203172,
    "match_ms": 5314415,
    "source": "replayer",
    "target": "stats_agent",
@@ -10815,8 +10830,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 380,
-   "wall_ms": 10201,
+   "seq": 381,
+   "wall_ms": 203228,
    "match_ms": 5314415,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10824,8 +10839,8 @@
    "detail": "snapshot + moments at 86'"
   },
   {
-   "seq": 381,
-   "wall_ms": 10202,
+   "seq": 382,
+   "wall_ms": 203229,
    "match_ms": 5399904,
    "source": "replayer",
    "target": "stats_agent",
@@ -10833,8 +10848,8 @@
    "detail": "17 events"
   },
   {
-   "seq": 382,
-   "wall_ms": 10295,
+   "seq": 383,
+   "wall_ms": 203284,
    "match_ms": 5399904,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10842,8 +10857,8 @@
    "detail": "snapshot + moments at 87'"
   },
   {
-   "seq": 383,
-   "wall_ms": 10296,
+   "seq": 384,
+   "wall_ms": 203286,
    "match_ms": 5435394,
    "source": "replayer",
    "target": "stats_agent",
@@ -10851,8 +10866,8 @@
    "detail": "9 events"
   },
   {
-   "seq": 384,
-   "wall_ms": 10405,
+   "seq": 385,
+   "wall_ms": 203343,
    "match_ms": 5435394,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10860,8 +10875,8 @@
    "detail": "snapshot + moments at 88'"
   },
   {
-   "seq": 385,
-   "wall_ms": 10405,
+   "seq": 386,
+   "wall_ms": 203344,
    "match_ms": 5435394,
    "source": "stats_agent",
    "target": "producer",
@@ -10870,8 +10885,8 @@
    "detail": "goal (importance 1.00)"
   },
   {
-   "seq": 386,
-   "wall_ms": 10406,
+   "seq": 387,
+   "wall_ms": 203344,
    "match_ms": 5435394,
    "source": "producer",
    "target": "insight_agent",
@@ -10880,20 +10895,20 @@
    "detail": "route=full: importance 1.00 >= 0.6"
   },
   {
-   "seq": 387,
-   "wall_ms": 10420,
+   "seq": 388,
+   "wall_ms": 213427,
    "match_ms": 5435394,
    "source": "insight_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00986",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 10080
   },
   {
-   "seq": 388,
-   "wall_ms": 10420,
+   "seq": 389,
+   "wall_ms": 213430,
    "match_ms": 5435394,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -10902,20 +10917,20 @@
    "detail": ""
   },
   {
-   "seq": 389,
-   "wall_ms": 10434,
+   "seq": 390,
+   "wall_ms": 223334,
    "match_ms": 5435394,
    "source": "narrator_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00986",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 9899
   },
   {
-   "seq": 390,
-   "wall_ms": 10434,
+   "seq": 391,
+   "wall_ms": 223338,
    "match_ms": 5435394,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -10924,44 +10939,44 @@
    "detail": ""
   },
   {
-   "seq": 391,
-   "wall_ms": 10448,
-   "match_ms": 5435394,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "goal:e00986",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 392,
-   "wall_ms": 10460,
+   "wall_ms": 235066,
    "match_ms": 5435394,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00986",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 11721
   },
   {
    "seq": 393,
-   "wall_ms": 10472,
+   "wall_ms": 251708,
    "match_ms": 5435394,
    "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
+   "target": "verifier",
    "moment_id": "goal:e00986",
-   "status": "cached",
-   "detail": "cached",
+   "status": "ok",
+   "detail": "ok",
    "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
+   "latency_ms": 16635
   },
   {
    "seq": 394,
-   "wall_ms": 10472,
+   "wall_ms": 262476,
+   "match_ms": 5435394,
+   "source": "personalizer_agent",
+   "target": "verifier",
+   "moment_id": "goal:e00986",
+   "status": "ok",
+   "detail": "ok",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 10762
+  },
+  {
+   "seq": 395,
+   "wall_ms": 262480,
    "match_ms": 5435394,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -10970,8 +10985,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 395,
-   "wall_ms": 10474,
+   "seq": 396,
+   "wall_ms": 262490,
    "match_ms": 5519965,
    "source": "replayer",
    "target": "stats_agent",
@@ -10979,8 +10994,8 @@
    "detail": "5 events"
   },
   {
-   "seq": 396,
-   "wall_ms": 10587,
+   "seq": 397,
+   "wall_ms": 262575,
    "match_ms": 5519965,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -10988,8 +11003,8 @@
    "detail": "snapshot + moments at 89'"
   },
   {
-   "seq": 397,
-   "wall_ms": 10587,
+   "seq": 398,
+   "wall_ms": 262575,
    "match_ms": 5460000,
    "source": "stats_agent",
    "target": "producer",
@@ -10998,8 +11013,8 @@
    "detail": "momentum_shift (importance 0.60)"
   },
   {
-   "seq": 398,
-   "wall_ms": 10588,
+   "seq": 399,
+   "wall_ms": 262576,
    "match_ms": 5460000,
    "source": "producer",
    "target": "insight_agent",
@@ -11008,8 +11023,8 @@
    "detail": "route=full: importance 0.60 >= 0.6"
   },
   {
-   "seq": 399,
-   "wall_ms": 10604,
+   "seq": 400,
+   "wall_ms": 262589,
    "match_ms": 5460000,
    "source": "insight_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11020,8 +11035,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 400,
-   "wall_ms": 10605,
+   "seq": 401,
+   "wall_ms": 262589,
    "match_ms": 5460000,
    "source": "insight_agent",
    "target": "narrator_agent",
@@ -11030,8 +11045,8 @@
    "detail": ""
   },
   {
-   "seq": 401,
-   "wall_ms": 10615,
+   "seq": 402,
+   "wall_ms": 262600,
    "match_ms": 5460000,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11042,8 +11057,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 402,
-   "wall_ms": 10615,
+   "seq": 403,
+   "wall_ms": 262600,
    "match_ms": 5460000,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -11052,20 +11067,8 @@
    "detail": ""
   },
   {
-   "seq": 403,
-   "wall_ms": 10628,
-   "match_ms": 5460000,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "momentum_shift:t90",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 404,
-   "wall_ms": 10641,
+   "wall_ms": 262605,
    "match_ms": 5460000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11077,7 +11080,7 @@
   },
   {
    "seq": 405,
-   "wall_ms": 10655,
+   "wall_ms": 262616,
    "match_ms": 5460000,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11089,7 +11092,19 @@
   },
   {
    "seq": 406,
-   "wall_ms": 10655,
+   "wall_ms": 262628,
+   "match_ms": 5460000,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "momentum_shift:t90",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 407,
+   "wall_ms": 262628,
    "match_ms": 5460000,
    "source": "personalizer_agent",
    "target": "publisher",
@@ -11098,8 +11113,8 @@
    "detail": "7 cards"
   },
   {
-   "seq": 407,
-   "wall_ms": 10657,
+   "seq": 408,
+   "wall_ms": 262630,
    "match_ms": 5567975,
    "source": "replayer",
    "target": "stats_agent",
@@ -11107,8 +11122,8 @@
    "detail": "8 events"
   },
   {
-   "seq": 408,
-   "wall_ms": 10775,
+   "seq": 409,
+   "wall_ms": 262683,
    "match_ms": 5567975,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11116,8 +11131,8 @@
    "detail": "snapshot + moments at 90'"
   },
   {
-   "seq": 409,
-   "wall_ms": 10776,
+   "seq": 410,
+   "wall_ms": 262683,
    "match_ms": 5633847,
    "source": "replayer",
    "target": "stats_agent",
@@ -11125,8 +11140,8 @@
    "detail": "5 events"
   },
   {
-   "seq": 410,
-   "wall_ms": 10890,
+   "seq": 411,
+   "wall_ms": 262745,
    "match_ms": 5633847,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11134,8 +11149,8 @@
    "detail": "snapshot + moments at 90+1'"
   },
   {
-   "seq": 411,
-   "wall_ms": 10891,
+   "seq": 412,
+   "wall_ms": 262746,
    "match_ms": 5674347,
    "source": "replayer",
    "target": "stats_agent",
@@ -11143,8 +11158,8 @@
    "detail": "7 events"
   },
   {
-   "seq": 412,
-   "wall_ms": 11007,
+   "seq": 413,
+   "wall_ms": 262813,
    "match_ms": 5674347,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11152,8 +11167,8 @@
    "detail": "snapshot + moments at 90+2'"
   },
   {
-   "seq": 413,
-   "wall_ms": 11008,
+   "seq": 414,
+   "wall_ms": 262814,
    "match_ms": 5756927,
    "source": "replayer",
    "target": "stats_agent",
@@ -11161,8 +11176,8 @@
    "detail": "11 events"
   },
   {
-   "seq": 414,
-   "wall_ms": 11162,
+   "seq": 415,
+   "wall_ms": 262870,
    "match_ms": 5756927,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11170,8 +11185,8 @@
    "detail": "snapshot + moments at 90+3'"
   },
   {
-   "seq": 415,
-   "wall_ms": 11165,
+   "seq": 416,
+   "wall_ms": 262871,
    "match_ms": 5769187,
    "source": "replayer",
    "target": "stats_agent",
@@ -11179,8 +11194,8 @@
    "detail": "2 events"
   },
   {
-   "seq": 416,
-   "wall_ms": 11306,
+   "seq": 417,
+   "wall_ms": 262926,
    "match_ms": 5769187,
    "source": "stats_agent",
    "target": "mcp:mcp",
@@ -11188,8 +11203,8 @@
    "detail": "snapshot + moments at 90+4'"
   },
   {
-   "seq": 417,
-   "wall_ms": 11306,
+   "seq": 418,
+   "wall_ms": 262926,
    "match_ms": 5769187,
    "source": "stats_agent",
    "target": "producer",
@@ -11198,8 +11213,8 @@
    "detail": "full_time (importance 0.85)"
   },
   {
-   "seq": 418,
-   "wall_ms": 11307,
+   "seq": 419,
+   "wall_ms": 262927,
    "match_ms": 5769187,
    "source": "producer",
    "target": "narrator_agent",
@@ -11208,8 +11223,8 @@
    "detail": "route=recap: full time: recap"
   },
   {
-   "seq": 419,
-   "wall_ms": 11324,
+   "seq": 420,
+   "wall_ms": 262941,
    "match_ms": 5769187,
    "source": "narrator_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11220,8 +11235,8 @@
    "latency_ms": 0
   },
   {
-   "seq": 420,
-   "wall_ms": 11324,
+   "seq": 421,
+   "wall_ms": 262941,
    "match_ms": 5769187,
    "source": "narrator_agent",
    "target": "personalizer_agent",
@@ -11230,20 +11245,8 @@
    "detail": ""
   },
   {
-   "seq": 421,
-   "wall_ms": 11340,
-   "match_ms": 5769187,
-   "source": "personalizer_agent",
-   "target": "gemini:gemini-flash-lite-latest",
-   "moment_id": "full_time:e01024",
-   "status": "cached",
-   "detail": "cached",
-   "provider": "gemini:gemini-flash-lite-latest",
-   "latency_ms": 0
-  },
-  {
    "seq": 422,
-   "wall_ms": 11360,
+   "wall_ms": 262955,
    "match_ms": 5769187,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11255,7 +11258,7 @@
   },
   {
    "seq": 423,
-   "wall_ms": 11381,
+   "wall_ms": 262970,
    "match_ms": 5769187,
    "source": "personalizer_agent",
    "target": "gemini:gemini-flash-lite-latest",
@@ -11267,7 +11270,19 @@
   },
   {
    "seq": 424,
-   "wall_ms": 11381,
+   "wall_ms": 262983,
+   "match_ms": 5769187,
+   "source": "personalizer_agent",
+   "target": "gemini:gemini-flash-lite-latest",
+   "moment_id": "full_time:e01024",
+   "status": "cached",
+   "detail": "cached",
+   "provider": "gemini:gemini-flash-lite-latest",
+   "latency_ms": 0
+  },
+  {
+   "seq": 425,
+   "wall_ms": 262983,
    "match_ms": 5769187,
    "source": "personalizer_agent",
    "target": "publisher",
