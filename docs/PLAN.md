@@ -36,6 +36,11 @@ This file records the agreed architecture and schedule, plus changes from the br
 - Agent Framework's own Foundry Local connector pins `foundry-local-sdk` 0.5.x, which calls the removed `foundry service` CLI command. Our adapter (`llm/foundry_local.py`) uses SDK 2.x instead: in-process load + its built-in OpenAI-compatible web service.
 - Dev machine: 2-core i7-5600U, 8 GB RAM, no usable GPU, so only CPU models up to ~2B parameters. `qwen3.5-2b-text` fails on the SDK's ONNX runtime (position_ids rank error); using `qwen2.5-1.5b`. Measured: warm model load ~23 s, one short reply ~7 s. Implication: live mode must batch LLM calls (key moments + ~10-minute windows), and demo baking runs unattended.
 - Gemini (free key) verified with `gemini-3.5-flash`: 5–37 s per call, with occasional 503 "high demand" errors (`gemini-flash-latest` hit 503). `gemini-flash-lite-latest` answered in ~1.4 s. Pin versioned model names; the `-latest` aliases move.
+- Microsoft Phi-3.5-mini (Foundry Local, CPU, 2.5 GB) on this 2-core laptop: one short reply in
+  99 s cold; the structured Insight call timed out (2 × 60 s) twice. Kept as an option for faster
+  hardware; qwen2.5-1.5b stays the default local model.
+- GitHub Copilot (Agent Framework `GitHubCopilotAgent`) answers Ask MatchMind questions in
+  19–37 s using 1–3 MCP tool calls; the runtime downloads itself on first use (~60 s).
 - **Recovery chain for Phase 3:** `gemini-3.5-flash` → `gemini-flash-lite-latest` → Foundry Local → template card. Each step is logged in the handoff log so judges can see it.
 
 ## Architecture
