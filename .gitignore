@@ -32,3 +32,6 @@ Thumbs.db
 
 # Private working notes (personal details; repo is public)
 docs/BRIEF.md
+
+# Local tooling
+.claude/
