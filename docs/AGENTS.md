@@ -161,7 +161,7 @@ and watch every executor run), the **ask_matchmind** Copilot agent, and the **in
 | Provider | How | Why |
 |---|---|---|
 | Google Gemini (free key) | `OpenAIChatCompletionClient` → OpenAI-compatible endpoint | Best quality, good Urdu/Arabic; used to bake the demo |
-| **Microsoft Foundry Local** | On-device `qwen2.5-1.5b` (or Microsoft's **Phi-3.5-mini**: `FOUNDRY_LOCAL_MODEL=phi-3.5-mini`), via a small adapter over Foundry Local SDK 2.x | No account, no quota, works offline; last line before templates |
+| **Microsoft Foundry Local** | On-device `qwen2.5-1.5b` by default; Microsoft's **Phi-3.5-mini** with `FOUNDRY_LOCAL_MODEL=phi-3.5-mini` on faster hardware. Via a small adapter over Foundry Local SDK 2.x | No account, no quota, works offline; last line before templates |
 | **GitHub Copilot** | `GitHubCopilotAgent` (Agent Framework) for Ask MatchMind | Uses the viewer's own Copilot access; tool use over MCP |
 
 Every call goes through an Agent Framework `Agent` with `response_format=<Pydantic model>`

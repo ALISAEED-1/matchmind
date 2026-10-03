@@ -51,7 +51,8 @@ Agent roles, routing, shared state, handoffs and the four levels of failure reco
 - **Microsoft Agent Framework** (Python): orchestration workflow, agents with structured output,
   MCP client (`MCPStdioTool`), `WorkflowViz` diagrams, and **DevUI** for debugging
 - **GitHub Copilot SDK** via Agent Framework's `GitHubCopilotAgent`: the Ask MatchMind agent
-- **Microsoft Foundry Local**: on-device LLM inference (`qwen2.5-1.5b`, or Microsoft **Phi-3.5-mini**)
+- **Microsoft Foundry Local**: on-device LLM inference (`qwen2.5-1.5b`; Microsoft **Phi-3.5-mini**
+  via `FOUNDRY_LOCAL_MODEL=phi-3.5-mini` on machines with more CPU or a GPU/NPU)
 - **Model Context Protocol**: the stats engine is an MCP server used by our agents and by Copilot
 - **GitHub Codespaces** (dev container): one-click live environment for judges
 - **GitHub Actions**: CI (ruff + pytest, flutter analyze + test), Pages deployment, web release

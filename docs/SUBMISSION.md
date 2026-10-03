@@ -28,8 +28,8 @@ the match. All data is synthetic and calibrated.
   (`MCPStdioTool`), `WorkflowViz` for the architecture diagram, and **DevUI** for debugging
 - **GitHub Copilot SDK** through Agent Framework's `GitHubCopilotAgent`: the Ask MatchMind agent,
   locked to read-only MCP tools
-- **Microsoft Foundry Local:** on-device models (`qwen2.5-1.5b`, Microsoft **Phi-3.5-mini**) in the
-  provider chain, via the Foundry Local SDK
+- **Microsoft Foundry Local:** on-device model in the provider chain via the Foundry Local SDK
+  (`qwen2.5-1.5b` by default; Microsoft **Phi-3.5-mini** supported on faster hardware)
 - **Model Context Protocol:** the stats engine as an MCP server, used by our agents and by Copilot
 - **GitHub Codespaces:** dev container for a one-click live environment
 - **GitHub Actions:** CI (Python lint and tests, Flutter analyze and tests), Pages deployment and the
