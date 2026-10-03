@@ -399,7 +399,10 @@ class MatchController extends ChangeNotifier {
     _sub = _live!.connect().listen(
       _onLiveMessage,
       onError: (Object e) {
-        error = 'Live connection failed: $e. Is the backend running at $liveBaseUrl?';
+        error =
+            'Live agents need the MatchMind backend, and none is answering at $liveBaseUrl.\n\n'
+            'Open the repo in GitHub Codespaces, or run it locally with: '
+            'uv run uvicorn matchmind.api.app:app';
         notifyListeners();
       },
     );

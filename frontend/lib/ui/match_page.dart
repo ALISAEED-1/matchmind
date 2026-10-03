@@ -28,7 +28,27 @@ class MatchPage extends StatelessWidget {
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(24),
-            child: Text(c.error!, textAlign: TextAlign.center),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(c.error!, textAlign: TextAlign.center),
+                if (c.isLive) ...[
+                  const SizedBox(height: 24),
+                  FilledButton.icon(
+                    icon: const Icon(Icons.play_arrow),
+                    label: const Text('Watch the demo instead'),
+                    onPressed: () => Navigator.of(context).pushReplacement(
+                      MaterialPageRoute<void>(
+                        builder: (_) => ChangeNotifierProvider(
+                          create: (_) => MatchController.demo(matchId: c.matchId, repo: c.repo)..load(),
+                          child: const MatchPage(),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ],
+            ),
           ),
         ),
       );

@@ -167,7 +167,8 @@ class _ModeCard extends StatelessWidget {
             Text(
               live
                   ? 'Connects to the MatchMind backend: the agent team runs while you watch, '
-                        'personalised for your profile. Start it with: uv run uvicorn matchmind.api.app:app'
+                        'personalised for your profile. Needs the backend: open the repo in GitHub Codespaces, '
+                        'or run uv run uvicorn matchmind.api.app:app'
                   : 'Replays cards the agent team already produced. No backend, keys or quota needed.',
               style: t.bodyMedium?.copyWith(color: MM.muted),
             ),
