@@ -183,9 +183,14 @@ class FactBuilder:
         return MomentFacts(facts=facts, fields=fields, players=names)
 
     def for_recap(self, snap: MatchSnapshot, moments: list[Moment]) -> MomentFacts:
+        # Goals and red cards always make the timeline; other big moments fill it up to 14.
+        must = {MomentKind.GOAL, MomentKind.RED_CARD}
         key = [m for m in moments if m.importance >= 0.6 and m.kind is not MomentKind.FULL_TIME]
+        essential = [m for m in key if m.kind in must]
+        extra = [m for m in key if m.kind not in must][: max(0, 14 - len(essential))]
+        chosen = sorted(essential + extra, key=lambda m: m.timestamp_ms)
         timeline = []
-        for m in key[:14]:
+        for m in chosen:
             entry = {
                 "minute": display_minute(m.period, m.minute),
                 "moment": m.kind.value.replace("_", " "),

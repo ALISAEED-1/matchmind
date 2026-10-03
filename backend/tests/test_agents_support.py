@@ -61,6 +61,15 @@ def test_goal_facts_carry_the_numbers_agents_may_quote():
     assert "match_so_far" in mf.facts
 
 
+@pytest.mark.parametrize("name", MATCHES)
+def test_recap_facts_always_include_every_goal(name):
+    m = load(name)
+    moments = detect_moments(m.events)
+    mf = FactBuilder(m.meta).for_recap(compute_snapshot(m.meta, m.events), moments)
+    recap_goals = [x for x in mf.facts["key_moments"] if x["moment"] == "goal"]
+    assert len(recap_goals) == m.meta.final_score.home + m.meta.final_score.away
+
+
 def test_allowed_numbers_cover_common_spellings():
     allowed = allowed_numbers({"xg": 0.27, "score": "A 1-2 B", "minute": "90+2'", "poss": 57})
     for token in ["0.27", "27", "1", "2", "90", "57", "0.3"]:
